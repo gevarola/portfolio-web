@@ -48,10 +48,10 @@ en: {
   pillars: {
     eyebrow: "What I do",
     items: [
-      { num: "01", title: "Social Media Manager", body: "Running channels day-to-day — publishing calendars, account growth, agency coordination, performance reporting." },
-      { num: "02", title: "Content Manager", body: "Editorial planning, brand voice, campaign direction — the strategy behind every post." },
-      { num: "03", title: "Content Creator", body: "Shooting and editing — Reels, TikToks and carousels, built from scratch." },
-      { num: "04", title: "Copywriting", body: "Scripts, captions, campaign copy — writing that sounds like a person, not a brand." }
+      { num: "01", title: "Social Media Manager", body: "I keep the lights on — calendars, growth, agencies, numbers. The unglamorous stuff that makes everything else possible." },
+      { num: "02", title: "Content Manager", body: "I decide what gets said before anyone writes a word. Voice, pillars, campaigns — the plan nobody sees but everyone feels." },
+      { num: "03", title: "Content Creator", body: "Camera, mic, edit. I make the thing people actually watch, not just scroll past." },
+      { num: "04", title: "Copywriting", body: "Words that don't sound like a press release. Scripts, captions, campaigns — written to be read, not skimmed." }
     ]
   },
   work: {
@@ -118,10 +118,10 @@ es: {
   pillars: {
     eyebrow: "Qué hago",
     items: [
-      { num: "01", title: "Social Media Manager", body: "Gestión diaria de canales — calendarios de publicación, crecimiento de cuentas, coordinación de agencias, reportes de performance." },
-      { num: "02", title: "Content Manager", body: "Planificación editorial, brand voice, dirección de campañas — la estrategia detrás de cada posteo." },
-      { num: "03", title: "Content Creator", body: "Grabación y edición — Reels, TikToks y carruseles, hechos de punta a punta." },
-      { num: "04", title: "Copywriting", body: "Guiones, captions, copy de campaña — escritura que suena a persona, no a marca." }
+      { num: "01", title: "Social Media Manager", body: "Mantengo todo funcionando — calendarios, crecimiento, agencias, números. Lo poco glamoroso que hace posible todo lo demás." },
+      { num: "02", title: "Content Manager", body: "Decido qué se dice antes de que alguien escriba una palabra. Voz, pilares, campañas — el plan que nadie ve pero todos sienten." },
+      { num: "03", title: "Content Creator", body: "Cámara, micrófono, edición. Hago lo que la gente realmente mira, no lo que scrollea de largo." },
+      { num: "04", title: "Copywriting", body: "Palabras que no suenan a gacetilla de prensa. Guiones, captions, campañas — escritas para leerse, no para pasarlas de largo." }
     ]
   },
   work: {
