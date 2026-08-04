@@ -55,8 +55,7 @@ en: {
     ]
   },
   work: {
-    eyebrow: "Case studies",
-    title: "Six campaigns, one thing in common: real business results.",
+    heading: "Selected work",
     challengeLabel: "The challenge",
     processLabel: "The process",
     resultLabel: "The result",
@@ -125,8 +124,7 @@ es: {
     ]
   },
   work: {
-    eyebrow: "Casos de éxito",
-    title: "Seis campañas, algo en común: resultados de negocio reales.",
+    heading: "Trabajo seleccionado",
     challengeLabel: "El desafío",
     processLabel: "El proceso",
     resultLabel: "El resultado",
@@ -164,9 +162,27 @@ const LINKS = {
   cv: "assets/files/German_Rojas_La_Valle_CV_ES.pdf"
 };
 
+const CLIENTS = [
+  {
+    id: "bitso",
+    en: {
+      name: "Bitso",
+      meta: "Fintech · Crypto exchange · LATAM",
+      intro: "4+ years in-house as Social Media Manager (2021–2026) — building content strategy across Argentina, Mexico, Brazil and Colombia. Since May 2026, creating content for them as a freelance creator."
+    },
+    es: {
+      name: "Bitso",
+      meta: "Fintech · Exchange de cripto · LATAM",
+      intro: "Más de 4 años en relación de dependencia como Social Media Manager (2021–2026) — construyendo la estrategia de contenido en Argentina, México, Brasil y Colombia. Desde mayo de 2026, creando contenido para ellos como freelance."
+    }
+  }
+];
+
 const CASES = [
   {
     id: "brand-expansion",
+    client: "bitso",
+    tag: { en: "Brand Expansion", es: "Expansión de Marca" },
     image: "assets/images/case-brand-expansion.jpg",
     org: "Bitso",
     period: "2022 — 2026",
@@ -198,6 +214,8 @@ const CASES = [
   },
   {
     id: "hugging-users",
+    client: "bitso",
+    tag: { en: "Educational Content", es: "Contenido Educativo" },
     image: "assets/images/case-hugging-users.jpg",
     org: "Bitso",
     period: "2023 — 2026",
@@ -229,6 +247,8 @@ const CASES = [
   },
   {
     id: "financial-education",
+    client: "bitso",
+    tag: { en: "Creator Partnerships", es: "Alianzas con Creadores" },
     image: "assets/images/case-financial-education.jpg",
     org: "Bitso",
     period: "2024",
@@ -260,6 +280,8 @@ const CASES = [
   },
   {
     id: "influencer-marketing",
+    client: "bitso",
+    tag: { en: "Influencer Marketing", es: "Influencer Marketing" },
     image: "assets/images/case-influencer-1.jpg",
     image2: "assets/images/case-influencer-2.jpg",
     org: "Bitso",
@@ -294,6 +316,8 @@ const CASES = [
   },
   {
     id: "storytelling-culture",
+    client: "bitso",
+    tag: { en: "Culture & Storytelling", es: "Cultura & Storytelling" },
     image: "assets/images/case-storytelling.jpg",
     org: "Bitso",
     period: "2026",
@@ -325,6 +349,8 @@ const CASES = [
   },
   {
     id: "havanna-mundial",
+    client: "havanna",
+    tag: { en: "World Cup Campaign", es: "Campaña Mundial" },
     image: "assets/images/case-havanna-hero.jpg",
     image2: "assets/images/case-havanna-tweet.jpg",
     org: "Havanna x Leo Messi",
