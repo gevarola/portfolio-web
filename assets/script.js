@@ -57,7 +57,6 @@
   function renderPillars() {
     var s = t().pillars;
     document.getElementById("pillars-eyebrow").textContent = s.eyebrow;
-    document.getElementById("pillars-title").textContent = s.title;
     document.getElementById("pillars-list").innerHTML = s.items.map(function (item) {
       return (
         '<div class="index-item">' +

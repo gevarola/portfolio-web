@@ -47,7 +47,6 @@ en: {
   },
   pillars: {
     eyebrow: "What I do",
-    title: "One person, four roles.",
     items: [
       { num: "01", title: "Social Media Manager", body: "Running channels day-to-day — publishing calendars, account growth, agency coordination, performance reporting." },
       { num: "02", title: "Content Manager", body: "Editorial planning, brand voice, campaign direction — the strategy behind every post." },
@@ -118,7 +117,6 @@ es: {
   },
   pillars: {
     eyebrow: "Qué hago",
-    title: "Una persona, cuatro roles.",
     items: [
       { num: "01", title: "Social Media Manager", body: "Gestión diaria de canales — calendarios de publicación, crecimiento de cuentas, coordinación de agencias, reportes de performance." },
       { num: "02", title: "Content Manager", body: "Planificación editorial, brand voice, dirección de campañas — la estrategia detrás de cada posteo." },
