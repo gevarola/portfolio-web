@@ -19,7 +19,7 @@ en: {
   meta: { title: "Germán Rojas La Valle — Content & Social Media Manager", langLabel: "ES" },
   nav: { about: "About", work: "Case studies", creator: "As a creator", contact: "Contact" },
   intro: {
-    status: "Available for freelance & full-time roles",
+    roleLine: "Social Media Manager · Content Manager · Content Creator",
     title: "Hi, I'm Germán — I build content that makes people stop scrolling.",
     subtitle: "4+ years leading content strategy across LATAM markets. Today, freelancing full-time for brands across the board.",
     platformsLabel: "Platforms",
@@ -94,7 +94,7 @@ es: {
   meta: { title: "Germán Rojas La Valle — Content & Social Media Manager", langLabel: "EN" },
   nav: { about: "Sobre mí", work: "Casos de éxito", creator: "Como creador", contact: "Contacto" },
   intro: {
-    status: "Disponible para freelance y roles full-time",
+    roleLine: "Social Media Manager · Content Manager · Content Creator",
     title: "Hola, soy Germán — construyo contenido que hace que la gente deje de scrollear.",
     subtitle: "Más de 4 años liderando estrategia de contenido en mercados de LATAM. Hoy, freelance full-time para marcas de todo tipo.",
     platformsLabel: "Plataformas",
@@ -385,9 +385,9 @@ const TOOLS = [
   { name: "Google Workspace", icon: "google", color: "#4285F4" },
   { name: "ChatGPT", icon: "openai", color: "#10A37F" },
   { name: "Claude", icon: "anthropic", color: "#D97757" },
-  { name: "CapCut", word: "CapCut", color: "#000000" },
-  { name: "Sprout Social", word: "Sprout", color: "#7EBB47" },
-  { name: "Monday", word: "Monday", color: "#FF3D57" }
+  { name: "CapCut", img: "assets/images/logo-capcut.jpg" },
+  { name: "Sprout Social", img: "assets/images/logo-sproutsocial.png" },
+  { name: "Monday", img: "assets/images/logo-monday.png" }
 ];
 
 const CREATOR_ITEMS = [

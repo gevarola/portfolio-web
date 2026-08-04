@@ -155,26 +155,14 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 700; line-height: 1.
 }
 .intro-photo img { width: 100%; height: 100%; object-fit: cover; }
 
-.status-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
+.role-line {
+  font-family: var(--font-body);
   font-size: 13px;
-  font-weight: 600;
-  color: #14151A;
-  background: #fff;
-  box-shadow: var(--chip-shadow);
-  padding: 8px 16px 8px 12px;
-  border-radius: 999px;
-  margin: 0 0 24px;
-}
-.status-pill::before {
-  content: "";
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: #2ECC71;
-  flex-shrink: 0;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--coral);
+  margin: 0 0 20px;
 }
 
 .intro-content h1 {
@@ -213,6 +201,13 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 700; line-height: 1.
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
+}
+.badge-chip img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 6px;
 }
 .badge-chip-word {
   width: auto;
