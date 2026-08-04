@@ -10,6 +10,7 @@
   --chip-shadow: 0 3px 10px rgba(0, 0, 0, 0.35);
   --font-display: "Space Grotesk", "Helvetica Neue", Arial, sans-serif;
   --font-body: "Inter", "Helvetica Neue", Arial, sans-serif;
+  --font-serif: "Fraunces", Georgia, serif;
 }
 
 * { box-sizing: border-box; }
@@ -112,6 +113,8 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 700; line-height: 1.
 .btn-primary:hover { background: var(--blue); color: #fff; }
 .btn-ghost { background: transparent; color: var(--ink); border-color: var(--line); }
 .btn-ghost:hover { border-color: var(--ink); }
+.btn-outline { background: transparent; color: var(--ink); border-color: var(--line); margin-top: 28px; }
+.btn-outline:hover { border-color: var(--ink); }
 
 /* Intro */
 .intro {
@@ -219,14 +222,37 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 700; line-height: 1.
   font-size: 12.5px;
 }
 
+/* Details */
+.details {
+  padding: 80px 0 100px;
+  border-top: 1px solid var(--line);
+}
+.details-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 56px;
+}
+.details-heading {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 600;
+  font-size: 34px;
+  color: var(--blue);
+  margin-bottom: 28px;
+}
+.timeline { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 22px; }
+.timeline li { display: flex; flex-direction: column; gap: 2px; }
+.timeline .t-role { font-weight: 600; color: var(--ink); font-size: 15px; }
+.timeline .t-org { color: var(--ink-soft); font-size: 13.5px; }
+.timeline .t-period { color: var(--ink-faint); font-size: 12.5px; margin-top: 2px; }
+
 /* Responsive */
 @media (max-width: 860px) {
   .intro-grid { grid-template-columns: 1fr; }
   .intro-content { order: 2; }
   .intro-photo-wrap { order: 1; margin-bottom: 36px; }
   .intro-photo { max-width: 260px; }
-  .blob-blue { width: 200px; height: 200px; right: 40px; }
-  .blob-coral { width: 150px; height: 150px; }
+  .details-grid { grid-template-columns: 1fr; gap: 44px; }
 }
 
 @media (max-width: 720px) {
@@ -245,4 +271,5 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 700; line-height: 1.
     gap: 18px;
   }
   .intro { padding: 44px 0 64px; }
+  .details { padding: 56px 0 72px; }
 }

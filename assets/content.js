@@ -22,22 +22,11 @@ en: {
     roleLine: "Social Media Manager · Content Manager · Content Creator",
     title: "Hi, I'm Germán — I build content that makes people stop scrolling.",
     subtitle: "4+ years leading content strategy across LATAM markets. Today, freelancing full-time for brands across the board.",
-    platformsLabel: "Platforms",
-    toolsLabel: "Tools",
     ctaWork: "View case studies",
     ctaContact: "Get in touch"
   },
-  about: {
-    eyebrow: "About",
-    title: "Strategy first. Storytelling always.",
-    body: [
-      "I'm Germán, a Content & Social Media Manager with 4+ years leading content strategy across four LATAM markets at Bitso, one of the region's largest crypto exchanges.",
-      "My work sits at the intersection of brand strategy, editorial direction and audience understanding — building content that educates, builds trust and drives real business impact.",
-      "Today I work freelance full-time, running content strategy for multiple brands at once across fintech, food, boutique e-commerce and consumer goods."
-    ],
-    languagesLabel: "Languages",
-    languages: "Spanish (native) · English (C1) · Portuguese (advanced)",
-    experienceLabel: "Experience",
+  details: {
+    experienceHeading: "Experience",
     experience: [
       { role: "Social Media & Content Manager", org: "Freelance · Independent", period: "Mar 2026 — Present" },
       { role: "Social Media Manager", org: "Bitso · Remote", period: "Apr 2024 — Mar 2026" },
@@ -45,18 +34,15 @@ en: {
       { role: "Social Media Analyst & Community Manager", org: "Bitso · Remote", period: "Oct 2021 — Apr 2023" },
       { role: "Community & Social Media Manager", org: "Freelance · Independent", period: "Jan 2019 — Oct 2021" }
     ],
-    educationLabel: "Education & certifications",
+    educationHeading: "Education",
     education: [
       { name: "Leadership & Innovation Program", org: "UADE", year: "2024" },
       { name: "Blockchain & Crypto Certificate", org: "University of Michigan", year: "2021" },
       { name: "BA in Labor Relations", org: "Universidad de Buenos Aires", year: "2016" }
     ],
-    skillsLabel: "Skills & tools",
-    skillGroups: [
-      { title: "Content & strategy", items: "Creative direction, campaign conceptualization, editorial planning, brand voice & tone, 360° campaigns, product-launch content, social listening, crisis communication, executive storytelling, content governance" },
-      { title: "Operations", items: "Agency & team management, cross-functional collaboration, remote work, budget tracking" },
-      { title: "Tools", items: "Notion, Figma, Canva, Buffer, AI tools (ChatGPT, Claude), Sprout Social, SEMrush, Monday, Google Workspace" }
-    ],
+    toolsHeading: "Tools",
+    platformsLabel: "Platforms",
+    toolsLabel: "Software",
     cvButton: "Download CV (Spanish)"
   },
   work: {
@@ -97,22 +83,11 @@ es: {
     roleLine: "Social Media Manager · Content Manager · Content Creator",
     title: "Hola, soy Germán — construyo contenido que hace que la gente deje de scrollear.",
     subtitle: "Más de 4 años liderando estrategia de contenido en mercados de LATAM. Hoy, freelance full-time para marcas de todo tipo.",
-    platformsLabel: "Plataformas",
-    toolsLabel: "Herramientas",
     ctaWork: "Ver casos de éxito",
     ctaContact: "Escribime"
   },
-  about: {
-    eyebrow: "Sobre mí",
-    title: "Primero la estrategia. Siempre el storytelling.",
-    body: [
-      "Soy Germán, Content & Social Media Manager con más de 4 años liderando estrategia de contenido en cuatro mercados de LATAM en Bitso, una de las exchanges de cripto más grandes de la región.",
-      "Mi trabajo está en la intersección entre estrategia de marca, dirección editorial y entendimiento de audiencia — contenido que educa, genera confianza y tiene impacto real en el negocio.",
-      "Hoy trabajo freelance full-time, llevando la estrategia de contenido de varias marcas al mismo tiempo, entre fintech, gastronomía, e-commerce boutique y consumo masivo."
-    ],
-    languagesLabel: "Idiomas",
-    languages: "Español (nativo) · Inglés (C1) · Portugués (avanzado)",
-    experienceLabel: "Experiencia",
+  details: {
+    experienceHeading: "Experiencia",
     experience: [
       { role: "Social Media & Content Manager", org: "Freelance · Independiente", period: "Mar 2026 — Presente" },
       { role: "Social Media Manager", org: "Bitso · Remoto", period: "Abr 2024 — Mar 2026" },
@@ -120,18 +95,15 @@ es: {
       { role: "Social Media Analyst & Community Manager", org: "Bitso · Remoto", period: "Oct 2021 — Abr 2023" },
       { role: "Community & Social Media Manager", org: "Freelance · Independiente", period: "Ene 2019 — Oct 2021" }
     ],
-    educationLabel: "Educación y certificaciones",
+    educationHeading: "Educación",
     education: [
       { name: "Programa de Liderazgo e Innovación", org: "UADE", year: "2024" },
       { name: "Certificado Blockchain & Cripto", org: "Universidad de Michigan", year: "2021" },
       { name: "Licenciatura en Relaciones del Trabajo", org: "Universidad de Buenos Aires", year: "2016" }
     ],
-    skillsLabel: "Habilidades y herramientas",
-    skillGroups: [
-      { title: "Contenido y estrategia", items: "Dirección creativa, conceptualización de campañas, planificación editorial, brand voice y tono, campañas 360°, contenido para lanzamientos de producto, social listening, comunicación de crisis, storytelling ejecutivo, gobernanza de contenido" },
-      { title: "Operaciones", items: "Gestión de agencias y equipos, colaboración cross-funcional, trabajo remoto, seguimiento de presupuesto" },
-      { title: "Herramientas", items: "Notion, Figma, Canva, Buffer, herramientas de IA (ChatGPT, Claude), Sprout Social, SEMrush, Monday, Google Workspace" }
-    ],
+    toolsHeading: "Herramientas",
+    platformsLabel: "Plataformas",
+    toolsLabel: "Software",
     cvButton: "Descargar CV (español)"
   },
   work: {

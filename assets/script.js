@@ -32,15 +32,32 @@
     document.getElementById("intro-subtitle").textContent = s.subtitle;
     document.getElementById("intro-cta-work").textContent = s.ctaWork;
     document.getElementById("intro-cta-contact").textContent = s.ctaContact;
-    document.getElementById("intro-platforms-label").textContent = s.platformsLabel;
-    document.getElementById("intro-tools-label").textContent = s.toolsLabel;
-    document.getElementById("intro-platforms").innerHTML = PLATFORMS.map(chip).join("");
-    document.getElementById("intro-tools").innerHTML = TOOLS.map(chip).join("");
+  }
+
+  function renderDetails() {
+    var s = t().details;
+    document.getElementById("details-experience-heading").textContent = s.experienceHeading;
+    document.getElementById("details-experience").innerHTML = s.experience.map(function (e) {
+      return '<li><span class="t-role">' + e.role + '</span><span class="t-org">' + e.org + '</span><span class="t-period">' + e.period + '</span></li>';
+    }).join("");
+    document.getElementById("details-education-heading").textContent = s.educationHeading;
+    document.getElementById("details-education").innerHTML = s.education.map(function (e) {
+      return '<li><span class="t-role">' + e.name + '</span><span class="t-org">' + e.org + '</span><span class="t-period">' + e.year + '</span></li>';
+    }).join("");
+    var cvBtn = document.getElementById("details-cv-btn");
+    cvBtn.textContent = s.cvButton;
+    cvBtn.setAttribute("href", LINKS.cv);
+    document.getElementById("details-tools-heading").textContent = s.toolsHeading;
+    document.getElementById("details-platforms-label").textContent = s.platformsLabel;
+    document.getElementById("details-tools-label").textContent = s.toolsLabel;
+    document.getElementById("details-platforms").innerHTML = PLATFORMS.map(chip).join("");
+    document.getElementById("details-tools").innerHTML = TOOLS.map(chip).join("");
   }
 
   function renderAll() {
     renderHeader();
     renderIntro();
+    renderDetails();
   }
 
   document.getElementById("lang-toggle").addEventListener("click", function () {
