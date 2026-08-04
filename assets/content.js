@@ -45,6 +45,16 @@ en: {
     toolsLabel: "Software",
     cvButton: "Download CV (Spanish)"
   },
+  pillars: {
+    eyebrow: "What I do",
+    title: "One person, four roles.",
+    items: [
+      { num: "01", title: "Social Media Manager", body: "Running channels day-to-day — publishing calendars, account growth, agency coordination, performance reporting." },
+      { num: "02", title: "Content Manager", body: "Editorial planning, brand voice, campaign direction — the strategy behind every post." },
+      { num: "03", title: "Content Creator", body: "Shooting and editing — Reels, TikToks and carousels, built from scratch." },
+      { num: "04", title: "Copywriting", body: "Scripts, captions, campaign copy — writing that sounds like a person, not a brand." }
+    ]
+  },
   work: {
     eyebrow: "Case studies",
     title: "Six campaigns, one thing in common: real business results.",
@@ -105,6 +115,16 @@ es: {
     platformsLabel: "Plataformas",
     toolsLabel: "Software",
     cvButton: "Descargar CV (español)"
+  },
+  pillars: {
+    eyebrow: "Qué hago",
+    title: "Una persona, cuatro roles.",
+    items: [
+      { num: "01", title: "Social Media Manager", body: "Gestión diaria de canales — calendarios de publicación, crecimiento de cuentas, coordinación de agencias, reportes de performance." },
+      { num: "02", title: "Content Manager", body: "Planificación editorial, brand voice, dirección de campañas — la estrategia detrás de cada posteo." },
+      { num: "03", title: "Content Creator", body: "Grabación y edición — Reels, TikToks y carruseles, hechos de punta a punta." },
+      { num: "04", title: "Copywriting", body: "Guiones, captions, copy de campaña — escritura que suena a persona, no a marca." }
+    ]
   },
   work: {
     eyebrow: "Casos de éxito",

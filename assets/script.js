@@ -54,10 +54,26 @@
     document.getElementById("details-tools").innerHTML = TOOLS.map(chip).join("");
   }
 
+  function renderPillars() {
+    var s = t().pillars;
+    document.getElementById("pillars-eyebrow").textContent = s.eyebrow;
+    document.getElementById("pillars-title").textContent = s.title;
+    document.getElementById("pillars-list").innerHTML = s.items.map(function (item) {
+      return (
+        '<div class="index-item">' +
+          '<span class="index-num">' + item.num + '</span>' +
+          '<span class="index-item-title">' + item.title + '</span>' +
+          '<span class="index-item-body">' + item.body + '</span>' +
+        '</div>'
+      );
+    }).join("");
+  }
+
   function renderAll() {
     renderHeader();
     renderIntro();
     renderDetails();
+    renderPillars();
   }
 
   document.getElementById("lang-toggle").addEventListener("click", function () {
