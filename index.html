@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Germán Rojas La Valle — Content & Social Media Manager</title>
+<meta name="description" content="Content & Social Media Manager with 4+ years leading content strategy across LATAM's fintech industry. Case studies, creator work, and contact.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+<header class="site-header" id="top">
+  <div class="wrap header-inner">
+    <a href="#top" class="logo">Germán Rojas La Valle</a>
+    <nav class="main-nav" id="main-nav">
+      <a href="#about" data-nav="about"></a>
+      <a href="#work" data-nav="work"></a>
+      <a href="#creator" data-nav="creator"></a>
+      <a href="#contact" data-nav="contact"></a>
+    </nav>
+    <div class="header-actions">
+      <button class="lang-toggle" id="lang-toggle" type="button" aria-label="Switch language"></button>
+      <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <p class="eyebrow" id="hero-eyebrow"></p>
+      <h1 id="hero-title"></h1>
+      <p class="hero-subtitle" id="hero-subtitle"></p>
+      <div class="hero-ctas">
+        <a href="#work" class="btn btn-primary" id="hero-cta-work"></a>
+        <a href="#contact" class="btn btn-ghost" id="hero-cta-contact"></a>
+      </div>
+      <div class="hero-stats" id="hero-stats"></div>
+    </div>
+  </section>
+
+  <section class="section" id="about">
+    <div class="wrap about-grid">
+      <div class="about-photo">
+        <img src="assets/images/profile.jpg" alt="Germán Rojas La Valle">
+      </div>
+      <div class="about-content">
+        <p class="eyebrow" id="about-eyebrow"></p>
+        <h2 id="about-title"></h2>
+        <div id="about-body"></div>
+
+        <div class="about-meta">
+          <div>
+            <p class="meta-label" id="about-languages-label"></p>
+            <p id="about-languages"></p>
+          </div>
+        </div>
+
+        <div class="about-block">
+          <p class="meta-label" id="about-experience-label"></p>
+          <ul class="timeline" id="about-experience"></ul>
+        </div>
+
+        <div class="about-block">
+          <p class="meta-label" id="about-education-label"></p>
+          <ul class="timeline" id="about-education"></ul>
+        </div>
+
+        <div class="about-block">
+          <p class="meta-label" id="about-skills-label"></p>
+          <div class="skills-grid" id="about-skills"></div>
+        </div>
+
+        <a href="assets/files/German_Rojas_La_Valle_CV_ES.pdf" class="btn btn-outline" id="about-cv-btn" download></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="work">
+    <div class="wrap">
+      <p class="eyebrow" id="work-eyebrow"></p>
+      <h2 id="work-title"></h2>
+      <div class="cases-grid" id="cases-grid"></div>
+    </div>
+  </section>
+
+  <section class="section" id="creator">
+    <div class="wrap">
+      <p class="eyebrow" id="creator-eyebrow"></p>
+      <h2 id="creator-title"></h2>
+      <p class="section-intro" id="creator-body"></p>
+
+      <div class="creator-stats-bar">
+        <span class="meta-label" id="creator-account-label"></span>
+        <div class="creator-stats" id="creator-stats"></div>
+      </div>
+
+      <div class="creator-grid" id="creator-grid"></div>
+    </div>
+  </section>
+
+  <section class="section section-dark" id="contact">
+    <div class="wrap">
+      <p class="eyebrow" id="contact-eyebrow"></p>
+      <h2 id="contact-title"></h2>
+      <p class="section-intro" id="contact-body"></p>
+      <div class="contact-links" id="contact-links"></div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p id="footer-text"></p>
+  </div>
+</footer>
+
+<div class="modal-overlay" id="case-modal">
+  <div class="modal" role="dialog" aria-modal="true">
+    <button class="modal-close" id="modal-close" type="button" aria-label="Close"></button>
+    <div class="modal-body" id="modal-body"></div>
+  </div>
+</div>
+
+<script src="assets/content.js"></script>
+<script src="assets/script.js"></script>
+</body>
+</html>
