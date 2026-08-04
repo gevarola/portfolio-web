@@ -382,7 +382,6 @@ const TOOLS = [
   { name: "Figma", icon: "figma", color: "#F24E1E" },
   { name: "Canva", icon: "canva", color: "#00C4CC" },
   { name: "Buffer", icon: "buffer", color: "#231F20" },
-  { name: "SEMrush", icon: "semrush", color: "#FF642D" },
   { name: "Google Workspace", icon: "google", color: "#4285F4" },
   { name: "ChatGPT", icon: "openai", color: "#10A37F" },
   { name: "Claude", icon: "anthropic", color: "#D97757" },

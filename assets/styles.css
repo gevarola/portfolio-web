@@ -1,12 +1,13 @@
 :root {
-  --bg: #F7F3EC;
-  --ink: #14151A;
-  --ink-soft: #55524A;
-  --ink-faint: #918C7E;
-  --blue: #3A5CFF;
-  --coral: #FF5A36;
+  --bg: #121317;
+  --ink: #F4F1E9;
+  --ink-soft: #B6B2A6;
+  --ink-faint: #767264;
+  --blue: #5271FF;
+  --coral: #FF6A48;
   --yellow: #FFC53D;
-  --line: rgba(20, 21, 26, 0.12);
+  --line: rgba(244, 241, 233, 0.14);
+  --chip-shadow: 0 3px 10px rgba(0, 0, 0, 0.35);
   --font-display: "Space Grotesk", "Helvetica Neue", Arial, sans-serif;
   --font-body: "Inter", "Helvetica Neue", Arial, sans-serif;
 }
@@ -108,7 +109,7 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 700; line-height: 1.
 }
 .btn:hover { transform: translateY(-1px); }
 .btn-primary { background: var(--ink); color: var(--bg); }
-.btn-primary:hover { background: var(--blue); }
+.btn-primary:hover { background: var(--blue); color: #fff; }
 .btn-ghost { background: transparent; color: var(--ink); border-color: var(--line); }
 .btn-ghost:hover { border-color: var(--ink); }
 
@@ -160,8 +161,9 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 700; line-height: 1.
   gap: 8px;
   font-size: 13px;
   font-weight: 600;
+  color: #14151A;
   background: #fff;
-  border: 1px solid var(--line);
+  box-shadow: var(--chip-shadow);
   padding: 8px 16px 8px 12px;
   border-radius: 999px;
   margin: 0 0 24px;
@@ -207,7 +209,7 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 700; line-height: 1.
   height: 38px;
   border-radius: 11px;
   background: #fff;
-  border: 1px solid var(--line);
+  box-shadow: var(--chip-shadow);
   display: inline-flex;
   align-items: center;
   justify-content: center;
