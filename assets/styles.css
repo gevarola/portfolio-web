@@ -161,7 +161,7 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 700; line-height: 1.
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--coral);
+  color: var(--blue);
   margin: 0 0 20px;
 }
 
