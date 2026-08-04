@@ -13,6 +13,17 @@
   --font-serif: "Fraunces", Georgia, serif;
 }
 
+.section-dark { background: var(--bg); color: var(--ink); }
+.section-light {
+  --bg: #F4F1E9;
+  --ink: #14151A;
+  --ink-soft: #55524A;
+  --ink-faint: #8A8578;
+  --line: rgba(20, 21, 26, 0.12);
+  background: var(--bg);
+  color: var(--ink);
+}
+
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 body {
