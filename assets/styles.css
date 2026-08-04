@@ -198,7 +198,7 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 700; line-height: 1.
 .badge-row { margin-top: 22px; }
 .badge-row-label {
   display: block;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -247,15 +247,15 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 700; line-height: 1.
   font-family: var(--font-serif);
   font-style: italic;
   font-weight: 600;
-  font-size: 34px;
+  font-size: 40px;
   color: var(--blue);
   margin-bottom: 28px;
 }
 .timeline { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 22px; }
-.timeline li { display: flex; flex-direction: column; gap: 2px; }
-.timeline .t-role { font-weight: 600; color: var(--ink); font-size: 15px; }
-.timeline .t-org { color: var(--ink-soft); font-size: 13.5px; }
-.timeline .t-period { color: var(--ink-faint); font-size: 12.5px; margin-top: 2px; }
+.timeline li { display: flex; flex-direction: column; gap: 3px; }
+.timeline .t-role { font-weight: 600; color: var(--ink); font-size: 17px; }
+.timeline .t-org { color: var(--ink-soft); font-size: 15px; }
+.timeline .t-period { color: var(--ink-faint); font-size: 13.5px; margin-top: 2px; }
 
 /* Pillars / index */
 .eyebrow {
@@ -293,12 +293,12 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 700; line-height: 1.
 .index-item-title {
   font-family: var(--font-display);
   font-weight: 600;
-  font-size: 24px;
+  font-size: 27px;
 }
 .index-item-body {
   color: var(--ink-soft);
-  font-size: 15.5px;
-  max-width: 420px;
+  font-size: 17px;
+  max-width: 440px;
 }
 
 /* Responsive */
