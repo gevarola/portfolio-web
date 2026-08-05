@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Germán Rojas La Valle — Content & Social Media Manager</title>
+<title>Germán Rojas La Valle · Content & Social Media Manager</title>
 <meta name="description" content="Content & Social Media Manager with 4+ years leading content strategy across LATAM's fintech industry. Case studies, creator work, and contact.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,12 +14,18 @@
 
 <header class="site-header" id="top">
   <div class="wrap header-inner">
-    <a href="#top" class="logo">Germán Rojas La Valle</a>
+    <a href="#top" class="logo">Portfolio</a>
     <nav class="main-nav" id="main-nav">
-      <!-- se completa a medida que armamos cada sección -->
+      <a href="#details" data-nav="about"></a>
+      <a href="#work" data-nav="work"></a>
+      <a href="#creator" data-nav="creator"></a>
+      <a href="#contact" data-nav="contact"></a>
     </nav>
     <div class="header-actions">
-      <button class="lang-toggle" id="lang-toggle" type="button" aria-label="Switch language"></button>
+      <div class="lang-switch" id="lang-toggle" role="group" aria-label="Language">
+        <button class="lang-option" data-lang="es" type="button"><span class="lang-flag" aria-hidden="true">🇦🇷</span>ES</button>
+        <button class="lang-option" data-lang="en" type="button"><span class="lang-flag" aria-hidden="true">🇺🇸</span>EN</button>
+      </div>
       <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Menu">
         <span></span><span></span><span></span>
       </button>
@@ -48,6 +54,10 @@
     </div>
   </section>
 
+  <div class="ticker section-light" aria-hidden="true">
+    <div class="ticker-track" id="ticker-track"></div>
+  </div>
+
   <section class="details section-light" id="details">
     <div class="wrap details-grid">
       <div class="details-col">
@@ -57,7 +67,14 @@
       <div class="details-col">
         <h2 class="details-heading" id="details-education-heading"></h2>
         <ul class="timeline" id="details-education"></ul>
-        <a href="assets/files/German_Rojas_La_Valle_CV_ES.pdf" class="btn btn-outline" id="details-cv-btn" download></a>
+        <div class="languages-block">
+          <span class="badge-row-label" id="details-languages-label"></span>
+          <p id="details-languages"></p>
+        </div>
+        <div class="cv-btn-row">
+          <a href="assets/files/German_Rojas_La_Valle_CV_ES.pdf" class="btn btn-primary" id="details-cv-btn-es" download></a>
+          <a href="assets/files/German_Rojas_La_Valle_CV_EN.pdf" class="btn btn-primary" id="details-cv-btn-en" download></a>
+        </div>
       </div>
       <div class="details-col">
         <h2 class="details-heading" id="details-tools-heading"></h2>
@@ -86,7 +103,44 @@
       <div id="clients-list"></div>
     </div>
   </section>
+
+  <section class="other-work section-dark" id="other-work">
+    <div class="wrap">
+      <h2 class="work-heading" id="other-work-eyebrow"></h2>
+      <p class="other-work-body" id="other-work-body"></p>
+      <div class="other-work-grid" id="other-work-grid"></div>
+    </div>
+  </section>
+
+  <section class="creator section-dark" id="creator">
+    <div class="wrap">
+      <h2 class="work-heading" id="creator-eyebrow"></h2>
+      <p class="creator-body" id="creator-body"></p>
+      <div class="creator-grid" id="creator-grid"></div>
+    </div>
+  </section>
+
+  <section class="ai-section section-light" id="ai">
+    <div class="wrap">
+      <h2 class="work-heading" id="ai-eyebrow"></h2>
+      <p class="ai-body" id="ai-body"></p>
+      <div class="ai-shots" id="ai-shots"></div>
+      <a href="#" class="btn btn-primary ai-cta" id="ai-cta" target="_blank" rel="noopener"></a>
+    </div>
+  </section>
+
+  <section class="contact section-light" id="contact">
+    <div class="wrap">
+      <h2 class="work-heading" id="contact-title"></h2>
+      <p class="contact-body" id="contact-body"></p>
+      <div class="contact-links" id="contact-links"></div>
+    </div>
+  </section>
 </main>
+
+<footer class="site-footer section-light">
+  <div class="wrap"><p id="site-footer-text"></p></div>
+</footer>
 
 <div class="modal-overlay" id="case-modal">
   <div class="modal" role="dialog" aria-modal="true">

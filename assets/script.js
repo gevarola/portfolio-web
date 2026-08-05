@@ -7,7 +7,9 @@
     var s = t();
     document.title = s.meta.title;
     document.documentElement.lang = state.lang;
-    document.getElementById("lang-toggle").textContent = s.meta.langLabel;
+    document.querySelectorAll(".lang-option").forEach(function (btn) {
+      btn.classList.toggle("active", btn.getAttribute("data-lang") === state.lang);
+    });
     var navLinks = document.querySelectorAll("[data-nav]");
     navLinks.forEach(function (a) {
       a.textContent = s.nav[a.getAttribute("data-nav")];
@@ -34,6 +36,14 @@
     document.getElementById("intro-cta-contact").textContent = s.ctaContact;
   }
 
+  function renderTicker() {
+    var words = TICKER_KEYWORDS[state.lang];
+    var itemsHtml = words.map(function (w) {
+      return '<span class="ticker-word">' + w + '</span><span class="ticker-dot">·</span>';
+    }).join("");
+    document.getElementById("ticker-track").innerHTML = itemsHtml + itemsHtml;
+  }
+
   function renderDetails() {
     var s = t().details;
     document.getElementById("details-experience-heading").textContent = s.experienceHeading;
@@ -44,9 +54,14 @@
     document.getElementById("details-education").innerHTML = s.education.map(function (e) {
       return '<li><span class="t-role">' + e.name + '</span><span class="t-org">' + e.org + '</span><span class="t-period">' + e.year + '</span></li>';
     }).join("");
-    var cvBtn = document.getElementById("details-cv-btn");
-    cvBtn.textContent = s.cvButton;
-    cvBtn.setAttribute("href", LINKS.cv);
+    document.getElementById("details-languages-label").textContent = s.languagesLabel;
+    document.getElementById("details-languages").textContent = s.languages;
+    var cvBtnEs = document.getElementById("details-cv-btn-es");
+    cvBtnEs.textContent = s.cvButtonEs;
+    cvBtnEs.setAttribute("href", LINKS.cvEs);
+    var cvBtnEn = document.getElementById("details-cv-btn-en");
+    cvBtnEn.textContent = s.cvButtonEn;
+    cvBtnEn.setAttribute("href", LINKS.cvEn);
     document.getElementById("details-tools-heading").textContent = s.toolsHeading;
     document.getElementById("details-platforms-label").textContent = s.platformsLabel;
     document.getElementById("details-tools-label").textContent = s.toolsLabel;
@@ -68,13 +83,20 @@
     }).join("");
   }
 
-  function projectCard(c, index) {
+  function projectCard(c) {
     var c_l = c[state.lang];
+    var c_tag = c.tag[state.lang];
+    var s = t().work;
+    var posStyle = c.imgPos ? ' style="object-position:' + c.imgPos + '"' : '';
     return (
       '<article class="project-card" data-case="' + c.id + '">' +
-        '<span class="project-card-tag">' + c.tag[state.lang] + '</span>' +
-        '<span class="project-card-num" aria-hidden="true">' + String(index + 1).padStart(2, "0") + '</span>' +
-        '<span class="project-card-title">' + c_l.title + '</span>' +
+        '<div class="project-card-img"><img src="' + c.image + '" alt="' + c_l.title + '" loading="lazy"' + posStyle + '></div>' +
+        '<div class="project-card-body">' +
+          '<p class="project-card-meta">' + c.org + ' · ' + c_tag + ' · ' + c.period + '</p>' +
+          '<h4 class="project-card-title">' + c_l.title + '</h4>' +
+          '<p class="project-card-teaser">' + c_l.challenge + '</p>' +
+          '<span class="project-card-link">' + s.viewCase + ' →</span>' +
+        '</div>' +
       '</article>'
     );
   }
@@ -83,25 +105,90 @@
     var s = t().work;
     document.getElementById("work-heading").textContent = s.heading;
     var listEl = document.getElementById("clients-list");
-    listEl.innerHTML = CLIENTS.map(function (client) {
-      var cl = client[state.lang];
-      var projects = CASES.filter(function (c) { return c.client === client.id; });
-      return (
-        '<div class="client-block">' +
-          '<div class="client-header">' +
-            '<h3 class="client-name">' + cl.name + '</h3>' +
-            '<p class="client-meta">' + cl.meta + '</p>' +
-            '<p class="client-intro">' + cl.intro + '</p>' +
-          '</div>' +
-          '<div class="project-grid">' + projects.map(projectCard).join("") + '</div>' +
-        '</div>'
-      );
-    }).join("");
+    listEl.innerHTML = '<div class="project-grid">' + CASES.map(projectCard).join("") + '</div>';
     listEl.querySelectorAll(".project-card").forEach(function (card) {
       card.addEventListener("click", function () {
         openCaseModal(card.getAttribute("data-case"));
       });
     });
+  }
+
+  function creatorCard(item) {
+    var statsHtml = item.stats
+      ? '<p class="creator-card-stats">' + item.stats.map(function (st) { return st.value + ' ' + st[state.lang]; }).join(" · ") + '</p>'
+      : '';
+    var brandLine = '<span class="creator-card-handle">' + item.brand + '</span>' + (item.type ? ' · ' + item.type[state.lang] : '');
+    return (
+      '<a class="creator-card" href="' + item.link + '" target="_blank" rel="noopener">' +
+        '<div class="creator-card-img"><img src="' + item.image + '" alt="' + item.brand + '" loading="lazy"></div>' +
+        '<div class="creator-card-body">' +
+          '<p class="creator-card-brand">' + brandLine + '</p>' +
+          '<p class="creator-card-desc">' + item[state.lang] + '</p>' +
+          statsHtml +
+        '</div>' +
+      '</a>'
+    );
+  }
+
+  function renderOtherWork() {
+    var s = t().otherWork;
+    document.getElementById("other-work-eyebrow").textContent = s.eyebrow;
+    document.getElementById("other-work-body").textContent = s.body;
+    document.getElementById("other-work-grid").innerHTML = OTHER_CLIENTS.map(function (c) {
+      return (
+        '<a class="other-work-item" href="' + c.link + '" target="_blank" rel="noopener">' +
+          '<div class="other-work-logo"><img src="' + c.logo + '" alt="' + c.name + '" loading="lazy"></div>' +
+          '<span class="other-work-name">' + c.name + '</span>' +
+          '<span class="other-work-stage">' + c.stage[state.lang] + '</span>' +
+        '</a>'
+      );
+    }).join("");
+  }
+
+  function renderCreator() {
+    var s = t().creator;
+    document.getElementById("creator-eyebrow").textContent = s.eyebrow;
+    document.getElementById("creator-body").textContent = s.body;
+    document.getElementById("creator-grid").innerHTML = CREATOR_ITEMS.map(creatorCard).join("");
+  }
+
+  function renderAI() {
+    var s = t().ai;
+    document.getElementById("ai-eyebrow").textContent = s.eyebrow;
+    document.getElementById("ai-body").textContent = s.body;
+    document.getElementById("ai-shots").innerHTML = s.shots.map(function (shot) {
+      return (
+        '<div class="ai-shot-card">' +
+          '<div class="ai-shot-img"><img src="' + shot.image + '" alt="' + s.eyebrow + '" loading="lazy"></div>' +
+          '<p class="ai-shot-caption">' + shot.caption + '</p>' +
+        '</div>'
+      );
+    }).join("");
+    var cta = document.getElementById("ai-cta");
+    cta.textContent = s.ctaLabel;
+    cta.setAttribute("href", LINKS.tempoDashboard);
+  }
+
+  function renderContact() {
+    var s = t().contact;
+    document.getElementById("contact-title").textContent = s.title;
+    document.getElementById("contact-body").textContent = s.body;
+    var rows = [
+      { label: s.emailLabel, href: "mailto:" + LINKS.email, icon: "mail" },
+      { label: s.linkedinLabel, href: LINKS.linkedin, icon: "linkedin" },
+      { label: s.instagramLabel, href: LINKS.instagram, icon: "instagram" },
+      { label: s.githubLabel, href: LINKS.github, icon: "github" }
+    ];
+    document.getElementById("contact-links").innerHTML = rows.map(function (r) {
+      var isExternal = r.href.indexOf("mailto:") !== 0;
+      return (
+        '<a class="contact-icon-btn" href="' + r.href + '"' + (isExternal ? ' target="_blank" rel="noopener"' : '') +
+        ' aria-label="' + r.label + '" title="' + r.label + '">' +
+        '<svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="' + ICON_PATHS[r.icon] + '"/></svg>' +
+        '</a>'
+      );
+    }).join("");
+    document.getElementById("site-footer-text").textContent = s.footer;
   }
 
   function openCaseModal(caseId) {
@@ -123,7 +210,9 @@
       '<div class="modal-stats">' + statsHtml + '</div>' +
       '<div class="modal-section"><h4>' + s.challengeLabel + '</h4><p>' + c_l.challenge + '</p></div>' +
       '<div class="modal-section"><h4>' + s.processLabel + '</h4><ul>' + processHtml + '</ul></div>' +
-      '<div class="modal-section"><h4>' + s.resultLabel + '</h4><p>' + c_l.result + '</p></div>';
+      '<div class="modal-section"><h4>' + s.resultLabel + '</h4><p>' + c_l.result + '</p></div>' +
+      '<div class="modal-section"><h4>' + s.strategicLabel + '</h4><p>' + c_l.strategicThinking + '</p></div>' +
+      '<div class="modal-section"><h4>' + s.learnedLabel + '</h4><p>' + c_l.whatWeLearned + '</p></div>';
 
     document.getElementById("modal-close").setAttribute("aria-label", s.close);
     document.getElementById("case-modal").classList.add("open");
@@ -138,15 +227,24 @@
   function renderAll() {
     renderHeader();
     renderIntro();
+    renderTicker();
     renderDetails();
     renderPillars();
     renderWork();
+    renderOtherWork();
+    renderCreator();
+    renderAI();
+    renderContact();
   }
 
-  document.getElementById("lang-toggle").addEventListener("click", function () {
-    state.lang = state.lang === "en" ? "es" : "en";
-    localStorage.setItem("grlv-lang", state.lang);
-    renderAll();
+  document.querySelectorAll(".lang-option").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var lang = btn.getAttribute("data-lang");
+      if (lang === state.lang) return;
+      state.lang = lang;
+      localStorage.setItem("grlv-lang", state.lang);
+      renderAll();
+    });
   });
 
   var navToggle = document.getElementById("nav-toggle");
@@ -155,6 +253,11 @@
       document.querySelector(".site-header").classList.toggle("nav-open");
     });
   }
+  document.getElementById("main-nav").addEventListener("click", function (e) {
+    if (e.target.tagName === "A") {
+      document.querySelector(".site-header").classList.remove("nav-open");
+    }
+  });
 
   document.getElementById("modal-close").addEventListener("click", closeCaseModal);
   document.getElementById("case-modal").addEventListener("click", function (e) {
