@@ -200,114 +200,81 @@ const LINKS = {
 
 const CASES = [
   {
-    id: "brand-expansion",
-    client: "bitso",
-    tag: { en: "Growth", es: "Growth" },
-    image: "assets/images/Brand expansion Latam.webp",
-    org: "Bitso",
-    period: "2022 to 2026",
+    id: "havanna-mundial",
+    client: "havanna",
+    tag: { en: "Community Management & Copywriting", es: "Community Management & Copywriting" },
+    image: "assets/images/case-havanna-hero.jpg",
+    image2: "assets/images/case-havanna-tweet.jpg",
+    org: "Havanna",
+    period: "2026",
     stats: [
-      { value: "60K+", en: "combined followers built from zero", es: "seguidores combinados construidos desde cero" },
-      { value: "40–50", en: "pieces of content / week across 4 markets", es: "piezas de contenido / semana en 4 mercados" },
-      { value: "10+", en: "person hybrid team coordinated", es: "personas en el equipo híbrido coordinado" }
+      { value: "+39M", en: "views in 45 days", es: "de views en 45 días" },
+      { value: "+512K", en: "engagement", es: "de engagement" },
+      { value: "130+", en: "pieces of content produced", es: "piezas de contenido producidas" }
     ],
     en: {
-      title: "Brand expansion in LATAM",
-      challenge: "Bitso had consolidated channels in Mexico and Brazil, but no dedicated presence in Argentina or Colombia, and content volume and consistency across markets was uneven.",
+      title: "Havanna x Leo",
+      challenge: "Havanna partnered with Lionel Messi during the 2026 World Cup. Success meant capturing a fast-moving, high-emotion national conversation in real time, not just publishing a fixed calendar, while protecting a beloved 100-year-old brand from ever feeling opportunistic.",
       process: [
-        "Built the Argentina and Colombia channels from scratch: architecture, localized tone of voice, and a market-specific editorial calendar, going from zero to consistent weekly publishing in both.",
-        "Coordinated a hybrid team (in-house + agency) to sustain production across all 4 markets simultaneously, publishing on Instagram, X and Facebook every week without interruption.",
-        "In 2025, led the content side of Bitso's global rebrand for the region, rebuilding messaging architecture, tone of voice and creative guidelines from scratch."
+        "Ran real-time content and community strategy across Instagram, TikTok, Facebook and X for 45+ days, from campaign launch through the tournament final.",
+        "Rode cultural moments as they happened (Messi's birthday, the pre-final tension, the final whistle), turning each into timely content instead of sticking to a rigid calendar.",
+        "Tracked audience sentiment daily and adjusted tone in real time, moderating conversation through emotionally sensitive moments like product doubts, pricing questions and the match result.",
+        "Balanced two roles for the brand at once, cheering as a fan and building awareness as a marketer, without ever reading as opportunistic."
       ],
-      result: "Took Bitso from operating in 2 markets to a full, owned content strategy across 4, with a unified tone of voice and content pillars aligned to business goals in every market and channel.",
-      strategicThinking: "We went with a hybrid team (in-house + agency) instead of fully outsourcing or keeping it fully in-house: the agency gave us production speed, while brand-voice control stayed in-house. And we built Argentina and Colombia from scratch instead of translating Mexico and Brazil's content, because the crypto conversation is different in every market.",
-      whatWeLearned: "At first we assumed one unified LATAM tone would work across all 4 markets. It didn't. We had to break the single playbook and let each market find its own voice within the same guidelines."
+      result: "39M+ views, 512K+ engagement and 130+ pieces of content in 45 days. Sentiment stayed strongly positive throughout the campaign, reaching 100% positive in the emotional aftermath of the final, with the campaign becoming one of the most talked-about brand moments of the tournament in Argentina.",
+      strategicThinking: "The rule for balancing \"fan\" and \"marketer\": every post had to feel genuine first, brand second.",
+      whatWeLearned: "The closer a brand gets to its users, the more engagement and the more good buzz it generates."
     },
     es: {
-      title: "Expansión de marca en LATAM",
-      challenge: "Bitso tenía canales consolidados en México y Brasil, pero ninguna presencia dedicada en Argentina o Colombia, y el volumen y la consistencia de contenido entre mercados era despareja.",
+      title: "Havanna x Leo",
+      challenge: "Havanna se asoció con Lionel Messi durante el Mundial 2026. El éxito significaba capturar en tiempo real una conversación nacional de alta emocionalidad y ritmo acelerado, no solo publicar un calendario fijo, cuidando a la vez a una marca centenaria y querida de sonar oportunista.",
       process: [
-        "Construimos los canales de Argentina y Colombia desde cero: arquitectura, tono de voz localizado y un calendario editorial por mercado, pasando de cero a publicación semanal consistente en ambos.",
-        "Coordinamos un equipo híbrido (interno + agencia) para sostener la producción en los 4 mercados en simultáneo, publicando en Instagram, X y Facebook todas las semanas sin interrupciones.",
-        "En 2025, lideré el lado de contenido del rebranding global de Bitso para la región, reconstruyendo la arquitectura de mensajes, el tono de voz y los lineamientos creativos desde cero."
+        "Llevé la estrategia de contenido y comunidad en tiempo real en Instagram, TikTok, Facebook y X durante más de 45 días, desde el lanzamiento de la campaña hasta la final del torneo.",
+        "Capitalizamos los momentos culturales a medida que sucedían (el cumpleaños de Messi, la previa a la final, el pitazo final), convirtiendo cada uno en contenido oportuno en vez de seguir un calendario rígido.",
+        "Trackeamos el sentimiento de la audiencia día a día y ajustamos el tono en tiempo real, moderando la conversación en momentos emocionalmente sensibles como dudas de producto, consultas de precio y el resultado del partido.",
+        "Balanceamos dos roles a la vez para la marca, alentar como hincha y generar awareness como marketer, sin que se sintiera oportunista en ningún momento."
       ],
-      result: "Llevamos a Bitso de operar en 2 mercados a una estrategia de contenido propia en 4, con un tono de voz y pilares de contenido unificados y alineados a los objetivos de negocio en cada mercado y canal.",
-      strategicThinking: "Optamos por un equipo híbrido (interno + agencia) en vez de tercerizar todo o mantenerlo 100% interno: la agencia daba velocidad de producción, pero el control de brand voice se mantenía adentro. Y construimos Argentina y Colombia desde cero en vez de \"traducir\" el contenido de México/Brasil, porque la conversación cripto es distinta en cada mercado.",
-      whatWeLearned: "Al principio asumimos que un tono de marca único para toda LATAM iba a funcionar en los 4 mercados. No fue así. Tuvimos que romper el playbook único y dejar que cada mercado tuviera su propia voz dentro de los mismos lineamientos."
+      result: "+39M de visualizaciones, +512K de engagement y +130 piezas de contenido en 45 días. El sentimiento se mantuvo fuertemente positivo durante toda la campaña, llegando a 100% positivo en el after emocional de la final, y la campaña se convirtió en uno de los momentos de marca más comentados del torneo en Argentina.",
+      strategicThinking: "La regla para balancear \"hincha\" y \"marketer\": todo posteo tenía que sentirse genuino primero, marca después.",
+      whatWeLearned: "Cuanto más cercana es la marca con los usuarios, más engagement y ruido positivo genera."
     }
   },
   {
-    id: "hugging-users",
+    id: "storytelling-culture",
     client: "bitso",
-    tag: { en: "Educational Content", es: "Contenido Educativo" },
-    image: "assets/images/case-hugging-users.jpg",
+    tag: { en: "Culture & Storytelling", es: "Cultura & Storytelling" },
+    image: "assets/images/case-storytelling.jpg",
+    imgPos: "top",
     org: "Bitso",
-    period: "2023 to 2026",
+    period: "2026",
     stats: [
-      { value: "+2M", en: "impressions", es: "de impresiones" },
-      { value: "+400K", en: "engagement", es: "de engagement" },
-      { value: "15+", en: "how-to videos & guides produced", es: "videos y guías how-to producidos" }
+      { value: "+300K", en: "impressions", es: "de impresiones" },
+      { value: "+1K", en: "saves", es: "guardados" },
+      { value: "+2K", en: "shares", es: "compartidos" }
     ],
     en: {
-      title: "Hugging Our Users",
-      challenge: "Customer support was getting a high volume of repetitive tickets: questions users could have solved themselves with the right content.",
+      title: "Financial storytelling through culture",
+      challenge: "Crypto and financial concepts are inherently complex, and traditional educational content often loses the audience before the point lands.",
       process: [
-        "Mapped the most frequent questions across social channels to find users' real pain points.",
-        "Designed a new educational content branch: 15+ how-to videos and carousel guides, from buying crypto for the first time to setting up a wallet.",
-        "Published natively across Instagram and TikTok, written to sound like a friend explaining, not a support article."
+        "Identified high-profile cultural moments (a record-breaking Pokémon card auction, the economics of Oscar campaigns, the cost of a Super Bowl ad) as entry points to explain financial concepts.",
+        "Built each piece around a hook the audience already cared about, then connected it to a financial insight they hadn't considered.",
+        "Designed content to be genuinely educational, not promotional, positioning Bitso as a trusted voice in financial literacy, not just crypto."
       ],
-      result: "Built a functional content pillar with a double impact: real, on-demand answers for users, and less operational load for the support team, as common questions got solved by content before they became tickets.",
-      strategicThinking: "We chose social content over just improving the help center, because that's where users were already paying attention: a video feels like a friend explaining, a support article doesn't.",
-      whatWeLearned: "We expected each video to directly lower ticket volume on that specific topic. Some did, but the bigger real impact was on brand trust. We learned to measure that by sentiment too, not just tickets avoided."
+      result: "Made complex financial concepts accessible and shareable by anchoring them to moments people were already talking about, proving the best entry point to financial education is a story the audience already knows, not a definition.",
+      strategicThinking: "We anchored financial education to pop-culture moments instead of a traditional explainer format, because the audience was already emotionally hooked, which lowered the resistance to \"learning something.\"",
+      whatWeLearned: "At first we wanted to spell out the \"financial insight\" clearly in every piece. It worked better once we kept it subtler and the content felt more like culture than class. We learned to under-explain instead of over-explain."
     },
     es: {
-      title: "Hugging Our Users",
-      challenge: "El equipo de soporte recibía un volumen alto de tickets repetitivos: preguntas que los usuarios podrían haber resuelto solos con el contenido correcto.",
+      title: "Storytelling financiero a través de la cultura",
+      challenge: "Los conceptos de cripto y finanzas son inherentemente complejos, y el contenido educativo tradicional suele perder a la audiencia antes de llegar al punto.",
       process: [
-        "Mapeamos las preguntas más frecuentes en redes para identificar los verdaderos puntos de dolor de los usuarios.",
-        "Diseñamos una nueva rama de contenido educativo: +15 videos how-to y guías en carrusel, desde comprar cripto por primera vez hasta configurar una wallet.",
-        "Publicamos en formato nativo en Instagram y TikTok, escrito para sonar como un amigo explicando, no como un artículo de soporte."
+        "Identificamos momentos culturales de alto perfil (una subasta récord de una carta Pokémon, la economía detrás de las campañas al Oscar, el costo de un spot en el Super Bowl) como puerta de entrada para explicar conceptos financieros.",
+        "Construimos cada pieza alrededor de un gancho que a la audiencia ya le importaba, y lo conectamos con un insight financiero que no habían considerado.",
+        "Diseñamos contenido genuinamente educativo, no promocional, posicionando a Bitso como una voz de confianza en educación financiera, no solo en cripto."
       ],
-      result: "Construimos un pilar de contenido funcional con doble impacto: respuestas reales y a demanda para los usuarios, y menos carga operativa para el equipo de soporte, porque las preguntas comunes se resolvían con contenido antes de convertirse en tickets.",
-      strategicThinking: "Elegimos contenido en redes en vez de mejorar solo la central de ayuda, porque ahí es donde el usuario ya presta atención: un video se siente como \"un amigo explicando\", un artículo de soporte no.",
-      whatWeLearned: "Esperábamos que cada video bajara directamente el volumen de tickets sobre ese tema puntual. Algunos lo hicieron, pero el impacto real más grande fue en confianza de marca. Aprendimos a medir esto también por sentimiento, no solo por tickets evitados."
-    }
-  },
-  {
-    id: "financial-education",
-    client: "bitso",
-    tag: { en: "Creator Partnerships", es: "Alianzas con Creadores" },
-    image: "assets/images/case-financial-education.jpg",
-    org: "Bitso",
-    period: "2024",
-    stats: [
-      { value: "4", en: "creator partnerships, 4 long-form episodes", es: "creadores, 4 episodios long-form" },
-      { value: "20+", en: "short-form clips from the same production", es: "clips short-form de la misma producción" },
-      { value: "+150K", en: "views & +20K engagement combined", es: "views y +20K de engagement combinados" }
-    ],
-    en: {
-      title: "Financial education with content creators",
-      challenge: "User interviews showed a clear demand for more educational content to make informed financial decisions: a gap Bitso's own channels weren't filling.",
-      process: [
-        "Identified and partnered with 4 Argentine creators with established, trusted crypto and finance audiences.",
-        "Co-produced an introductory educational video series, scripting and briefing each creator so the content felt genuinely useful, not branded messaging in disguise.",
-        "Published natively on each creator's own channel and cross-promoted on Bitso's accounts, then repurposed each episode into 4–5 short-form clips."
-      ],
-      result: "Positioned Bitso in financial-education conversations through voices users already trusted, reaching audiences its own channels hadn't engaged before.",
-      strategicThinking: "We worked with creators instead of doing it all in the brand's own voice, because the trust was already built on their side: the audience listens to them on financial topics, not (yet) to an exchange.",
-      whatWeLearned: "We started out briefing very tightly to protect the brand message. The content performed better once we gave creators more creative freedom within guidelines. We learned to loosen the grip."
-    },
-    es: {
-      title: "Educación financiera con creadores de contenido",
-      challenge: "Las entrevistas a usuarios mostraron una demanda clara de más contenido educativo para tomar decisiones financieras informadas: un vacío que los canales propios de Bitso no cubrían.",
-      process: [
-        "Identificamos y armamos alianza con 4 creadores argentinos con audiencias de cripto y finanzas ya establecidas y de confianza.",
-        "Co-producimos una serie de video educativa introductoria, escribiendo el guion y briefeando a cada creador para que el contenido se sintiera genuinamente útil, no mensaje de marca disfrazado.",
-        "Publicamos en formato nativo en el canal de cada creador y lo cross-promocionamos en las cuentas de Bitso, después recortamos cada episodio en 4-5 clips cortos."
-      ],
-      result: "Posicionamos a Bitso en las conversaciones de educación financiera a través de voces en las que los usuarios ya confiaban, llegando a audiencias que los canales propios no habían alcanzado antes.",
-      strategicThinking: "Trabajamos con creadores en vez de hacerlo todo con la voz de la marca porque la confianza ya estaba construida del lado de ellos: la audiencia los escucha a ellos en temas financieros, no (todavía) a un exchange.",
-      whatWeLearned: "Arrancamos briefeando muy de cerca para proteger el mensaje de marca. El contenido funcionó mejor cuando les dimos más libertad creativa dentro de los lineamientos. Aprendimos a soltar el control."
+      result: "Hicimos que conceptos financieros complejos fueran accesibles y compartibles, ancládolos a momentos de los que la gente ya estaba hablando, demostrando que la mejor puerta de entrada a la educación financiera es una historia que la audiencia ya conoce, no una definición.",
+      strategicThinking: "Anclamos educación financiera a momentos de cultura pop en vez de un formato explicativo tradicional, porque la audiencia ya estaba emocionalmente enganchada, lo que bajaba la resistencia a \"aprender algo\".",
+      whatWeLearned: "Al principio queríamos remarcar bien el \"insight financiero\" en cada pieza. Funcionó mejor cuando lo dejamos más sutil y el contenido se sintió más cultura que clase. Aprendimos a subexplicar en vez de sobreexplicar."
     }
   },
   {
@@ -351,81 +318,114 @@ const CASES = [
     }
   },
   {
-    id: "storytelling-culture",
+    id: "financial-education",
     client: "bitso",
-    tag: { en: "Culture & Storytelling", es: "Cultura & Storytelling" },
-    image: "assets/images/case-storytelling.jpg",
-    imgPos: "top",
+    tag: { en: "Creator Partnerships", es: "Alianzas con Creadores" },
+    image: "assets/images/case-financial-education.jpg",
     org: "Bitso",
-    period: "2026",
+    period: "2024",
     stats: [
-      { value: "+300K", en: "impressions", es: "de impresiones" },
-      { value: "+1K", en: "saves", es: "guardados" },
-      { value: "+2K", en: "shares", es: "compartidos" }
+      { value: "4", en: "creator partnerships, 4 long-form episodes", es: "creadores, 4 episodios long-form" },
+      { value: "20+", en: "short-form clips from the same production", es: "clips short-form de la misma producción" },
+      { value: "+150K", en: "views & +20K engagement combined", es: "views y +20K de engagement combinados" }
     ],
     en: {
-      title: "Financial storytelling through culture",
-      challenge: "Crypto and financial concepts are inherently complex, and traditional educational content often loses the audience before the point lands.",
+      title: "Financial education with content creators",
+      challenge: "User interviews showed a clear demand for more educational content to make informed financial decisions: a gap Bitso's own channels weren't filling.",
       process: [
-        "Identified high-profile cultural moments (a record-breaking Pokémon card auction, the economics of Oscar campaigns, the cost of a Super Bowl ad) as entry points to explain financial concepts.",
-        "Built each piece around a hook the audience already cared about, then connected it to a financial insight they hadn't considered.",
-        "Designed content to be genuinely educational, not promotional, positioning Bitso as a trusted voice in financial literacy, not just crypto."
+        "Identified and partnered with 4 Argentine creators with established, trusted crypto and finance audiences.",
+        "Co-produced an introductory educational video series, scripting and briefing each creator so the content felt genuinely useful, not branded messaging in disguise.",
+        "Published natively on each creator's own channel and cross-promoted on Bitso's accounts, then repurposed each episode into 4–5 short-form clips."
       ],
-      result: "Made complex financial concepts accessible and shareable by anchoring them to moments people were already talking about, proving the best entry point to financial education is a story the audience already knows, not a definition.",
-      strategicThinking: "We anchored financial education to pop-culture moments instead of a traditional explainer format, because the audience was already emotionally hooked, which lowered the resistance to \"learning something.\"",
-      whatWeLearned: "At first we wanted to spell out the \"financial insight\" clearly in every piece. It worked better once we kept it subtler and the content felt more like culture than class. We learned to under-explain instead of over-explain."
+      result: "Positioned Bitso in financial-education conversations through voices users already trusted, reaching audiences its own channels hadn't engaged before.",
+      strategicThinking: "We worked with creators instead of doing it all in the brand's own voice, because the trust was already built on their side: the audience listens to them on financial topics, not (yet) to an exchange.",
+      whatWeLearned: "We started out briefing very tightly to protect the brand message. The content performed better once we gave creators more creative freedom within guidelines. We learned to loosen the grip."
     },
     es: {
-      title: "Storytelling financiero a través de la cultura",
-      challenge: "Los conceptos de cripto y finanzas son inherentemente complejos, y el contenido educativo tradicional suele perder a la audiencia antes de llegar al punto.",
+      title: "Educación financiera con creadores de contenido",
+      challenge: "Las entrevistas a usuarios mostraron una demanda clara de más contenido educativo para tomar decisiones financieras informadas: un vacío que los canales propios de Bitso no cubrían.",
       process: [
-        "Identificamos momentos culturales de alto perfil (una subasta récord de una carta Pokémon, la economía detrás de las campañas al Oscar, el costo de un spot en el Super Bowl) como puerta de entrada para explicar conceptos financieros.",
-        "Construimos cada pieza alrededor de un gancho que a la audiencia ya le importaba, y lo conectamos con un insight financiero que no habían considerado.",
-        "Diseñamos contenido genuinamente educativo, no promocional, posicionando a Bitso como una voz de confianza en educación financiera, no solo en cripto."
+        "Identificamos y armamos alianza con 4 creadores argentinos con audiencias de cripto y finanzas ya establecidas y de confianza.",
+        "Co-producimos una serie de video educativa introductoria, escribiendo el guion y briefeando a cada creador para que el contenido se sintiera genuinamente útil, no mensaje de marca disfrazado.",
+        "Publicamos en formato nativo en el canal de cada creador y lo cross-promocionamos en las cuentas de Bitso, después recortamos cada episodio en 4-5 clips cortos."
       ],
-      result: "Hicimos que conceptos financieros complejos fueran accesibles y compartibles, ancládolos a momentos de los que la gente ya estaba hablando, demostrando que la mejor puerta de entrada a la educación financiera es una historia que la audiencia ya conoce, no una definición.",
-      strategicThinking: "Anclamos educación financiera a momentos de cultura pop en vez de un formato explicativo tradicional, porque la audiencia ya estaba emocionalmente enganchada, lo que bajaba la resistencia a \"aprender algo\".",
-      whatWeLearned: "Al principio queríamos remarcar bien el \"insight financiero\" en cada pieza. Funcionó mejor cuando lo dejamos más sutil y el contenido se sintió más cultura que clase. Aprendimos a subexplicar en vez de sobreexplicar."
+      result: "Posicionamos a Bitso en las conversaciones de educación financiera a través de voces en las que los usuarios ya confiaban, llegando a audiencias que los canales propios no habían alcanzado antes.",
+      strategicThinking: "Trabajamos con creadores en vez de hacerlo todo con la voz de la marca porque la confianza ya estaba construida del lado de ellos: la audiencia los escucha a ellos en temas financieros, no (todavía) a un exchange.",
+      whatWeLearned: "Arrancamos briefeando muy de cerca para proteger el mensaje de marca. El contenido funcionó mejor cuando les dimos más libertad creativa dentro de los lineamientos. Aprendimos a soltar el control."
     }
   },
   {
-    id: "havanna-mundial",
-    client: "havanna",
-    tag: { en: "Community Management & Copywriting", es: "Community Management & Copywriting" },
-    image: "assets/images/case-havanna-hero.jpg",
-    image2: "assets/images/case-havanna-tweet.jpg",
-    org: "Havanna",
-    period: "2026",
+    id: "hugging-users",
+    client: "bitso",
+    tag: { en: "Educational Content", es: "Contenido Educativo" },
+    image: "assets/images/case-hugging-users.jpg",
+    org: "Bitso",
+    period: "2023 to 2026",
     stats: [
-      { value: "+39M", en: "views in 45 days", es: "de views en 45 días" },
-      { value: "+512K", en: "engagement", es: "de engagement" },
-      { value: "130+", en: "pieces of content produced", es: "piezas de contenido producidas" }
+      { value: "+2M", en: "impressions", es: "de impresiones" },
+      { value: "+400K", en: "engagement", es: "de engagement" },
+      { value: "15+", en: "how-to videos & guides produced", es: "videos y guías how-to producidos" }
     ],
     en: {
-      title: "Havanna x Mundial",
-      challenge: "Havanna partnered with Lionel Messi during the 2026 World Cup. Success meant capturing a fast-moving, high-emotion national conversation in real time, not just publishing a fixed calendar, while protecting a beloved 100-year-old brand from ever feeling opportunistic.",
+      title: "Hugging Our Users",
+      challenge: "Customer support was getting a high volume of repetitive tickets: questions users could have solved themselves with the right content.",
       process: [
-        "Ran real-time content and community strategy across Instagram, TikTok, Facebook and X for 45+ days, from campaign launch through the tournament final.",
-        "Rode cultural moments as they happened (Messi's birthday, the pre-final tension, the final whistle), turning each into timely content instead of sticking to a rigid calendar.",
-        "Tracked audience sentiment daily and adjusted tone in real time, moderating conversation through emotionally sensitive moments like product doubts, pricing questions and the match result.",
-        "Balanced two roles for the brand at once, cheering as a fan and building awareness as a marketer, without ever reading as opportunistic."
+        "Mapped the most frequent questions across social channels to find users' real pain points.",
+        "Designed a new educational content branch: 15+ how-to videos and carousel guides, from buying crypto for the first time to setting up a wallet.",
+        "Published natively across Instagram and TikTok, written to sound like a friend explaining, not a support article."
       ],
-      result: "39M+ views, 512K+ engagement and 130+ pieces of content in 45 days. Sentiment stayed strongly positive throughout the campaign, reaching 100% positive in the emotional aftermath of the final, with the campaign becoming one of the most talked-about brand moments of the tournament in Argentina.",
-      strategicThinking: "The rule for balancing \"fan\" and \"marketer\": every post had to feel genuine first, brand second.",
-      whatWeLearned: "The closer a brand gets to its users, the more engagement and the more good buzz it generates."
+      result: "Built a functional content pillar with a double impact: real, on-demand answers for users, and less operational load for the support team, as common questions got solved by content before they became tickets.",
+      strategicThinking: "We chose social content over just improving the help center, because that's where users were already paying attention: a video feels like a friend explaining, a support article doesn't.",
+      whatWeLearned: "We expected each video to directly lower ticket volume on that specific topic. Some did, but the bigger real impact was on brand trust. We learned to measure that by sentiment too, not just tickets avoided."
     },
     es: {
-      title: "Havanna x Mundial",
-      challenge: "Havanna se asoció con Lionel Messi durante el Mundial 2026. El éxito significaba capturar en tiempo real una conversación nacional de alta emocionalidad y ritmo acelerado, no solo publicar un calendario fijo, cuidando a la vez a una marca centenaria y querida de sonar oportunista.",
+      title: "Hugging Our Users",
+      challenge: "El equipo de soporte recibía un volumen alto de tickets repetitivos: preguntas que los usuarios podrían haber resuelto solos con el contenido correcto.",
       process: [
-        "Llevé la estrategia de contenido y comunidad en tiempo real en Instagram, TikTok, Facebook y X durante más de 45 días, desde el lanzamiento de la campaña hasta la final del torneo.",
-        "Capitalizamos los momentos culturales a medida que sucedían (el cumpleaños de Messi, la previa a la final, el pitazo final), convirtiendo cada uno en contenido oportuno en vez de seguir un calendario rígido.",
-        "Trackeamos el sentimiento de la audiencia día a día y ajustamos el tono en tiempo real, moderando la conversación en momentos emocionalmente sensibles como dudas de producto, consultas de precio y el resultado del partido.",
-        "Balanceamos dos roles a la vez para la marca, alentar como hincha y generar awareness como marketer, sin que se sintiera oportunista en ningún momento."
+        "Mapeamos las preguntas más frecuentes en redes para identificar los verdaderos puntos de dolor de los usuarios.",
+        "Diseñamos una nueva rama de contenido educativo: +15 videos how-to y guías en carrusel, desde comprar cripto por primera vez hasta configurar una wallet.",
+        "Publicamos en formato nativo en Instagram y TikTok, escrito para sonar como un amigo explicando, no como un artículo de soporte."
       ],
-      result: "+39M de visualizaciones, +512K de engagement y +130 piezas de contenido en 45 días. El sentimiento se mantuvo fuertemente positivo durante toda la campaña, llegando a 100% positivo en el after emocional de la final, y la campaña se convirtió en uno de los momentos de marca más comentados del torneo en Argentina.",
-      strategicThinking: "La regla para balancear \"hincha\" y \"marketer\": todo posteo tenía que sentirse genuino primero, marca después.",
-      whatWeLearned: "Cuanto más cercana es la marca con los usuarios, más engagement y ruido positivo genera."
+      result: "Construimos un pilar de contenido funcional con doble impacto: respuestas reales y a demanda para los usuarios, y menos carga operativa para el equipo de soporte, porque las preguntas comunes se resolvían con contenido antes de convertirse en tickets.",
+      strategicThinking: "Elegimos contenido en redes en vez de mejorar solo la central de ayuda, porque ahí es donde el usuario ya presta atención: un video se siente como \"un amigo explicando\", un artículo de soporte no.",
+      whatWeLearned: "Esperábamos que cada video bajara directamente el volumen de tickets sobre ese tema puntual. Algunos lo hicieron, pero el impacto real más grande fue en confianza de marca. Aprendimos a medir esto también por sentimiento, no solo por tickets evitados."
+    }
+  },
+  {
+    id: "brand-expansion",
+    client: "bitso",
+    tag: { en: "Growth", es: "Growth" },
+    image: "assets/images/Brand expansion Latam.webp",
+    org: "Bitso",
+    period: "2022 to 2026",
+    stats: [
+      { value: "60K+", en: "combined followers built from zero", es: "seguidores combinados construidos desde cero" },
+      { value: "40–50", en: "pieces of content / week across 4 markets", es: "piezas de contenido / semana en 4 mercados" },
+      { value: "10+", en: "person hybrid team coordinated", es: "personas en el equipo híbrido coordinado" }
+    ],
+    en: {
+      title: "Brand expansion in LATAM",
+      challenge: "Bitso had consolidated channels in Mexico and Brazil, but no dedicated presence in Argentina or Colombia, and content volume and consistency across markets was uneven.",
+      process: [
+        "Built the Argentina and Colombia channels from scratch: architecture, localized tone of voice, and a market-specific editorial calendar, going from zero to consistent weekly publishing in both.",
+        "Coordinated a hybrid team (in-house + agency) to sustain production across all 4 markets simultaneously, publishing on Instagram, X and Facebook every week without interruption.",
+        "In 2025, led the content side of Bitso's global rebrand for the region, rebuilding messaging architecture, tone of voice and creative guidelines from scratch."
+      ],
+      result: "Took Bitso from operating in 2 markets to a full, owned content strategy across 4, with a unified tone of voice and content pillars aligned to business goals in every market and channel.",
+      strategicThinking: "We went with a hybrid team (in-house + agency) instead of fully outsourcing or keeping it fully in-house: the agency gave us production speed, while brand-voice control stayed in-house. And we built Argentina and Colombia from scratch instead of translating Mexico and Brazil's content, because the crypto conversation is different in every market.",
+      whatWeLearned: "At first we assumed one unified LATAM tone would work across all 4 markets. It didn't. We had to break the single playbook and let each market find its own voice within the same guidelines."
+    },
+    es: {
+      title: "Expansión de marca en LATAM",
+      challenge: "Bitso tenía canales consolidados en México y Brasil, pero ninguna presencia dedicada en Argentina o Colombia, y el volumen y la consistencia de contenido entre mercados era despareja.",
+      process: [
+        "Construimos los canales de Argentina y Colombia desde cero: arquitectura, tono de voz localizado y un calendario editorial por mercado, pasando de cero a publicación semanal consistente en ambos.",
+        "Coordinamos un equipo híbrido (interno + agencia) para sostener la producción en los 4 mercados en simultáneo, publicando en Instagram, X y Facebook todas las semanas sin interrupciones.",
+        "En 2025, lideré el lado de contenido del rebranding global de Bitso para la región, reconstruyendo la arquitectura de mensajes, el tono de voz y los lineamientos creativos desde cero."
+      ],
+      result: "Llevamos a Bitso de operar en 2 mercados a una estrategia de contenido propia en 4, con un tono de voz y pilares de contenido unificados y alineados a los objetivos de negocio en cada mercado y canal.",
+      strategicThinking: "Optamos por un equipo híbrido (interno + agencia) en vez de tercerizar todo o mantenerlo 100% interno: la agencia daba velocidad de producción, pero el control de brand voice se mantenía adentro. Y construimos Argentina y Colombia desde cero en vez de \"traducir\" el contenido de México/Brasil, porque la conversación cripto es distinta en cada mercado.",
+      whatWeLearned: "Al principio asumimos que un tono de marca único para toda LATAM iba a funcionar en los 4 mercados. No fue así. Tuvimos que romper el playbook único y dejar que cada mercado tuviera su propia voz dentro de los mismos lineamientos."
     }
   }
 ];
