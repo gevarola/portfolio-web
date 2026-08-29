@@ -195,7 +195,7 @@ const LINKS = {
   github: "https://github.com/gevarola",
   cvEs: "assets/files/German_Rojas_La_Valle_CV_ES.pdf",
   cvEn: "assets/files/German_Rojas_La_Valle_CV_EN.pdf",
-  tempoDashboard: "https://tempo-cafe.netlify.app/"
+  tempoDashboard: "https://tempo-cafe-seven.vercel.app/"
 };
 
 const CASES = [
