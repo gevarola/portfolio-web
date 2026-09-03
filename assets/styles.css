@@ -714,12 +714,32 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 700; line-height: 1.
 .webdev-stats .value { font-family: var(--font-display); font-weight: 700; font-size: 20px; color: var(--blue); display: block; }
 .webdev-stats .label { font-size: 13px; color: var(--ink-soft); }
 .webdev-media {
+  position: relative;
   border-radius: 14px;
   overflow: hidden;
   border: 1px solid var(--line);
   box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
 }
-.webdev-media img { width: 100%; height: 100%; display: block; object-fit: cover; }
+.webdev-media img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  filter: grayscale(1) contrast(1.05) brightness(1.05);
+  transition: filter .3s ease;
+}
+.webdev-media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--blue);
+  opacity: 0.5;
+  mix-blend-mode: color;
+  pointer-events: none;
+  transition: opacity .3s ease;
+}
+.webdev-media:hover img { filter: none; }
+.webdev-media:hover::after { opacity: 0; }
 @media (max-width: 900px) {
   .webdev-grid { grid-template-columns: 1fr; }
   .webdev-media { order: -1; }
