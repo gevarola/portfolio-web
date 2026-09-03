@@ -156,17 +156,17 @@
     var s = t().ai;
     document.getElementById("ai-eyebrow").textContent = s.eyebrow;
     document.getElementById("ai-body").textContent = s.body;
-    document.getElementById("ai-shots").innerHTML = s.shots.map(function (shot) {
+    document.getElementById("ai-tools").innerHTML = AI_TOOLS.map(function (tool) {
       return (
-        '<div class="ai-shot-card">' +
-          '<div class="ai-shot-img"><img src="' + shot.image + '" alt="' + s.eyebrow + '" loading="lazy"></div>' +
-          '<p class="ai-shot-caption">' + shot.caption + '</p>' +
+        '<div class="ai-tool-card">' +
+          '<div class="ai-tool-img"><img src="' + tool.image + '" alt="' + tool.name + '" loading="lazy"></div>' +
+          '<div class="ai-tool-footer">' +
+            '<span class="ai-tool-name">' + tool.name + '</span>' +
+            '<a class="btn btn-primary ai-tool-cta" href="' + tool.link + '" target="_blank" rel="noopener">' + s.ctaLabel + '</a>' +
+          '</div>' +
         '</div>'
       );
     }).join("");
-    var cta = document.getElementById("ai-cta");
-    cta.textContent = s.ctaLabel;
-    cta.setAttribute("href", LINKS.tempoDashboard);
   }
 
   function renderContact() {

@@ -57,7 +57,11 @@ en: {
       { num: "01", title: "Social Media Manager", body: "I keep the lights on: calendars, growth, agencies, numbers. The unglamorous stuff that makes everything else possible." },
       { num: "02", title: "Content Manager", body: "I decide what gets said before anyone writes a word. Voice, pillars, campaigns: the plan nobody sees but everyone feels." },
       { num: "03", title: "Content Creator", body: "Camera, mic, edit. I make the thing people actually watch, not just scroll past." },
-      { num: "04", title: "Copywriting", body: "Words that don't sound like a press release. Scripts, captions, campaigns, written to be read, not skimmed." }
+      { num: "04", title: "Copywriting", body: "Words that don't sound like a press release. Scripts, captions, campaigns, written to be read, not skimmed." },
+      { num: "05", title: "Video Editor", body: "Timelines, cuts, pacing. The invisible half-second that decides if someone keeps watching or swipes away." },
+      { num: "06", title: "AI Automation", body: "I build the pipelines and prompts that handle the repetitive part for me. Scraping, reporting, workflows: less manual work, same output." },
+      { num: "07", title: "Web Development", body: "This site, client landing pages, quick internal tools: I build what I need instead of waiting on a developer." },
+      { num: "08", title: "Community Management", body: "Replies, DMs, comment sections. The direct line between the brand and the people actually watching it." }
     ]
   },
   work: {
@@ -83,13 +87,8 @@ en: {
   ai: {
     eyebrow: "Self-Designed Tracking Tool",
     title: "I also build the tools.",
-    body: "Beyond strategy and content, I build the tools that support it. This reporting pipeline is something I designed and built myself from scratch, using AI (Claude Code) to do it. It scrapes Instagram data, analyzes it, and generates this monthly dashboard automatically for Tempo Café, one of my clients. No manual copy-pasting into slides, no agency retainer for reporting.",
-    ctaLabel: "View live dashboard",
-    shots: [
-      { image: "assets/images/1.png", caption: "Auto-generated monthly report, branded per client." },
-      { image: "assets/images/2.png", caption: "Every post ranked by real performance data." },
-      { image: "assets/images/3.png", caption: "Plain-language recommendations, generated from the data, not a template." }
-    ]
+    body: "Beyond strategy and content, I build the tools that support it. This reporting pipeline is something I designed and built myself from scratch, using AI (Claude Code) to do it. It scrapes Instagram data, analyzes it, and generates a monthly dashboard automatically for clients like Tempo Café and Prato Autos. No manual copy-pasting into slides, no agency retainer for reporting.",
+    ctaLabel: "View live dashboard"
   },
   contact: {
     eyebrow: "Contact",
@@ -141,7 +140,11 @@ es: {
       { num: "01", title: "Social Media Manager", body: "Mantengo todo funcionando: calendarios, crecimiento, agencias, números. Lo poco glamoroso que hace posible todo lo demás." },
       { num: "02", title: "Content Manager", body: "Decido qué se dice antes de que alguien escriba una palabra. Voz, pilares, campañas: el plan que nadie ve pero todos sienten." },
       { num: "03", title: "Content Creator", body: "Cámara, micrófono, edición. Hago lo que la gente realmente mira, no lo que scrollea de largo." },
-      { num: "04", title: "Copywriting", body: "Palabras que no suenan a gacetilla de prensa. Guiones, captions, campañas, escritas para leerse, no para pasarlas de largo." }
+      { num: "04", title: "Copywriting", body: "Palabras que no suenan a gacetilla de prensa. Guiones, captions, campañas, escritas para leerse, no para pasarlas de largo." },
+      { num: "05", title: "Editor de Video", body: "Timelines, cortes, ritmo. El medio segundo invisible que decide si alguien se queda mirando o desliza al siguiente." },
+      { num: "06", title: "AI Automation", body: "Armo los pipelines y prompts que hacen la parte repetitiva por mí. Scraping, reportes, flujos de trabajo: menos trabajo manual, el mismo resultado." },
+      { num: "07", title: "Desarrollo Web", body: "Esta web, landings de clientes, herramientas internas rápidas: construyo lo que necesito en vez de esperar a un desarrollador." },
+      { num: "08", title: "Community Management", body: "Respuestas, DMs, comentarios. La línea directa entre la marca y la gente que realmente la está mirando." }
     ]
   },
   work: {
@@ -167,13 +170,8 @@ es: {
   ai: {
     eyebrow: "Tracking Tool, Diseño Propio",
     title: "También construyo las herramientas.",
-    body: "Además de estrategia y contenido, construyo las herramientas que lo sostienen. Este pipeline de reportes lo diseñé y armé yo desde cero, usando IA (Claude Code) para hacerlo. Scrapea datos de Instagram, los analiza, y genera este dashboard mensual automáticamente para Tempo Café, uno de mis clientes. Sin copiar y pegar a mano en un slide, sin depender de una agencia para el reporte.",
-    ctaLabel: "Ver dashboard en vivo",
-    shots: [
-      { image: "assets/images/1.png", caption: "Reporte mensual autogenerado, con la marca de cada cliente." },
-      { image: "assets/images/2.png", caption: "Cada post rankeado por performance real." },
-      { image: "assets/images/3.png", caption: "Recomendaciones en lenguaje simple, generadas desde los datos, no una plantilla." }
-    ]
+    body: "Además de estrategia y contenido, construyo las herramientas que lo sostienen. Este pipeline de reportes lo diseñé y armé yo desde cero, usando IA (Claude Code) para hacerlo. Scrapea datos de Instagram, los analiza, y genera un dashboard mensual automáticamente para clientes como Tempo Café y Prato Autos. Sin copiar y pegar a mano en un slide, sin depender de una agencia para el reporte.",
+    ctaLabel: "Ver dashboard en vivo"
   },
   contact: {
     eyebrow: "Contacto",
@@ -195,8 +193,14 @@ const LINKS = {
   github: "https://github.com/gevarola",
   cvEs: "assets/files/German_Rojas_La_Valle_CV_ES.pdf",
   cvEn: "assets/files/German_Rojas_La_Valle_CV_EN.pdf",
-  tempoDashboard: "https://tempo-cafe-seven.vercel.app/"
+  tempoDashboard: "https://tempo-cafe-seven.vercel.app/#agosto",
+  pratoDashboard: "https://prato-autos.vercel.app/"
 };
+
+const AI_TOOLS = [
+  { name: "Tempo Café", image: "assets/images/ai-tempo-hero.png", link: LINKS.tempoDashboard },
+  { name: "Prato Autos", image: "assets/images/ai-prato-hero.png", link: LINKS.pratoDashboard }
+];
 
 const CASES = [
   {

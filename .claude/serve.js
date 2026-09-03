@@ -15,4 +15,4 @@ http.createServer((req, res) => {
     res.writeHead(200, { "Content-Type": TYPES[ext] || "application/octet-stream" });
     res.end(data);
   });
-}).listen(8743, "127.0.0.1");
+}).listen(process.env.PORT || 8743, "127.0.0.1");

@@ -5,7 +5,8 @@
       "name": "portfolio",
       "runtimeExecutable": "node",
       "runtimeArgs": [".claude/serve.js"],
-      "port": 8743
+      "port": 8743,
+      "autoPort": true
     }
   ]
 }
