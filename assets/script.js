@@ -170,6 +170,22 @@
     }).join("");
   }
 
+  function renderWebDev() {
+    var s = t().webdev;
+    var p = WEBDEV_PROJECT;
+    document.getElementById("webdev-eyebrow").textContent = s.eyebrow;
+    document.getElementById("webdev-body").textContent = s.body;
+    document.getElementById("webdev-stats").innerHTML = p.stats.map(function (st) {
+      return '<div><span class="value">' + st.value + '</span><span class="label">' + st[state.lang] + '</span></div>';
+    }).join("");
+    var cta = document.getElementById("webdev-cta");
+    cta.textContent = s.ctaLabel;
+    cta.setAttribute("href", p.link);
+    var img = document.getElementById("webdev-image");
+    img.setAttribute("src", p.image);
+    img.setAttribute("alt", p.name);
+  }
+
   function renderContact() {
     var s = t().contact;
     document.getElementById("contact-title").textContent = s.title;
@@ -265,6 +281,7 @@
     renderOtherWork();
     renderCreator();
     renderAI();
+    renderWebDev();
     renderContact();
     initScrollReveals();
   }

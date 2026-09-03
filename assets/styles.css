@@ -688,6 +688,43 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 700; line-height: 1.
   .ai-tool-cta { width: 100%; }
 }
 
+/* Web Development section */
+.webdev-section { padding: 90px 0 100px; border-top: 1px solid var(--line); }
+.webdev-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 56px;
+  align-items: center;
+}
+.webdev-content .work-heading { margin-bottom: 20px; }
+.webdev-body {
+  color: var(--ink-soft);
+  font-size: 17px;
+  max-width: 560px;
+}
+.webdev-stats {
+  display: flex;
+  gap: 28px;
+  flex-wrap: wrap;
+  margin: 28px 0 32px;
+  padding: 22px 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.webdev-stats .value { font-family: var(--font-display); font-weight: 700; font-size: 20px; color: var(--blue); display: block; }
+.webdev-stats .label { font-size: 13px; color: var(--ink-soft); }
+.webdev-media {
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+}
+.webdev-media img { width: 100%; height: 100%; display: block; object-fit: cover; }
+@media (max-width: 900px) {
+  .webdev-grid { grid-template-columns: 1fr; }
+  .webdev-media { order: -1; }
+}
+
 /* Contact */
 .contact { padding: 90px 0 80px; border-top: 1px solid var(--line); text-align: center; }
 .contact .work-heading { max-width: 800px; margin-left: auto; margin-right: auto; }

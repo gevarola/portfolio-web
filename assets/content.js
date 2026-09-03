@@ -90,6 +90,11 @@ en: {
     body: "Beyond strategy and content, I build the tools that support it. This reporting pipeline is something I designed and built myself from scratch, using AI (Claude Code) to do it. It scrapes Instagram data, analyzes it, and generates a monthly dashboard automatically for clients like Tempo Café and Prato Autos. No manual copy-pasting into slides, no agency retainer for reporting.",
     ctaLabel: "View live dashboard"
   },
+  webdev: {
+    eyebrow: "Web Development",
+    body: "\"De Guerrero a Guerrero\" is a live sports news site for Rosario Central fans that I built end-to-end with Claude Code. I'm upfront that AI wrote the code, but building and shipping a real site taught me the general concepts behind web development: structure, hosting, and how the pieces fit together. Scores, upcoming fixtures, league standings and head-to-head history all update automatically, no manual data entry. It's already live with 3,000+ visits.",
+    ctaLabel: "View live site"
+  },
   contact: {
     eyebrow: "Contact",
     title: "Let's talk about your content.",
@@ -173,6 +178,11 @@ es: {
     body: "Además de estrategia y contenido, construyo las herramientas que lo sostienen. Este pipeline de reportes lo diseñé y armé yo desde cero, usando IA (Claude Code) para hacerlo. Scrapea datos de Instagram, los analiza, y genera un dashboard mensual automáticamente para clientes como Tempo Café y Prato Autos. Sin copiar y pegar a mano en un slide, sin depender de una agencia para el reporte.",
     ctaLabel: "Ver dashboard en vivo"
   },
+  webdev: {
+    eyebrow: "Desarrollo Web",
+    body: "\"De Guerrero a Guerrero\" es una web de noticias deportivas para hinchas de Rosario Central que armé de punta a punta con Claude Code. Soy transparente en que el código lo escribió la IA, pero construir y publicar una web real me enseñó los conceptos generales del desarrollo web: estructura, hosting, y cómo encaja cada pieza. Resultados, próximos partidos, tabla de posiciones e historial se actualizan automáticamente, sin carga manual de datos. Ya está en vivo con más de 3.000 visitas.",
+    ctaLabel: "Ver sitio en vivo"
+  },
   contact: {
     eyebrow: "Contacto",
     title: "Hablemos de tu contenido.",
@@ -194,13 +204,25 @@ const LINKS = {
   cvEs: "assets/files/German_Rojas_La_Valle_CV_ES.pdf",
   cvEn: "assets/files/German_Rojas_La_Valle_CV_EN.pdf",
   tempoDashboard: "https://tempo-cafe-seven.vercel.app/#agosto",
-  pratoDashboard: "https://prato-autos.vercel.app/"
+  pratoDashboard: "https://prato-autos.vercel.app/",
+  guerreroSite: "https://www.deguerreroaguerrero.site/"
 };
 
 const AI_TOOLS = [
   { name: "Tempo Café", image: "assets/images/ai-tempo-hero.png", link: LINKS.tempoDashboard },
   { name: "Prato Autos", image: "assets/images/ai-prato-hero.png", link: LINKS.pratoDashboard }
 ];
+
+const WEBDEV_PROJECT = {
+  name: "De Guerrero a Guerrero",
+  image: "assets/images/case-guerrero-hero.png",
+  link: LINKS.guerreroSite,
+  stats: [
+    { value: "+3.000", en: "visits since launch", es: "visitas desde el lanzamiento" },
+    { value: "100%", en: "automated live data", es: "datos en vivo automatizados" },
+    { value: "Claude Code", en: "wrote the code", es: "escribió el código" }
+  ]
+};
 
 const CASES = [
   {
