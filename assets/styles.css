@@ -370,6 +370,7 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 700; line-height: 1.
   gap: 28px;
 }
 .project-card {
+  position: relative;
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -380,6 +381,15 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 700; line-height: 1.
   overflow: hidden;
   cursor: pointer;
   transition: transform .18s ease, box-shadow .18s ease;
+}
+.reveal-mask {
+  display: none;
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background: #FFFFFF;
+  transform-origin: top;
+  pointer-events: none;
 }
 .project-card:hover {
   transform: translateY(-4px);

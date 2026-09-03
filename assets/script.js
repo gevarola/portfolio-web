@@ -90,6 +90,7 @@
     var posStyle = c.imgPos ? ' style="object-position:' + c.imgPos + '"' : '';
     return (
       '<article class="project-card" data-case="' + c.id + '">' +
+        '<div class="reveal-mask" aria-hidden="true"></div>' +
         '<div class="project-card-img"><img src="' + c.image + '" alt="' + c_l.title + '" loading="lazy"' + posStyle + '></div>' +
         '<div class="project-card-body">' +
           '<p class="project-card-meta">' + c.org + ' · ' + c_tag + ' · ' + c.period + '</p>' +
@@ -224,6 +225,36 @@
     document.body.style.overflow = "";
   }
 
+  var revealCtx = null;
+
+  function initScrollReveals() {
+    if (typeof gsap === "undefined" || typeof ScrollTrigger === "undefined") return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    if (revealCtx) revealCtx.revert();
+
+    revealCtx = gsap.context(function () {
+      gsap.from("#pillars-list .index-item", {
+        scrollTrigger: { trigger: "#pillars-list", start: "top 82%" },
+        opacity: 0, y: 24, duration: 0.6, ease: "power2.out", stagger: 0.08
+      });
+
+      gsap.utils.toArray("#clients-list .project-card").forEach(function (card) {
+        var mask = card.querySelector(".reveal-mask");
+        gsap.set(mask, { display: "block" });
+        gsap.timeline({ scrollTrigger: { trigger: card, start: "top 85%" } })
+          .from(card, { opacity: 0, y: 16, duration: 0.5, ease: "power2.out" })
+          .fromTo(mask, { scaleY: 1 }, { scaleY: 0, duration: 0.7, ease: "power3.inOut" }, "-=0.25");
+      });
+
+      gsap.from("#other-work-grid .other-work-item", {
+        scrollTrigger: {
+          trigger: "#other-work-grid", start: "top bottom", end: "bottom 60%", scrub: 0.6
+        },
+        opacity: 0, scale: 0.85, filter: "blur(8px)", stagger: 0.12
+      });
+    });
+  }
+
   function renderAll() {
     renderHeader();
     renderIntro();
@@ -235,6 +266,7 @@
     renderCreator();
     renderAI();
     renderContact();
+    initScrollReveals();
   }
 
   document.querySelectorAll(".lang-option").forEach(function (btn) {
