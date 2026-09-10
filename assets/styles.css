@@ -479,17 +479,37 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 700; line-height: 1.
   align-items: center;
   text-align: center;
   gap: 14px;
+  width: 100%;
   padding: 28px 16px;
   background: #1A1B20;
   border: 1px solid rgba(244, 241, 233, 0.08);
   border-radius: 14px;
   text-decoration: none;
   color: inherit;
+  font: inherit;
+  cursor: pointer;
   transition: transform .18s ease, border-color .18s ease;
 }
-.other-work-item:hover {
+.other-work-item:hover,
+.other-work-item:focus-visible {
   transform: translateY(-4px);
   border-color: rgba(244, 241, 233, 0.22);
+  outline: none;
+}
+.other-work-item:focus-visible { border-color: var(--blue); }
+.other-work-cta {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink-faint);
+  opacity: 0;
+  transform: translateY(-4px);
+  transition: opacity .18s ease, transform .18s ease, color .18s ease;
+}
+.other-work-item:hover .other-work-cta,
+.other-work-item:focus-visible .other-work-cta {
+  opacity: 1;
+  transform: translateY(0);
+  color: var(--blue);
 }
 .other-work-logo {
   position: relative;
@@ -594,6 +614,21 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 700; line-height: 1.
 }
 .creator-card:hover .creator-card-img img { filter: none; }
 .creator-card:hover .creator-card-img::after { opacity: 0; }
+.creator-card-platform {
+  position: absolute;
+  z-index: 2;
+  top: 10px;
+  left: 10px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: rgba(244, 241, 233, 0.94);
+  color: #14151A;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
+}
 .creator-card-body {
   display: flex;
   flex-direction: column;
@@ -862,6 +897,86 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 700; line-height: 1.
 .modal-section h4 { font-family: var(--font-body); font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: #8A8578; margin: 0 0 10px; }
 .modal-section p { margin: 0; color: #403D36; font-size: 15.5px; line-height: 1.55; }
 .modal-section ul { margin: 0; padding-left: 20px; color: #403D36; font-size: 15.5px; line-height: 1.55; display: flex; flex-direction: column; gap: 10px; }
+
+/* Brand modal (other-work drill-down, opens inside the portfolio page) */
+.brand-modal-head {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+.brand-modal-logo {
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #000;
+}
+.brand-modal-logo img { width: 100%; height: 100%; object-fit: cover; }
+.brand-modal-name { margin: 0 0 4px !important; }
+.brand-modal-profile {
+  margin-left: auto;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--blue);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.brand-modal-profile:hover { text-decoration: underline; }
+.brand-modal-desc {
+  margin: 0 0 8px;
+  color: #403D36;
+  font-size: 15.5px;
+  line-height: 1.55;
+}
+.brand-modal-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: 16px;
+  gap: 16px;
+}
+.brand-modal-empty {
+  margin: 0;
+  padding: 20px;
+  background: rgba(20, 21, 26, 0.04);
+  border: 1px dashed rgba(20, 21, 26, 0.18);
+  border-radius: 12px;
+  color: #55524A;
+  font-size: 15px;
+  line-height: 1.5;
+}
+.brand-modal-empty a { color: var(--blue); font-weight: 600; }
+@media (max-width: 560px) {
+  .brand-modal-grid { grid-template-columns: 1fr; }
+  .brand-modal-profile { margin-left: 0; }
+}
+
+.creator-card-pending {
+  background: transparent;
+  border: 1px dashed rgba(244, 241, 233, 0.16);
+  cursor: default;
+}
+.creator-card-pending:hover { transform: none; border-color: rgba(244, 241, 233, 0.16); }
+.creator-card-pending-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(244, 241, 233, 0.03);
+}
+.creator-card-pending-img::after { content: none; }
+.creator-card-pending-plus {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 26px;
+  color: var(--ink-faint);
+}
+.creator-card-pending-label {
+  margin: 0 !important;
+  text-align: center;
+  font-size: 13px;
+  color: var(--ink-faint);
+}
 
 /* Responsive */
 @media (max-width: 860px) {

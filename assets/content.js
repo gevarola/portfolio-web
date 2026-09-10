@@ -75,13 +75,20 @@ en: {
     close: "Close"
   },
   otherWork: {
-    eyebrow: "Other work",
-    body: "I'm also providing ongoing support (video creation, editing and community management) to a handful of other brands. Some of these accounts are just getting started, others are already established and growing steadily."
+    eyebrow: "Brands I manage",
+    body: "I also handle content, video editing and community management for these brands. Some are just getting started, others are already established — tap a logo to see the actual reels and posts I made for each one.",
+    cta: "See the work",
+    viewProfile: "View Instagram profile",
+    piecesLabel: "pieces",
+    empty: "New content for this account is on its way. In the meantime, check out the full profile.",
+    description: "I handle the Instagram content for {name}: reels, posts and day-to-day community management.",
+    featuredHeading: "Featured content",
+    pendingLabel: "Coming soon"
   },
   creator: {
     eyebrow: "As a creator",
     title: "I also step in front of the camera.",
-    body: "Beyond strategy, I write, shoot and edit my own short-form video, as @gevarola, and as a creator for the brands I work with. Same instinct for what stops the scroll, just from the other side of the camera.",
+    body: "Beyond strategy, I write, shoot and edit my own short-form video, as @gevarola. Same instinct for what stops the scroll, just from the other side of the camera.",
     watchLabel: "Watch"
   },
   ai: {
@@ -163,13 +170,20 @@ es: {
     close: "Cerrar"
   },
   otherWork: {
-    eyebrow: "Otros trabajos",
-    body: "También estoy dando soporte continuo (creación y edición de video, y community management) a otras marcas. Algunas de estas cuentas recién están arrancando, otras ya están asentadas y creciendo firmemente."
+    eyebrow: "Marcas que gestiono",
+    body: "También llevo el contenido, la edición de video y el community management de estas marcas. Algunas recién están arrancando, otras ya están asentadas — tocá un logo para ver la info y los reels y posts reales que hice para cada una.",
+    cta: "Ver el trabajo",
+    viewProfile: "Ver perfil de Instagram",
+    piecesLabel: "piezas",
+    empty: "El contenido de esta cuenta está en camino. Mientras tanto, mirá el perfil completo.",
+    description: "Llevo el contenido de Instagram de {name}: reels, posts y el día a día de la comunidad.",
+    featuredHeading: "Contenido destacado",
+    pendingLabel: "Próximamente"
   },
   creator: {
     eyebrow: "Como creador",
     title: "También me pongo delante de cámara.",
-    body: "Además de la estrategia, escribo, grabo y edito mis propios videos cortos, como @gevarola, y como creador para las marcas con las que trabajo. El mismo instinto de qué hace que alguien deje de scrollear, pero del otro lado de la cámara.",
+    body: "Además de la estrategia, escribo, grabo y edito mis propios videos cortos, como @gevarola. El mismo instinto de qué hace que alguien deje de scrollear, pero del otro lado de la cámara.",
     watchLabel: "Ver"
   },
   ai: {
@@ -484,28 +498,36 @@ const TICKER_KEYWORDS = {
 
 const OTHER_CLIENTS = [
   {
+    id: "fruta-noble",
     logo: "assets/images/logo-fruta-noble-client.png",
     name: "Fruta Noble",
     link: "https://www.instagram.com/fruta.noble/",
-    stage: { en: "Just getting started", es: "Recién empezando" }
+    stage: { en: "Just getting started", es: "Recién empezando" },
+    pendingSlots: 0
   },
   {
+    id: "tempo-cafe",
     logo: "assets/images/logo-tempo-cafe-client.png",
     name: "Tempo Café",
     link: "https://www.instagram.com/tempocafe_/",
-    stage: { en: "Just getting started", es: "Recién empezando" }
+    stage: { en: "Just getting started", es: "Recién empezando" },
+    pendingSlots: 0
   },
   {
+    id: "criscar",
     logo: "assets/images/logo-criscar-client.jpeg",
     name: "Frigorífico Criscar",
     link: "https://www.instagram.com/frigorifico.criscar.campana/",
-    stage: { en: "Consolidating", es: "Consolidando" }
+    stage: { en: "Consolidating", es: "Consolidando" },
+    pendingSlots: 0
   },
   {
+    id: "prato-autos",
     logo: "assets/images/logo-prato-autos.png",
     name: "Prato Autos",
     link: "https://www.instagram.com/prato.autos/",
-    stage: { en: "Established & growing", es: "Marca asentada" }
+    stage: { en: "Established & growing", es: "Marca asentada" },
+    pendingSlots: 0
   }
 ];
 
@@ -523,19 +545,81 @@ const CREATOR_ITEMS = [
     image: "assets/images/creator-criscar.webp",
     link: "https://www.instagram.com/reel/DXE8WY8ESmy/",
     brand: "@frigorifico.criscar.campana",
+    client: "criscar",
     type: { en: "Account launch", es: "Lanzamiento de cuenta" },
     stats: [{ value: "84K", en: "views", es: "views" }, { value: "500", en: "engagement", es: "engagement" }],
     en: "First introductory video made for Frigorífico Criscar, a plant tour to kick off the relationship with the brand.",
     es: "Primer video de presentación para Frigorífico Criscar, un recorrido por la planta para arrancar la relación con la marca."
   },
   {
+    image: "assets/images/creator-criscar-2.jpg",
+    link: "https://www.instagram.com/reel/DbawF4TFGFS/",
+    brand: "@frigorifico.criscar.campana",
+    client: "criscar",
+    type: { en: "Trend Humor", es: "Trend Humor" },
+    stats: [{ value: "99", en: "likes", es: "me gusta" }, { value: "4", en: "comments", es: "comentarios" }],
+    en: "In-store humor bit poking fun at an absurd one-star review, playing it against the shop's real five-star reviews.",
+    es: "Video de humor en el local, burlándose de una reseña negativa absurda y contrastándola con las reseñas de 5 estrellas reales."
+  },
+  {
+    image: "assets/images/creator-criscar-3.jpg",
+    link: "https://www.instagram.com/reel/DYSw8pbAAEk/",
+    brand: "@frigorifico.criscar.campana",
+    client: "criscar",
+    type: { en: "Trend Humor", es: "Trend Humor" },
+    stats: [{ value: "55", en: "likes", es: "me gusta" }, { value: "6", en: "comments", es: "comentarios" }],
+    en: "In-store humor bit about picking meat over salad, playing up the shop's no-nonsense, meat-first attitude.",
+    es: "Video de humor en el local sobre elegir carne antes que ensalada, jugando con la actitud directa y carnívora del negocio."
+  },
+  {
+    image: "assets/images/creator-criscar-4.jpg",
+    link: "https://www.instagram.com/reel/DZFaAmbDpYG/",
+    brand: "@frigorifico.criscar.campana",
+    client: "criscar",
+    type: { en: "Talking head", es: "Frente a cámara" },
+    stats: [{ value: "43", en: "likes", es: "me gusta" }, { value: "4", en: "comments", es: "comentarios" }],
+    en: "Talking-head bit in the shop showing how much quality meat a fixed budget gets you.",
+    es: "Video frente a cámara en el local mostrando cuánta carne de calidad rinde un presupuesto fijo."
+  },
+  {
     image: "assets/images/creator-tempo-cafe.webp",
     link: "https://www.instagram.com/p/DbYZR8PhEGg/",
     brand: "@tempocafe_",
+    client: "tempo-cafe",
     type: { en: "Trend Humor", es: "Trend Humor" },
     stats: [{ value: "+6K", en: "views", es: "views" }, { value: "+250", en: "engagement", es: "engagement" }],
     en: "Comedic video riding a trend to spark conversation, made for Tempo Café's account.",
     es: "Video cómico que se sube a un trend para generar conversación, hecho para la cuenta de Tempo Café."
+  },
+  {
+    image: "assets/images/creator-tempo-cafe-2.jpg",
+    link: "https://www.instagram.com/p/DcRD-OpBxC8/",
+    brand: "@tempocafe_",
+    client: "tempo-cafe",
+    type: { en: "In-store moment", es: "Momento en el local" },
+    stats: [{ value: "102", en: "likes", es: "me gusta" }, { value: "25", en: "comments", es: "comentarios" }],
+    en: "Counter scene handing over coffee and a medialuna, framed around treating yourself to a little pick-me-up.",
+    es: "Escena de mostrador entregando un café y una medialuna, con el mensaje de darte ese pequeño empujón para arrancar el día."
+  },
+  {
+    image: "assets/images/creator-tempo-cafe-3.jpg",
+    link: "https://www.instagram.com/p/DcgrkXWBQG_/",
+    brand: "@tempocafe_",
+    client: "tempo-cafe",
+    type: { en: "Trend Humor", es: "Trend Humor" },
+    stats: [{ value: "203", en: "likes", es: "me gusta" }, { value: "42", en: "comments", es: "comentarios" }],
+    en: "Humor bit filmed in-store with two of the team, playing on the idea of \"the perfect duo.\"",
+    es: "Video de humor filmado en el local con dos personas del equipo, jugando con la idea del 'dúo perfecto'."
+  },
+  {
+    image: "assets/images/creator-tempo-cafe-4.jpg",
+    link: "https://www.instagram.com/p/DbJpLIUhYZC/",
+    brand: "@tempocafe_",
+    client: "tempo-cafe",
+    type: { en: "Talking head", es: "Frente a cámara" },
+    stats: [{ value: "171", en: "likes", es: "me gusta" }, { value: "24", en: "comments", es: "comentarios" }],
+    en: "Talking-head bit telling the audience they've scrolled enough for today and should stop by for a coffee.",
+    es: "Video frente a cámara diciéndole a la audiencia que ya scrolleó demasiado y que se pase por Tempo a tomar algo."
   },
   {
     image: "assets/images/creator-entrevistas.jpg",
@@ -577,10 +661,91 @@ const CREATOR_ITEMS = [
     image: "assets/images/creator-fruta-noble.jpg",
     link: "https://www.instagram.com/p/DVqwdxOESsE/",
     brand: "@fruta.noble",
+    client: "fruta-noble",
     type: { en: "Collab post", es: "Colaboración" },
     stats: [{ value: "1.9K", en: "views", es: "views" }, { value: "105", en: "engagement", es: "engagement" }],
     en: "Awareness video for a wine subscription club, explaining the service and product in one video, with a conversational, humor-first tone so it doesn't feel like a tutorial.",
     es: "Video de awareness para un club de vinos, explicando el servicio y el producto en un solo video, con un tono conversacional y con humor para que no se sienta como un tutorial."
+  },
+  {
+    image: "assets/images/creator-fruta-noble-2.jpg",
+    link: "https://www.instagram.com/reel/DY4hxcOOikI/",
+    brand: "@fruta.noble",
+    client: "fruta-noble",
+    type: { en: "Educational tip", es: "Tip educativo" },
+    stats: [{ value: "87", en: "likes", es: "me gusta" }, { value: "10", en: "comments", es: "comentarios" }],
+    en: "Talking-head tip on the right way to hold and pour a glass of wine without ruining your clothes.",
+    es: "Tip frente a cámara sobre cómo sostener y servir la copa de vino sin arruinarte la ropa."
+  },
+  {
+    image: "assets/images/creator-fruta-noble-3.jpg",
+    link: "https://www.instagram.com/reel/Dayg8MihAVI/",
+    brand: "@fruta.noble",
+    client: "fruta-noble",
+    type: { en: "Humor", es: "Humor" },
+    stats: [{ value: "111", en: "likes", es: "me gusta" }, { value: "10", en: "comments", es: "comentarios" }],
+    en: "Relatable humor bit about wanting a glass of wine earlier in the day than you probably should.",
+    es: "Video de humor sobre las ganas de tomarte una copa de vino más temprano de lo que 'deberías'."
+  },
+  {
+    image: "assets/images/creator-fruta-noble-4.jpg",
+    link: "https://www.instagram.com/reel/DcMh3Q0hzIa/",
+    brand: "@fruta.noble",
+    client: "fruta-noble",
+    type: { en: "Educational video", es: "Video educativo" },
+    stats: [{ value: "108", en: "likes", es: "me gusta" }, { value: "0", en: "comments", es: "comentarios" }],
+    en: "Explains what orange wine is and why it's different, tying it back to the small-producer labels the club sources.",
+    es: "Explica qué es el vino naranjo y por qué es distinto, conectándolo con las etiquetas de productores chicos que trae el club."
+  },
+  {
+    image: "assets/images/creator-fruta-noble-5.jpg",
+    link: "https://www.instagram.com/reel/DZVteLJhacC/",
+    brand: "@fruta.noble",
+    client: "fruta-noble",
+    type: { en: "Educational tip", es: "Tip educativo" },
+    stats: [{ value: "94", en: "likes", es: "me gusta" }, { value: "6", en: "comments", es: "comentarios" }],
+    en: "Answers how long an opened bottle of wine actually lasts, and how to keep it drinkable for longer.",
+    es: "Responde cuánto dura un vino ya abierto y cómo conservarlo para que siga rindiendo."
+  },
+  {
+    image: "assets/images/creator-prato-autos-1.jpg",
+    link: "https://www.tiktok.com/@tomyprat/video/7681708029724691733",
+    brand: "@tomyprat",
+    client: "prato-autos",
+    type: { en: "Vehicle walkaround", es: "Recorrida de auto" },
+    stats: [{ value: "3642", en: "likes", es: "me gusta" }, { value: "459", en: "comments", es: "comentarios" }],
+    en: "Walkaround of a Ford Focus wagon on the lot, asking followers what they think of the less common trunk body style.",
+    es: "Recorrida de un Ford Focus con baúl en el estacionamiento, preguntándole a los seguidores qué opinan de esta versión menos común."
+  },
+  {
+    image: "assets/images/creator-prato-autos-2.jpg",
+    link: "https://www.tiktok.com/@tomyprat/video/7682475467345120519",
+    brand: "@tomyprat",
+    client: "prato-autos",
+    type: { en: "Listing walkaround", es: "Recorrida de unidad" },
+    stats: [{ value: "1154", en: "likes", es: "me gusta" }, { value: "84", en: "comments", es: "comentarios" }],
+    en: "Quick walkaround of a 2016 Honda CR-V currently listed for sale.",
+    es: "Recorrida corta de una Honda CR-V 2016 que está a la venta."
+  },
+  {
+    image: "assets/images/creator-prato-autos-3.jpg",
+    link: "https://www.instagram.com/reel/DcMp7vVp7lU/",
+    brand: "@prato.autos",
+    client: "prato-autos",
+    type: { en: "New inventory", es: "Nuevo ingreso" },
+    stats: [{ value: "148", en: "likes", es: "me gusta" }, { value: "27", en: "comments", es: "comentarios" }],
+    en: "Announces a Chevrolet Tracker 2024 as a new arrival on the lot.",
+    es: "Anuncia el ingreso de un Chevrolet Tracker 2024 a la agencia."
+  },
+  {
+    image: "assets/images/creator-prato-autos-4.jpg",
+    link: "https://www.instagram.com/reel/DcefJ0_p4QX/",
+    brand: "@prato.autos",
+    client: "prato-autos",
+    type: { en: "Comparison", es: "Comparación" },
+    stats: [{ value: "105", en: "likes", es: "me gusta" }, { value: "14", en: "comments", es: "comentarios" }],
+    en: "Side-by-side comparison of a Toyota Corolla and a Honda Fit with the hoods up, built around a question to drive comments.",
+    es: "Comparación lado a lado de un Toyota Corolla y una Honda Fit con los capots abiertos, armada como pregunta para generar comentarios."
   },
   {
     image: "assets/images/creator-barao.jpg",

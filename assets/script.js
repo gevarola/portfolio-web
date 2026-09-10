@@ -114,6 +114,20 @@
     });
   }
 
+  function platformOf(link) {
+    return link.indexOf("tiktok.com") > -1 ? "tiktok" : "instagram";
+  }
+
+  function platformBadge(link) {
+    var p = platformOf(link);
+    var label = p === "tiktok" ? "TikTok" : "Instagram";
+    return (
+      '<span class="creator-card-platform" title="' + label + '" aria-label="' + label + '">' +
+        '<svg viewBox="0 0 24 24" width="12" height="12"><path fill="currentColor" d="' + ICON_PATHS[p] + '"/></svg>' +
+      '</span>'
+    );
+  }
+
   function creatorCard(item) {
     var statsHtml = item.stats
       ? '<p class="creator-card-stats">' + item.stats.map(function (st) { return st.value + ' ' + st[state.lang]; }).join(" · ") + '</p>'
@@ -121,7 +135,7 @@
     var brandLine = '<span class="creator-card-handle">' + item.brand + '</span>' + (item.type ? ' · ' + item.type[state.lang] : '');
     return (
       '<a class="creator-card" href="' + item.link + '" target="_blank" rel="noopener">' +
-        '<div class="creator-card-img"><img src="' + item.image + '" alt="' + item.brand + '" loading="lazy"></div>' +
+        '<div class="creator-card-img">' + platformBadge(item.link) + '<img src="' + item.image + '" alt="' + item.brand + '" loading="lazy"></div>' +
         '<div class="creator-card-body">' +
           '<p class="creator-card-brand">' + brandLine + '</p>' +
           '<p class="creator-card-desc">' + item[state.lang] + '</p>' +
@@ -137,20 +151,115 @@
     document.getElementById("other-work-body").textContent = s.body;
     document.getElementById("other-work-grid").innerHTML = OTHER_CLIENTS.map(function (c) {
       return (
-        '<a class="other-work-item" href="' + c.link + '" target="_blank" rel="noopener">' +
+        '<button type="button" class="other-work-item" data-client="' + c.id + '">' +
           '<div class="other-work-logo"><img src="' + c.logo + '" alt="' + c.name + '" loading="lazy"></div>' +
           '<span class="other-work-name">' + c.name + '</span>' +
           '<span class="other-work-stage">' + c.stage[state.lang] + '</span>' +
-        '</a>'
+          '<span class="other-work-cta">' + s.cta + ' →</span>' +
+        '</button>'
       );
     }).join("");
+    document.querySelectorAll(".other-work-item").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        openBrandModal(btn.getAttribute("data-client"));
+      });
+    });
+  }
+
+  // Parses "6.3M" / "84K" / "+250" / "500" into a plain number.
+  function parseMetric(str) {
+    var clean = String(str).replace(/[+,]/g, "").trim();
+    var mult = 1;
+    if (/M$/i.test(clean)) { mult = 1e6; clean = clean.slice(0, -1); }
+    else if (/K$/i.test(clean)) { mult = 1e3; clean = clean.slice(0, -1); }
+    var n = parseFloat(clean);
+    return isNaN(n) ? 0 : n * mult;
+  }
+
+  function formatMetric(n) {
+    if (n >= 1e6) return (Math.round(n / 1e5) / 10) + "M";
+    if (n >= 1e3) return (Math.round(n / 100) / 10) + "K";
+    return String(Math.round(n));
+  }
+
+  function brandFeaturedCard(item) {
+    var statsHtml = item.stats
+      ? '<p class="creator-card-stats">' + item.stats.map(function (st) { return st.value + " " + st[state.lang]; }).join(" · ") + "</p>"
+      : "";
+    return (
+      '<a class="creator-card" href="' + item.link + '" target="_blank" rel="noopener">' +
+        '<div class="creator-card-img">' + platformBadge(item.link) + '<img src="' + item.image + '" alt="' + item.brand + '" loading="lazy"></div>' +
+        '<div class="creator-card-body">' +
+          '<p class="creator-card-desc">' + item[state.lang] + "</p>" +
+          statsHtml +
+        "</div>" +
+      "</a>"
+    );
+  }
+
+  function pendingSlotCard(label) {
+    return (
+      '<div class="creator-card creator-card-pending" aria-hidden="true">' +
+        '<div class="creator-card-img creator-card-pending-img"><span class="creator-card-pending-plus">+</span></div>' +
+        '<div class="creator-card-body"><p class="creator-card-pending-label">' + label + "</p></div>" +
+      "</div>"
+    );
+  }
+
+  function openBrandModal(clientId) {
+    var c = OTHER_CLIENTS.filter(function (x) { return x.id === clientId; })[0];
+    if (!c) return;
+    var s = t().otherWork;
+    var items = CREATOR_ITEMS.filter(function (x) { return x.client === clientId; });
+
+    var statsHtml = "";
+    if (c.stats && c.stats.length) {
+      statsHtml = c.stats.map(function (st) {
+        return '<div><span class="value">' + st.value + '</span><span class="label">' + st[state.lang] + "</span></div>";
+      }).join("");
+    } else if (items.length) {
+      // Only the views total is shown here, not every metric type each piece happens to carry.
+      var viewsTotal = 0, viewsStat = null;
+      items.forEach(function (item) {
+        (item.stats || []).forEach(function (st) {
+          if (st.en === "views") { viewsTotal += parseMetric(st.value); viewsStat = st; }
+        });
+      });
+      statsHtml =
+        '<div><span class="value">' + items.length + '</span><span class="label">' + s.piecesLabel + '</span></div>' +
+        (viewsStat ? '<div><span class="value">' + formatMetric(viewsTotal) + '</span><span class="label">' + viewsStat[state.lang] + '</span></div>' : '');
+    }
+
+    var pendingHtml = "";
+    for (var i = 0; i < (c.pendingSlots || 0); i++) pendingHtml += pendingSlotCard(s.pendingLabel);
+
+    var featuredHtml = (items.length || pendingHtml)
+      ? '<div class="creator-grid brand-modal-grid">' + items.map(brandFeaturedCard).join("") + pendingHtml + '</div>'
+      : '<p class="brand-modal-empty">' + s.empty + ' <a href="' + c.link + '" target="_blank" rel="noopener">' + s.viewProfile + ' ↗</a></p>';
+
+    document.getElementById("modal-body").innerHTML =
+      '<div class="brand-modal-head">' +
+        '<div class="brand-modal-logo"><img src="' + c.logo + '" alt="' + c.name + '"></div>' +
+        '<div>' +
+          '<h3 class="brand-modal-name">' + c.name + '</h3>' +
+          '<span class="other-work-stage">' + c.stage[state.lang] + '</span>' +
+        '</div>' +
+        '<a class="brand-modal-profile" href="' + c.link + '" target="_blank" rel="noopener">' + s.viewProfile + ' ↗</a>' +
+      '</div>' +
+      '<p class="brand-modal-desc">' + s.description.replace("{name}", c.name) + '</p>' +
+      (statsHtml ? '<div class="modal-stats">' + statsHtml + '</div>' : '') +
+      '<div class="modal-section"><h4>' + s.featuredHeading + '</h4>' + featuredHtml + '</div>';
+
+    document.getElementById("modal-close").setAttribute("aria-label", t().work.close);
+    document.getElementById("case-modal").classList.add("open");
+    document.body.style.overflow = "hidden";
   }
 
   function renderCreator() {
     var s = t().creator;
     document.getElementById("creator-eyebrow").textContent = s.eyebrow;
     document.getElementById("creator-body").textContent = s.body;
-    document.getElementById("creator-grid").innerHTML = CREATOR_ITEMS.map(creatorCard).join("");
+    document.getElementById("creator-grid").innerHTML = CREATOR_ITEMS.filter(function (item) { return !item.client; }).map(creatorCard).join("");
   }
 
   function renderAI() {
