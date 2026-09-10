@@ -500,16 +500,12 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 700; line-height: 1.
 .other-work-cta {
   font-size: 13px;
   font-weight: 600;
-  color: var(--ink-faint);
-  opacity: 0;
-  transform: translateY(-4px);
-  transition: opacity .18s ease, transform .18s ease, color .18s ease;
+  color: var(--blue);
+  transition: transform .18s ease;
 }
 .other-work-item:hover .other-work-cta,
 .other-work-item:focus-visible .other-work-cta {
-  opacity: 1;
-  transform: translateY(0);
-  color: var(--blue);
+  transform: translateX(2px);
 }
 .other-work-logo {
   position: relative;

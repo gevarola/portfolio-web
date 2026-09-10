@@ -246,7 +246,7 @@
         '</div>' +
         '<a class="brand-modal-profile" href="' + c.link + '" target="_blank" rel="noopener">' + s.viewProfile + ' ↗</a>' +
       '</div>' +
-      '<p class="brand-modal-desc">' + s.description.replace("{name}", c.name) + '</p>' +
+      '<p class="brand-modal-desc">' + c.description[state.lang] + '</p>' +
       (statsHtml ? '<div class="modal-stats">' + statsHtml + '</div>' : '') +
       '<div class="modal-section"><h4>' + s.featuredHeading + '</h4>' + featuredHtml + '</div>';
 

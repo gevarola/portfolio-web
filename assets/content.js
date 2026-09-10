@@ -81,7 +81,6 @@ en: {
     viewProfile: "View Instagram profile",
     piecesLabel: "pieces",
     empty: "New content for this account is on its way. In the meantime, check out the full profile.",
-    description: "I handle the Instagram content for {name}: reels, posts and day-to-day community management.",
     featuredHeading: "Featured content",
     pendingLabel: "Coming soon"
   },
@@ -176,7 +175,6 @@ es: {
     viewProfile: "Ver perfil de Instagram",
     piecesLabel: "piezas",
     empty: "El contenido de esta cuenta está en camino. Mientras tanto, mirá el perfil completo.",
-    description: "Llevo el contenido de Instagram de {name}: reels, posts y el día a día de la comunidad.",
     featuredHeading: "Contenido destacado",
     pendingLabel: "Próximamente"
   },
@@ -503,6 +501,11 @@ const OTHER_CLIENTS = [
     name: "Fruta Noble",
     link: "https://www.instagram.com/fruta.noble/",
     stage: { en: "Just getting started", es: "Recién empezando" },
+    stats: [{ value: "+20", en: "pieces", es: "piezas" }, { value: "+50K", en: "views", es: "views" }],
+    description: {
+      en: "I run the Instagram strategy and content for Fruta Noble: I script, shoot and edit the reels and posts, appear on camera in some of them, and manage the day-to-day community.",
+      es: "Llevo la estrategia y el contenido de Instagram de Fruta Noble: escribo el guion, grabo y edito los reels y posts, apareciendo en cámara en algunos, además de gestionar el día a día de la comunidad."
+    },
     pendingSlots: 0
   },
   {
@@ -511,6 +514,11 @@ const OTHER_CLIENTS = [
     name: "Tempo Café",
     link: "https://www.instagram.com/tempocafe_/",
     stage: { en: "Just getting started", es: "Recién empezando" },
+    stats: [{ value: "+40", en: "pieces", es: "piezas" }, { value: "+70K", en: "views", es: "views" }],
+    description: {
+      en: "I run the Instagram strategy and content for Tempo Café: I script, shoot and edit the reels and posts, appear on camera in some of them, and manage the day-to-day community.",
+      es: "Llevo la estrategia y el contenido de Instagram de Tempo Café: escribo el guion, grabo y edito los reels y posts, apareciendo en cámara en algunos, además de gestionar el día a día de la comunidad."
+    },
     pendingSlots: 0
   },
   {
@@ -519,6 +527,11 @@ const OTHER_CLIENTS = [
     name: "Frigorífico Criscar",
     link: "https://www.instagram.com/frigorifico.criscar.campana/",
     stage: { en: "Consolidating", es: "Consolidando" },
+    stats: [{ value: "+30", en: "pieces", es: "piezas" }, { value: "+300K", en: "views", es: "views" }],
+    description: {
+      en: "I run the Instagram strategy and content for Frigorífico Criscar: I script, shoot and edit the reels and posts, appear on camera in some of them, and manage the day-to-day community.",
+      es: "Llevo la estrategia y el contenido de Instagram de Frigorífico Criscar: escribo el guion, grabo y edito los reels y posts, apareciendo en cámara en algunos, además de gestionar el día a día de la comunidad."
+    },
     pendingSlots: 0
   },
   {
@@ -527,6 +540,11 @@ const OTHER_CLIENTS = [
     name: "Prato Autos",
     link: "https://www.instagram.com/prato.autos/",
     stage: { en: "Established & growing", es: "Marca asentada" },
+    stats: [{ value: "+40", en: "pieces", es: "piezas" }, { value: "+2M", en: "views", es: "views" }],
+    description: {
+      en: "I run the Instagram strategy and content for Prato Autos: I script, shoot and edit the reels and posts, and manage the day-to-day community.",
+      es: "Llevo la estrategia y el contenido de Instagram de Prato Autos: escribo el guion, grabo y edito los reels y posts, además de gestionar el día a día de la comunidad."
+    },
     pendingSlots: 0
   }
 ];
