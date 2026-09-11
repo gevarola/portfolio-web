@@ -17,15 +17,19 @@
   }
 
   function chip(item) {
+    var inner;
     if (item.icon) {
       var d = ICON_PATHS[item.icon];
-      return '<span class="badge-chip" title="' + item.name + '"><svg viewBox="0 0 24 24" width="19" height="19"><path fill="' + item.color + '" d="' + d + '"/></svg></span>';
+      inner = '<span class="badge-chip"><svg viewBox="0 0 24 24" width="19" height="19"><path fill="' + item.color + '" d="' + d + '"/></svg></span>';
+    } else if (item.img) {
+      inner = '<span class="badge-chip"><img src="' + item.img + '" alt="' + item.name + '"></span>';
+    } else {
+      inner = '<span class="badge-chip badge-chip-word" style="color:' + item.color + '">' + item.word + '</span>';
     }
-    if (item.img) {
-      return '<span class="badge-chip" title="' + item.name + '"><img src="' + item.img + '" alt="' + item.name + '"></span>';
-    }
-    return '<span class="badge-chip badge-chip-word" title="' + item.name + '" style="color:' + item.color + '">' + item.word + '</span>';
+    return '<span class="badge-chip-wrap">' + inner + '<span class="badge-tooltip" role="tooltip">' + item.name + '</span></span>';
   }
+
+  function pad2(n) { return n < 10 ? "0" + n : String(n); }
 
   function renderIntro() {
     var s = t().intro;
@@ -83,22 +87,21 @@
     }).join("");
   }
 
-  function projectCard(c) {
+  function projectCard(c, i) {
     var c_l = c[state.lang];
     var c_tag = c.tag[state.lang];
     var s = t().work;
     var posStyle = c.imgPos ? ' style="object-position:' + c.imgPos + '"' : '';
     return (
-      '<article class="project-card" data-case="' + c.id + '">' +
-        '<div class="reveal-mask" aria-hidden="true"></div>' +
-        '<div class="project-card-img"><img src="' + c.image + '" alt="' + c_l.title + '" loading="lazy"' + posStyle + '></div>' +
-        '<div class="project-card-body">' +
-          '<p class="project-card-meta">' + c.org + ' · ' + c_tag + ' · ' + c.period + '</p>' +
-          '<h4 class="project-card-title">' + c_l.title + '</h4>' +
-          '<p class="project-card-teaser">' + c_l.challenge + '</p>' +
-          '<span class="project-card-link">' + s.viewCase + ' →</span>' +
-        '</div>' +
-      '</article>'
+      '<button type="button" class="row-item" data-case="' + c.id + '" data-preview="' + c.image + '">' +
+        '<span class="row-num">' + pad2(i + 1) + '</span>' +
+        '<span class="row-thumb"><img src="' + c.image + '" alt="" loading="lazy"' + posStyle + '></span>' +
+        '<span class="row-body">' +
+          '<span class="row-title">' + c_l.title + '</span>' +
+          '<span class="row-meta">' + c.org + ' · ' + c_tag + ' · ' + c.period + '</span>' +
+        '</span>' +
+        '<span class="row-cta"><span class="row-cta-label">' + s.viewCase + '</span> →</span>' +
+      '</button>'
     );
   }
 
@@ -119,8 +122,8 @@
     });
 
     var listEl = document.getElementById("clients-list");
-    listEl.innerHTML = '<div class="project-grid">' + CASES.map(projectCard).join("") + '</div>';
-    listEl.querySelectorAll(".project-card").forEach(function (card) {
+    listEl.innerHTML = CASES.map(projectCard).join("");
+    listEl.querySelectorAll(".row-item").forEach(function (card) {
       card.addEventListener("click", function () {
         openCaseModal(card.getAttribute("data-case"));
       });
@@ -154,19 +157,22 @@
     );
   }
 
-  function creatorCard(item) {
-    var statsHtml = item.stats
-      ? '<div class="creator-card-stats">' + combineEngagementStats(item.stats).map(function (st) { return '<span>' + st.value + ' ' + st[state.lang] + '</span>'; }).join("") + '</div>'
-      : '';
-    var brandLine = '<span class="creator-card-handle">' + item.brand + '</span>' + (item.type ? ' · ' + item.type[state.lang] : '');
+  function creatorCard(item, i) {
+    var platform = platformOf(item.link) === "tiktok" ? "TikTok" : "Instagram";
+    var typeLine = item.brand + (item.type ? " · " + item.type[state.lang] : "");
+    var statsLine = item.stats
+      ? combineEngagementStats(item.stats).map(function (st) { return st.value + " " + st[state.lang]; }).join(" · ")
+      : "";
+    var metaLine = platform + (statsLine ? " · " + statsLine : "");
     return (
-      '<a class="creator-card" href="' + item.link + '" target="_blank" rel="noopener">' +
-        '<div class="creator-card-img">' + platformBadge(item.link) + '<img src="' + item.image + '" alt="' + item.brand + '" loading="lazy"></div>' +
-        '<div class="creator-card-body">' +
-          '<p class="creator-card-brand">' + brandLine + '</p>' +
-          '<p class="creator-card-desc">' + item[state.lang] + '</p>' +
-          statsHtml +
-        '</div>' +
+      '<a class="row-item" href="' + item.link + '" target="_blank" rel="noopener" data-preview="' + item.image + '">' +
+        '<span class="row-num">' + pad2(i + 1) + '</span>' +
+        '<span class="row-thumb"><img src="' + item.image + '" alt="" loading="lazy"></span>' +
+        '<span class="row-body">' +
+          '<span class="row-title">' + typeLine + '</span>' +
+          '<span class="row-meta">' + metaLine + '</span>' +
+        '</span>' +
+        '<span class="row-cta">↗</span>' +
       '</a>'
     );
   }
@@ -174,17 +180,21 @@
   function renderOtherWork() {
     var s = t().otherWork;
     document.getElementById("other-work-body").textContent = s.body;
-    document.getElementById("other-work-grid").innerHTML = OTHER_CLIENTS.map(function (c) {
+    var listEl = document.getElementById("other-work-list");
+    listEl.innerHTML = OTHER_CLIENTS.map(function (c, i) {
       return (
-        '<button type="button" class="other-work-item" data-client="' + c.id + '">' +
-          '<div class="other-work-logo"><img src="' + c.logo + '" alt="' + c.name + '" loading="lazy"></div>' +
-          '<span class="other-work-name">' + c.name + '</span>' +
-          '<span class="other-work-stage">' + c.stage[state.lang] + '</span>' +
-          '<span class="other-work-cta">' + s.cta + ' →</span>' +
+        '<button type="button" class="row-item" data-client="' + c.id + '" data-preview="' + c.logo + '">' +
+          '<span class="row-num">' + pad2(i + 1) + '</span>' +
+          '<span class="row-thumb"><img src="' + c.logo + '" alt="" loading="lazy"></span>' +
+          '<span class="row-body">' +
+            '<span class="row-title">' + c.name + '</span>' +
+            '<span class="row-meta">' + c.stage[state.lang] + '</span>' +
+          '</span>' +
+          '<span class="row-cta"><span class="row-cta-label">' + s.cta + '</span> →</span>' +
         '</button>'
       );
     }).join("");
-    document.querySelectorAll(".other-work-item").forEach(function (btn) {
+    listEl.querySelectorAll(".row-item").forEach(function (btn) {
       btn.addEventListener("click", function () {
         openBrandModal(btn.getAttribute("data-client"));
       });
@@ -302,7 +312,7 @@
     var s = t().creator;
     document.getElementById("creator-eyebrow").textContent = s.eyebrow;
     document.getElementById("creator-body").textContent = s.body;
-    document.getElementById("creator-grid").innerHTML = CREATOR_ITEMS.filter(function (item) { return !item.client; }).map(creatorCard).join("");
+    document.getElementById("creator-list").innerHTML = CREATOR_ITEMS.filter(function (item) { return !item.client; }).map(creatorCard).join("");
   }
 
   function renderAI() {
@@ -406,20 +416,45 @@
         opacity: 0, y: 24, duration: 0.6, ease: "power2.out", stagger: 0.08
       });
 
-      gsap.utils.toArray("#clients-list .project-card").forEach(function (card) {
-        var mask = card.querySelector(".reveal-mask");
-        gsap.set(mask, { display: "block" });
-        gsap.timeline({ scrollTrigger: { trigger: card, start: "top 85%" } })
-          .from(card, { opacity: 0, y: 16, duration: 0.5, ease: "power2.out" })
-          .fromTo(mask, { scaleY: 1 }, { scaleY: 0, duration: 0.7, ease: "power3.inOut" }, "-=0.25");
+      gsap.from("#clients-list .row-item", {
+        scrollTrigger: { trigger: "#clients-list", start: "top 85%" },
+        opacity: 0, y: 18, duration: 0.5, ease: "power2.out", stagger: 0.06
       });
 
-      gsap.from("#other-work-grid .other-work-item", {
-        scrollTrigger: {
-          trigger: "#other-work-grid", start: "top bottom", end: "bottom 60%", scrub: 0.6
-        },
-        opacity: 0, scale: 0.85, filter: "blur(8px)", stagger: 0.12
+      gsap.from("#other-work-list .row-item", {
+        scrollTrigger: { trigger: "#other-work-list", start: "top 85%" },
+        opacity: 0, y: 18, duration: 0.5, ease: "power2.out", stagger: 0.05
       });
+
+      gsap.from("#creator-list .row-item", {
+        scrollTrigger: { trigger: "#creator-list", start: "top 85%" },
+        opacity: 0, y: 18, duration: 0.5, ease: "power2.out", stagger: 0.05
+      });
+    });
+  }
+
+  function setupHoverPreview() {
+    var el = document.getElementById("hover-preview");
+    if (!el || !window.matchMedia("(hover: hover) and (pointer: fine)").matches) return;
+    var img = el.querySelector("img");
+    var active = null;
+    document.addEventListener("mouseover", function (e) {
+      var row = e.target.closest(".row-item[data-preview]");
+      if (!row || row === active) return;
+      active = row;
+      img.src = row.getAttribute("data-preview");
+      el.classList.add("visible");
+    });
+    document.addEventListener("mouseout", function (e) {
+      var row = e.target.closest(".row-item[data-preview]");
+      if (!row || (e.relatedTarget && row.contains(e.relatedTarget))) return;
+      active = null;
+      el.classList.remove("visible");
+    });
+    document.addEventListener("mousemove", function (e) {
+      if (!active) return;
+      el.style.left = e.clientX + "px";
+      el.style.top = e.clientY + "px";
     });
   }
 
@@ -467,5 +502,6 @@
     if (e.key === "Escape") closeCaseModal();
   });
 
+  setupHoverPreview();
   renderAll();
 })();
