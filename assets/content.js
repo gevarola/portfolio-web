@@ -65,7 +65,9 @@ en: {
     ]
   },
   work: {
-    heading: "Selected work",
+    heading: "Work",
+    tabCases: "Big projects",
+    tabBrands: "Accounts I manage",
     challengeLabel: "The challenge",
     processLabel: "The process",
     resultLabel: "The result",
@@ -75,7 +77,6 @@ en: {
     close: "Close"
   },
   otherWork: {
-    eyebrow: "Brands I manage",
     body: "I also handle content, video editing and community management for these brands. Some are just getting started, others are already established — tap a logo to see the actual reels and posts I made for each one.",
     cta: "See the work",
     viewProfile: "View Instagram profile",
@@ -159,7 +160,9 @@ es: {
     ]
   },
   work: {
-    heading: "Trabajo seleccionado",
+    heading: "Trabajo",
+    tabCases: "Proyectos grandes",
+    tabBrands: "Cuentas que manejo",
     challengeLabel: "El desafío",
     processLabel: "El proceso",
     resultLabel: "El resultado",
@@ -169,7 +172,6 @@ es: {
     close: "Cerrar"
   },
   otherWork: {
-    eyebrow: "Marcas que gestiono",
     body: "También llevo el contenido, la edición de video y el community management de estas marcas. Algunas recién están arrancando, otras ya están asentadas — tocá un logo para ver la info y los reels y posts reales que hice para cada una.",
     cta: "Ver el trabajo",
     viewProfile: "Ver perfil de Instagram",
@@ -575,7 +577,7 @@ const CREATOR_ITEMS = [
     brand: "@frigorifico.criscar.campana",
     client: "criscar",
     type: { en: "Trend Humor", es: "Trend Humor" },
-    stats: [{ value: "99", en: "likes", es: "me gusta" }, { value: "4", en: "comments", es: "comentarios" }],
+    stats: [{ value: "+120K", en: "views", es: "views" }, { value: "99", en: "likes", es: "me gusta" }, { value: "4", en: "comments", es: "comentarios" }],
     en: "In-store humor bit poking fun at an absurd one-star review, playing it against the shop's real five-star reviews.",
     es: "Video de humor en el local, burlándose de una reseña negativa absurda y contrastándola con las reseñas de 5 estrellas reales."
   },
@@ -585,7 +587,7 @@ const CREATOR_ITEMS = [
     brand: "@frigorifico.criscar.campana",
     client: "criscar",
     type: { en: "Trend Humor", es: "Trend Humor" },
-    stats: [{ value: "55", en: "likes", es: "me gusta" }, { value: "6", en: "comments", es: "comentarios" }],
+    stats: [{ value: "+4.3K", en: "views", es: "views" }, { value: "55", en: "likes", es: "me gusta" }, { value: "6", en: "comments", es: "comentarios" }],
     en: "In-store humor bit about picking meat over salad, playing up the shop's no-nonsense, meat-first attitude.",
     es: "Video de humor en el local sobre elegir carne antes que ensalada, jugando con la actitud directa y carnívora del negocio."
   },
@@ -595,7 +597,7 @@ const CREATOR_ITEMS = [
     brand: "@frigorifico.criscar.campana",
     client: "criscar",
     type: { en: "Talking head", es: "Frente a cámara" },
-    stats: [{ value: "43", en: "likes", es: "me gusta" }, { value: "4", en: "comments", es: "comentarios" }],
+    stats: [{ value: "+60K", en: "views", es: "views" }, { value: "43", en: "likes", es: "me gusta" }, { value: "4", en: "comments", es: "comentarios" }],
     en: "Talking-head bit in the shop showing how much quality meat a fixed budget gets you.",
     es: "Video frente a cámara en el local mostrando cuánta carne de calidad rinde un presupuesto fijo."
   },
@@ -615,7 +617,7 @@ const CREATOR_ITEMS = [
     brand: "@tempocafe_",
     client: "tempo-cafe",
     type: { en: "In-store moment", es: "Momento en el local" },
-    stats: [{ value: "102", en: "likes", es: "me gusta" }, { value: "25", en: "comments", es: "comentarios" }],
+    stats: [{ value: "+6K", en: "views", es: "views" }, { value: "102", en: "likes", es: "me gusta" }, { value: "25", en: "comments", es: "comentarios" }],
     en: "Counter scene handing over coffee and a medialuna, framed around treating yourself to a little pick-me-up.",
     es: "Escena de mostrador entregando un café y una medialuna, con el mensaje de darte ese pequeño empujón para arrancar el día."
   },
@@ -625,7 +627,7 @@ const CREATOR_ITEMS = [
     brand: "@tempocafe_",
     client: "tempo-cafe",
     type: { en: "Trend Humor", es: "Trend Humor" },
-    stats: [{ value: "203", en: "likes", es: "me gusta" }, { value: "42", en: "comments", es: "comentarios" }],
+    stats: [{ value: "+4.2K", en: "views", es: "views" }, { value: "203", en: "likes", es: "me gusta" }, { value: "42", en: "comments", es: "comentarios" }],
     en: "Humor bit filmed in-store with two of the team, playing on the idea of \"the perfect duo.\"",
     es: "Video de humor filmado en el local con dos personas del equipo, jugando con la idea del 'dúo perfecto'."
   },
@@ -635,7 +637,7 @@ const CREATOR_ITEMS = [
     brand: "@tempocafe_",
     client: "tempo-cafe",
     type: { en: "Talking head", es: "Frente a cámara" },
-    stats: [{ value: "171", en: "likes", es: "me gusta" }, { value: "24", en: "comments", es: "comentarios" }],
+    stats: [{ value: "3.2K", en: "views", es: "views" }, { value: "171", en: "likes", es: "me gusta" }, { value: "24", en: "comments", es: "comentarios" }],
     en: "Talking-head bit telling the audience they've scrolled enough for today and should stop by for a coffee.",
     es: "Video frente a cámara diciéndole a la audiencia que ya scrolleó demasiado y que se pase por Tempo a tomar algo."
   },
@@ -691,7 +693,7 @@ const CREATOR_ITEMS = [
     brand: "@fruta.noble",
     client: "fruta-noble",
     type: { en: "Educational tip", es: "Tip educativo" },
-    stats: [{ value: "87", en: "likes", es: "me gusta" }, { value: "10", en: "comments", es: "comentarios" }],
+    stats: [{ value: "+13K", en: "views", es: "views" }, { value: "87", en: "likes", es: "me gusta" }, { value: "10", en: "comments", es: "comentarios" }],
     en: "Talking-head tip on the right way to hold and pour a glass of wine without ruining your clothes.",
     es: "Tip frente a cámara sobre cómo sostener y servir la copa de vino sin arruinarte la ropa."
   },
@@ -701,7 +703,7 @@ const CREATOR_ITEMS = [
     brand: "@fruta.noble",
     client: "fruta-noble",
     type: { en: "Humor", es: "Humor" },
-    stats: [{ value: "111", en: "likes", es: "me gusta" }, { value: "10", en: "comments", es: "comentarios" }],
+    stats: [{ value: "+4K", en: "views", es: "views" }, { value: "111", en: "likes", es: "me gusta" }, { value: "10", en: "comments", es: "comentarios" }],
     en: "Relatable humor bit about wanting a glass of wine earlier in the day than you probably should.",
     es: "Video de humor sobre las ganas de tomarte una copa de vino más temprano de lo que 'deberías'."
   },
@@ -711,7 +713,7 @@ const CREATOR_ITEMS = [
     brand: "@fruta.noble",
     client: "fruta-noble",
     type: { en: "Educational video", es: "Video educativo" },
-    stats: [{ value: "108", en: "likes", es: "me gusta" }, { value: "0", en: "comments", es: "comentarios" }],
+    stats: [{ value: "+9K", en: "views", es: "views" }, { value: "108", en: "likes", es: "me gusta" }, { value: "0", en: "comments", es: "comentarios" }],
     en: "Explains what orange wine is and why it's different, tying it back to the small-producer labels the club sources.",
     es: "Explica qué es el vino naranjo y por qué es distinto, conectándolo con las etiquetas de productores chicos que trae el club."
   },
@@ -721,7 +723,7 @@ const CREATOR_ITEMS = [
     brand: "@fruta.noble",
     client: "fruta-noble",
     type: { en: "Educational tip", es: "Tip educativo" },
-    stats: [{ value: "94", en: "likes", es: "me gusta" }, { value: "6", en: "comments", es: "comentarios" }],
+    stats: [{ value: "+2K", en: "views", es: "views" }, { value: "94", en: "likes", es: "me gusta" }, { value: "6", en: "comments", es: "comentarios" }],
     en: "Answers how long an opened bottle of wine actually lasts, and how to keep it drinkable for longer.",
     es: "Responde cuánto dura un vino ya abierto y cómo conservarlo para que siga rindiendo."
   },
@@ -731,7 +733,7 @@ const CREATOR_ITEMS = [
     brand: "@tomyprat",
     client: "prato-autos",
     type: { en: "Vehicle walkaround", es: "Recorrida de auto" },
-    stats: [{ value: "3642", en: "likes", es: "me gusta" }, { value: "459", en: "comments", es: "comentarios" }],
+    stats: [{ value: "+100K", en: "views", es: "views" }, { value: "3642", en: "likes", es: "me gusta" }, { value: "459", en: "comments", es: "comentarios" }],
     en: "Walkaround of a Ford Focus wagon on the lot, asking followers what they think of the less common trunk body style.",
     es: "Recorrida de un Ford Focus con baúl en el estacionamiento, preguntándole a los seguidores qué opinan de esta versión menos común."
   },
@@ -741,7 +743,7 @@ const CREATOR_ITEMS = [
     brand: "@tomyprat",
     client: "prato-autos",
     type: { en: "Listing walkaround", es: "Recorrida de unidad" },
-    stats: [{ value: "1154", en: "likes", es: "me gusta" }, { value: "84", en: "comments", es: "comentarios" }],
+    stats: [{ value: "+50K", en: "views", es: "views" }, { value: "1154", en: "likes", es: "me gusta" }, { value: "84", en: "comments", es: "comentarios" }],
     en: "Quick walkaround of a 2016 Honda CR-V currently listed for sale.",
     es: "Recorrida corta de una Honda CR-V 2016 que está a la venta."
   },
@@ -751,7 +753,7 @@ const CREATOR_ITEMS = [
     brand: "@prato.autos",
     client: "prato-autos",
     type: { en: "New inventory", es: "Nuevo ingreso" },
-    stats: [{ value: "148", en: "likes", es: "me gusta" }, { value: "27", en: "comments", es: "comentarios" }],
+    stats: [{ value: "+15K", en: "views", es: "views" }, { value: "148", en: "likes", es: "me gusta" }, { value: "27", en: "comments", es: "comentarios" }],
     en: "Announces a Chevrolet Tracker 2024 as a new arrival on the lot.",
     es: "Anuncia el ingreso de un Chevrolet Tracker 2024 a la agencia."
   },
@@ -761,7 +763,7 @@ const CREATOR_ITEMS = [
     brand: "@prato.autos",
     client: "prato-autos",
     type: { en: "Comparison", es: "Comparación" },
-    stats: [{ value: "105", en: "likes", es: "me gusta" }, { value: "14", en: "comments", es: "comentarios" }],
+    stats: [{ value: "+12K", en: "views", es: "views" }, { value: "105", en: "likes", es: "me gusta" }, { value: "14", en: "comments", es: "comentarios" }],
     en: "Side-by-side comparison of a Toyota Corolla and a Honda Fit with the hoods up, built around a question to drive comments.",
     es: "Comparación lado a lado de un Toyota Corolla y una Honda Fit con los capots abiertos, armada como pregunta para generar comentarios."
   },

@@ -102,9 +102,22 @@
     );
   }
 
+  var workTab = "cases";
+
   function renderWork() {
     var s = t().work;
     document.getElementById("work-heading").textContent = s.heading;
+
+    var tabsEl = document.getElementById("work-tabs");
+    tabsEl.innerHTML =
+      '<button type="button" class="work-tab" data-tab="cases">' + s.tabCases + '</button>' +
+      '<button type="button" class="work-tab" data-tab="brands">' + s.tabBrands + '</button>';
+    tabsEl.querySelectorAll(".work-tab").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        setWorkTab(btn.getAttribute("data-tab"));
+      });
+    });
+
     var listEl = document.getElementById("clients-list");
     listEl.innerHTML = '<div class="project-grid">' + CASES.map(projectCard).join("") + '</div>';
     listEl.querySelectorAll(".project-card").forEach(function (card) {
@@ -112,6 +125,19 @@
         openCaseModal(card.getAttribute("data-case"));
       });
     });
+
+    renderOtherWork();
+    setWorkTab(workTab);
+  }
+
+  function setWorkTab(tab) {
+    workTab = tab;
+    document.getElementById("work-panel-cases").hidden = tab !== "cases";
+    document.getElementById("work-panel-brands").hidden = tab !== "brands";
+    document.querySelectorAll(".work-tab").forEach(function (btn) {
+      btn.classList.toggle("active", btn.getAttribute("data-tab") === tab);
+    });
+    initScrollReveals();
   }
 
   function platformOf(link) {
@@ -130,7 +156,7 @@
 
   function creatorCard(item) {
     var statsHtml = item.stats
-      ? '<p class="creator-card-stats">' + item.stats.map(function (st) { return st.value + ' ' + st[state.lang]; }).join(" · ") + '</p>'
+      ? '<div class="creator-card-stats">' + combineEngagementStats(item.stats).map(function (st) { return '<span>' + st.value + ' ' + st[state.lang] + '</span>'; }).join("") + '</div>'
       : '';
     var brandLine = '<span class="creator-card-handle">' + item.brand + '</span>' + (item.type ? ' · ' + item.type[state.lang] : '');
     return (
@@ -147,7 +173,6 @@
 
   function renderOtherWork() {
     var s = t().otherWork;
-    document.getElementById("other-work-eyebrow").textContent = s.eyebrow;
     document.getElementById("other-work-body").textContent = s.body;
     document.getElementById("other-work-grid").innerHTML = OTHER_CLIENTS.map(function (c) {
       return (
@@ -182,9 +207,27 @@
     return String(Math.round(n));
   }
 
+  // Folds separate "likes" and "comments" stats into a single rounded "engagement" stat.
+  function combineEngagementStats(stats) {
+    var likes = null, comments = null, rest = [];
+    stats.forEach(function (st) {
+      if (st.en === "likes") likes = st;
+      else if (st.en === "comments") comments = st;
+      else rest.push(st);
+    });
+    if (!likes || !comments) return stats;
+    var total = parseMetric(likes.value) + parseMetric(comments.value);
+    var rounded = total >= 1000 ? formatMetric(total)
+      : total >= 100 ? Math.round(total / 10) * 10
+      : total >= 20 ? Math.round(total / 5) * 5
+      : Math.round(total);
+    rest.push({ value: "+" + rounded, en: "engagement", es: "engagement" });
+    return rest;
+  }
+
   function brandFeaturedCard(item) {
     var statsHtml = item.stats
-      ? '<p class="creator-card-stats">' + item.stats.map(function (st) { return st.value + " " + st[state.lang]; }).join(" · ") + "</p>"
+      ? '<div class="creator-card-stats">' + combineEngagementStats(item.stats).map(function (st) { return "<span>" + st.value + " " + st[state.lang] + "</span>"; }).join("") + "</div>"
       : "";
     return (
       '<a class="creator-card" href="' + item.link + '" target="_blank" rel="noopener">' +
@@ -387,7 +430,6 @@
     renderDetails();
     renderPillars();
     renderWork();
-    renderOtherWork();
     renderCreator();
     renderAI();
     renderWebDev();
