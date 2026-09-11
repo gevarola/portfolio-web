@@ -471,21 +471,21 @@ const CASES = [
 ];
 
 const PLATFORMS = [
-  { name: "Instagram", icon: "instagram", color: "#FF0069" },
-  { name: "TikTok", icon: "tiktok", color: "#000000" },
-  { name: "X", icon: "x", color: "#000000" },
-  { name: "Facebook", icon: "facebook", color: "#0866FF" },
-  { name: "YouTube", icon: "youtube", color: "#FF0000" }
+  { name: "Instagram", icon: "instagram" },
+  { name: "TikTok", icon: "tiktok" },
+  { name: "X", icon: "x" },
+  { name: "Facebook", icon: "facebook" },
+  { name: "YouTube", icon: "youtube" }
 ];
 
 const TOOLS = [
-  { name: "Notion", icon: "notion", color: "#000000" },
-  { name: "Figma", icon: "figma", color: "#F24E1E" },
-  { name: "Canva", icon: "canva", color: "#00C4CC" },
-  { name: "Buffer", icon: "buffer", color: "#231F20" },
-  { name: "Google Workspace", icon: "google", color: "#4285F4" },
-  { name: "ChatGPT", icon: "openai", color: "#10A37F" },
-  { name: "Claude", icon: "anthropic", color: "#D97757" },
+  { name: "Notion", icon: "notion" },
+  { name: "Figma", icon: "figma" },
+  { name: "Canva", icon: "canva" },
+  { name: "Buffer", icon: "buffer" },
+  { name: "Google Workspace", icon: "google" },
+  { name: "ChatGPT", icon: "openai" },
+  { name: "Claude", icon: "anthropic" },
   { name: "CapCut", img: "assets/images/logo-capcut.jpg" },
   { name: "Sprout Social", img: "assets/images/logo-sproutsocial.png" },
   { name: "Monday", img: "assets/images/logo-monday.png" }

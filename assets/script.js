@@ -20,11 +20,11 @@
     var inner;
     if (item.icon) {
       var d = ICON_PATHS[item.icon];
-      inner = '<span class="badge-chip"><svg viewBox="0 0 24 24" width="19" height="19"><path fill="' + item.color + '" d="' + d + '"/></svg></span>';
+      inner = '<span class="badge-chip"><svg viewBox="0 0 24 24" width="19" height="19"><path fill="currentColor" d="' + d + '"/></svg></span>';
     } else if (item.img) {
       inner = '<span class="badge-chip"><img src="' + item.img + '" alt="' + item.name + '"></span>';
     } else {
-      inner = '<span class="badge-chip badge-chip-word" style="color:' + item.color + '">' + item.word + '</span>';
+      inner = '<span class="badge-chip badge-chip-word">' + item.word + '</span>';
     }
     return '<span class="badge-chip-wrap">' + inner + '<span class="badge-tooltip" role="tooltip">' + item.name + '</span></span>';
   }
@@ -76,15 +76,37 @@
   function renderPillars() {
     var s = t().pillars;
     document.getElementById("pillars-eyebrow").textContent = s.eyebrow;
-    document.getElementById("pillars-list").innerHTML = s.items.map(function (item) {
+    var listEl = document.getElementById("pillars-list");
+    listEl.innerHTML = s.items.map(function (item, i) {
       return (
         '<div class="index-item">' +
-          '<span class="index-num">' + item.num + '</span>' +
-          '<span class="index-item-title">' + item.title + '</span>' +
-          '<span class="index-item-body">' + item.body + '</span>' +
+          '<button type="button" class="index-item-toggle" aria-expanded="false" data-index="' + i + '">' +
+            '<span class="index-num">' + item.num + '</span>' +
+            '<span class="index-item-title">' + item.title + '</span>' +
+            '<span class="index-item-icon" aria-hidden="true">+</span>' +
+          '</button>' +
+          '<div class="index-item-panel">' +
+            '<div class="index-item-panel-inner">' +
+              '<p class="index-item-body">' + item.body + '</p>' +
+            '</div>' +
+          '</div>' +
         '</div>'
       );
     }).join("");
+    listEl.querySelectorAll(".index-item-toggle").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var item = btn.closest(".index-item");
+        var wasOpen = item.classList.contains("open");
+        listEl.querySelectorAll(".index-item.open").forEach(function (openItem) {
+          openItem.classList.remove("open");
+          openItem.querySelector(".index-item-toggle").setAttribute("aria-expanded", "false");
+        });
+        if (!wasOpen) {
+          item.classList.add("open");
+          btn.setAttribute("aria-expanded", "true");
+        }
+      });
+    });
   }
 
   function projectCard(c, i) {
@@ -438,11 +460,24 @@
     if (!el || !window.matchMedia("(hover: hover) and (pointer: fine)").matches) return;
     var img = el.querySelector("img");
     var active = null;
+
+    function position(e) {
+      var gap = 20, margin = 16;
+      var w = el.offsetWidth, h = el.offsetHeight;
+      var left = e.clientX + gap;
+      var top = e.clientY + gap;
+      if (left + w > window.innerWidth - margin) left = e.clientX - gap - w;
+      if (top + h > window.innerHeight - margin) top = e.clientY - gap - h;
+      el.style.left = Math.max(margin, left) + "px";
+      el.style.top = Math.max(margin, top) + "px";
+    }
+
     document.addEventListener("mouseover", function (e) {
       var row = e.target.closest(".row-item[data-preview]");
       if (!row || row === active) return;
       active = row;
       img.src = row.getAttribute("data-preview");
+      position(e);
       el.classList.add("visible");
     });
     document.addEventListener("mouseout", function (e) {
@@ -453,8 +488,7 @@
     });
     document.addEventListener("mousemove", function (e) {
       if (!active) return;
-      el.style.left = e.clientX + "px";
-      el.style.top = e.clientY + "px";
+      position(e);
     });
   }
 
