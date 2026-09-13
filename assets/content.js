@@ -678,6 +678,15 @@ const CREATOR_ITEMS = [
     es: "Video frente a cámara sobre si el helado tiene olor o no."
   },
   {
+    image: "assets/images/creator-experta.jpg",
+    link: "https://www.instagram.com/p/Dc_tOn8CKGD/",
+    brand: "@expertaoficial",
+    type: { en: "Talking head", es: "Frente a cámara" },
+    stats: [{ value: "+2K", en: "views", es: "views" }, { value: "+70", en: "engagement", es: "engagement" }],
+    en: "Talking-head humor bit for Experta Seguros about using a house as loan collateral.",
+    es: "Video de humor frente a cámara para Experta Seguros sobre usar una casa como garantía de un préstamo."
+  },
+  {
     image: "assets/images/creator-fruta-noble.jpg",
     link: "https://www.instagram.com/p/DVqwdxOESsE/",
     brand: "@fruta.noble",
