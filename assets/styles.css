@@ -254,8 +254,16 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 700; line-height: 1.
   height: 100%;
   object-fit: contain;
   padding: 6px;
-  filter: grayscale(1);
-  opacity: 0.75;
+}
+.badge-chip-logo { position: relative; }
+.badge-chip-logo img { filter: grayscale(1); }
+.badge-chip-logo::after {
+  content: "";
+  position: absolute;
+  inset: 6px;
+  background: var(--blue);
+  mix-blend-mode: color;
+  pointer-events: none;
 }
 .badge-chip-word {
   width: auto;

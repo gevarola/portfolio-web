@@ -22,7 +22,7 @@
       var d = ICON_PATHS[item.icon];
       inner = '<span class="badge-chip"><svg viewBox="0 0 24 24" width="19" height="19"><path fill="currentColor" d="' + d + '"/></svg></span>';
     } else if (item.img) {
-      inner = '<span class="badge-chip"><img src="' + item.img + '" alt="' + item.name + '"></span>';
+      inner = '<span class="badge-chip badge-chip-logo"><img src="' + item.img + '" alt="' + item.name + '"></span>';
     } else {
       inner = '<span class="badge-chip badge-chip-word">' + item.word + '</span>';
     }
