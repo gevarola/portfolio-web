@@ -328,9 +328,13 @@
     var s = t().creator;
     document.getElementById("creator-eyebrow").textContent = s.eyebrow;
     document.getElementById("creator-body").textContent = s.body;
+    var items = CREATOR_ITEMS.filter(function (item) { return !item.client; });
+    var cardsHtml = items.map(creatorCard).join("");
     var listEl = document.getElementById("creator-list");
-    listEl.className = "creator-grid";
-    listEl.innerHTML = CREATOR_ITEMS.filter(function (item) { return !item.client; }).map(creatorCard).join("");
+    listEl.className = "creator-marquee";
+    listEl.innerHTML = '<div class="creator-marquee-track">' + cardsHtml + cardsHtml + '</div>';
+    var track = listEl.querySelector(".creator-marquee-track");
+    if (track) track.style.animationDuration = Math.max(items.length * 6, 20) + "s";
   }
 
   function renderAI() {
@@ -441,11 +445,6 @@
 
       gsap.from("#other-work-list .other-work-item", {
         scrollTrigger: { trigger: "#other-work-list", start: "top 85%" },
-        opacity: 0, y: 18, duration: 0.5, ease: "power2.out", stagger: 0.05
-      });
-
-      gsap.from("#creator-list .creator-card", {
-        scrollTrigger: { trigger: "#creator-list", start: "top 85%" },
         opacity: 0, y: 18, duration: 0.5, ease: "power2.out", stagger: 0.05
       });
     });
