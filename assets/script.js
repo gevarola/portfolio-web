@@ -115,7 +115,7 @@
     var s = t().work;
     var posStyle = c.imgPos ? ' style="object-position:' + c.imgPos + '"' : '';
     return (
-      '<button type="button" class="row-item" data-case="' + c.id + '" data-preview="' + c.image + '">' +
+      '<button type="button" class="row-item" data-case="' + c.id + '">' +
         '<span class="row-num">' + pad2(i + 1) + '</span>' +
         '<span class="row-thumb"><img src="' + c.image + '" alt="" loading="lazy"' + posStyle + '></span>' +
         '<span class="row-body">' +
@@ -187,7 +187,7 @@
       : "";
     var metaLine = platform + (statsLine ? " · " + statsLine : "");
     return (
-      '<a class="row-item" href="' + item.link + '" target="_blank" rel="noopener" data-preview="' + item.image + '">' +
+      '<a class="row-item" href="' + item.link + '" target="_blank" rel="noopener">' +
         '<span class="row-num">' + pad2(i + 1) + '</span>' +
         '<span class="row-thumb"><img src="' + item.image + '" alt="" loading="lazy"></span>' +
         '<span class="row-body">' +
@@ -205,7 +205,7 @@
     var listEl = document.getElementById("other-work-list");
     listEl.innerHTML = OTHER_CLIENTS.map(function (c, i) {
       return (
-        '<button type="button" class="row-item" data-client="' + c.id + '" data-preview="' + c.logo + '">' +
+        '<button type="button" class="row-item" data-client="' + c.id + '">' +
           '<span class="row-num">' + pad2(i + 1) + '</span>' +
           '<span class="row-thumb"><img src="' + c.logo + '" alt="" loading="lazy"></span>' +
           '<span class="row-body">' +
@@ -455,43 +455,6 @@
     });
   }
 
-  function setupHoverPreview() {
-    var el = document.getElementById("hover-preview");
-    if (!el || !window.matchMedia("(hover: hover) and (pointer: fine)").matches) return;
-    var img = el.querySelector("img");
-    var active = null;
-
-    function position(e) {
-      var gap = 20, margin = 16;
-      var w = el.offsetWidth, h = el.offsetHeight;
-      var left = e.clientX + gap;
-      var top = e.clientY + gap;
-      if (left + w > window.innerWidth - margin) left = e.clientX - gap - w;
-      if (top + h > window.innerHeight - margin) top = e.clientY - gap - h;
-      el.style.left = Math.max(margin, left) + "px";
-      el.style.top = Math.max(margin, top) + "px";
-    }
-
-    document.addEventListener("mouseover", function (e) {
-      var row = e.target.closest(".row-item[data-preview]");
-      if (!row || row === active) return;
-      active = row;
-      img.src = row.getAttribute("data-preview");
-      position(e);
-      el.classList.add("visible");
-    });
-    document.addEventListener("mouseout", function (e) {
-      var row = e.target.closest(".row-item[data-preview]");
-      if (!row || (e.relatedTarget && row.contains(e.relatedTarget))) return;
-      active = null;
-      el.classList.remove("visible");
-    });
-    document.addEventListener("mousemove", function (e) {
-      if (!active) return;
-      position(e);
-    });
-  }
-
   function renderAll() {
     renderHeader();
     renderIntro();
@@ -536,6 +499,5 @@
     if (e.key === "Escape") closeCaseModal();
   });
 
-  setupHoverPreview();
   renderAll();
 })();
