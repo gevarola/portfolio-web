@@ -174,7 +174,7 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 700; line-height: 1.
   z-index: 0;
   inset: -16%;
   border-radius: 50%;
-  background: radial-gradient(circle at 42% 38%, rgba(82, 113, 255, 0.55), rgba(82, 113, 255, 0) 62%);
+  background: radial-gradient(circle at 50% 50%, rgba(82, 113, 255, 0.55), rgba(82, 113, 255, 0) 62%);
   filter: blur(26px);
   pointer-events: none;
 }
