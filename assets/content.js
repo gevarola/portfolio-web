@@ -23,7 +23,7 @@ en: {
   nav: { about: "About", work: "Work", creator: "As a creator", contact: "Contact" },
   intro: {
     roleLine: "Social Media Manager · Content Manager · Content Creator",
-    title: "Hi, I'm Germán. I help brands and creators build content people choose to stick around for.",
+    title: "Hi, I'm Germán. I help brands and creators build content people [[choose to stick around for]].",
     subtitle: "4+ years leading content strategy across LATAM markets. Today, freelancing full-time for brands across the board.",
     ctaWork: "View case studies",
     ctaContact: "Get in touch"
@@ -118,7 +118,7 @@ es: {
   nav: { about: "Sobre mí", work: "Trabajo", creator: "Como creador", contact: "Contacto" },
   intro: {
     roleLine: "Social Media Manager · Content Manager · Content Creator",
-    title: "Hola, soy Germán. Ayudo a marcas y creadores a construir contenido que la gente elige quedarse a ver.",
+    title: "Hola, soy Germán. Ayudo a marcas y creadores a construir contenido que la gente [[elige quedarse a ver]].",
     subtitle: "Más de 4 años liderando estrategia de contenido en mercados de LATAM. Hoy, freelance full-time para marcas de todo tipo.",
     ctaWork: "Ver casos de éxito",
     ctaContact: "Escribime"

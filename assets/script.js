@@ -32,7 +32,10 @@
   function renderIntro() {
     var s = t().intro;
     document.getElementById("intro-status").textContent = s.roleLine;
-    document.getElementById("intro-title").innerHTML = s.title.replace(/(\S+)([.?!])?\s*$/, '<span class="highlight">$1</span>$2');
+    var titleHtml = /\[\[.+\]\]/.test(s.title)
+      ? s.title.replace(/\[\[(.+?)\]\]/g, '<span class="highlight">$1</span>')
+      : s.title.replace(/(\S+)([.?!])?\s*$/, '<span class="highlight">$1</span>$2');
+    document.getElementById("intro-title").innerHTML = titleHtml;
     document.getElementById("intro-subtitle").textContent = s.subtitle;
     document.getElementById("intro-cta-work").textContent = s.ctaWork;
     document.getElementById("intro-cta-contact").textContent = s.ctaContact;
@@ -161,7 +164,9 @@
     document.querySelectorAll(".work-tab").forEach(function (btn) {
       btn.classList.toggle("active", btn.getAttribute("data-tab") === tab);
     });
-    initScrollReveals();
+    // Recalculate trigger positions for the panel that just became visible,
+    // without tearing down and re-arming reveals that already played.
+    if (typeof ScrollTrigger !== "undefined") ScrollTrigger.refresh();
   }
 
   function platformOf(link) {
