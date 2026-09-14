@@ -690,7 +690,6 @@ const CREATOR_ITEMS = [
     image: "assets/images/creator-fruta-noble.jpg",
     link: "https://www.instagram.com/p/DVqwdxOESsE/",
     brand: "@fruta.noble",
-    client: "fruta-noble",
     type: { en: "Collab post", es: "Colaboración" },
     stats: [{ value: "1.9K", en: "views", es: "views" }, { value: "105", en: "engagement", es: "engagement" }],
     en: "Awareness video explaining a wine subscription club with a humor-first tone.",
