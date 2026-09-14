@@ -697,7 +697,7 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 700; line-height: 1.
 .creator-card {
   display: flex;
   flex-direction: column;
-  height: 100%;
+  align-self: stretch;
   background: #1A1B20;
   border: 1px solid rgba(244, 241, 233, 0.08);
   border-radius: 14px;
