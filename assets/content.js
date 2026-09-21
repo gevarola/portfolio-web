@@ -531,8 +531,8 @@ const OTHER_CLIENTS = [
     stage: { en: "Consolidating", es: "Consolidando" },
     stats: [{ value: "+30", en: "pieces", es: "piezas" }, { value: "+300K", en: "views", es: "views" }],
     description: {
-      en: "The pen behind the script and the face in front of the lens: I'm the content creator who gives Frigorífico Criscar its voice, on and off camera.",
-      es: "La pluma detrás del guion y la cara frente a la cámara: soy el creador de contenido que le da voz a Frigorífico Criscar, dentro y fuera de plano."
+      en: "Content creator for Frigorífico Criscar: I come up with the ideas, write the scripts and bring them to life, on camera when the piece needs a face.",
+      es: "Creador de contenido de Frigorífico Criscar: ideo los conceptos, escribo los guiones y los llevo a la pantalla, poniendo la cara cuando la pieza lo pide."
     },
     pendingSlots: 0
   },
