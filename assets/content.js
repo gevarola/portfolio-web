@@ -502,7 +502,7 @@ const OTHER_CLIENTS = [
     logo: "assets/images/logo-fruta-noble-client.png",
     name: "Fruta Noble",
     link: "https://www.instagram.com/fruta.noble/",
-    stage: { en: "Just getting started", es: "Recién empezando" },
+    stage: { en: "Consolidating", es: "Consolidando" },
     stats: [{ value: "+20", en: "pieces", es: "piezas" }, { value: "+50K", en: "views", es: "views" }],
     description: {
       en: "I run the Instagram strategy and content for Fruta Noble: I script, shoot and edit the reels and posts, appear on camera in some of them, and manage the day-to-day community.",
@@ -515,7 +515,7 @@ const OTHER_CLIENTS = [
     logo: "assets/images/logo-tempo-cafe-client.jpg",
     name: "Tempo Café",
     link: "https://www.instagram.com/tempocafe_/",
-    stage: { en: "Just getting started", es: "Recién empezando" },
+    stage: { en: "Consolidating", es: "Consolidando" },
     stats: [{ value: "+40", en: "pieces", es: "piezas" }, { value: "+70K", en: "views", es: "views" }],
     description: {
       en: "I run the Instagram strategy and content for Tempo Café: I script, shoot and edit the reels and posts, appear on camera in some of them, and manage the day-to-day community.",
@@ -544,8 +544,8 @@ const OTHER_CLIENTS = [
     stage: { en: "Established & growing", es: "Marca asentada" },
     stats: [{ value: "+40", en: "pieces", es: "piezas" }, { value: "+2M", en: "views", es: "views" }],
     description: {
-      en: "I run the Instagram strategy and content for Prato Autos: I script, shoot and edit the reels and posts, and manage the day-to-day community.",
-      es: "Llevo la estrategia y el contenido de Instagram de Prato Autos: escribo el guion, grabo y edito los reels y posts, además de gestionar el día a día de la comunidad."
+      en: "Social media manager for Prato Autos, a personal brand: I define the content strategy, drive its growth on Instagram and come up with the ideas and scripts, then handle production and the day-to-day community.",
+      es: "Social media manager de Prato Autos, una marca personal: defino la estrategia de contenido, impulso su crecimiento en Instagram y ideo los conceptos y guiones, además de la producción y la comunidad del día a día."
     },
     pendingSlots: 0
   }
