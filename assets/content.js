@@ -544,8 +544,8 @@ const OTHER_CLIENTS = [
     stage: { en: "Established & growing", es: "Marca asentada" },
     stats: [{ value: "+40", en: "pieces", es: "piezas" }, { value: "+2M", en: "views", es: "views" }],
     description: {
-      en: "Social media manager for Prato Autos, a personal brand: I define the content strategy, drive its growth on Instagram and come up with the ideas and scripts, then handle production and the day-to-day community.",
-      es: "Social media manager de Prato Autos, una marca personal: defino la estrategia de contenido, impulso su crecimiento en Instagram y ideo los conceptos y guiones, además de la producción y la comunidad del día a día."
+      en: "I build the strategy behind a personal brand: I plan its growth on Instagram, come up with the content ideas and scripts, and handle production and the day-to-day community.",
+      es: "Construyo la estrategia detrás de una marca personal: planifico su crecimiento en Instagram, ideo los contenidos y guiones, y me encargo de la producción y la comunidad del día a día."
     },
     pendingSlots: 0
   }
