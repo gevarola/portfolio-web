@@ -512,7 +512,7 @@ const OTHER_CLIENTS = [
   },
   {
     id: "tempo-cafe",
-    logo: "assets/images/logo-tempo-cafe-client.png",
+    logo: "assets/images/logo-tempo-cafe-client.jpg",
     name: "Tempo Café",
     link: "https://www.instagram.com/tempocafe_/",
     stage: { en: "Just getting started", es: "Recién empezando" },
@@ -531,8 +531,8 @@ const OTHER_CLIENTS = [
     stage: { en: "Consolidating", es: "Consolidando" },
     stats: [{ value: "+30", en: "pieces", es: "piezas" }, { value: "+300K", en: "views", es: "views" }],
     description: {
-      en: "I run the Instagram strategy and content for Frigorífico Criscar: I script, shoot and edit the reels and posts, appear on camera in some of them, and manage the day-to-day community.",
-      es: "Llevo la estrategia y el contenido de Instagram de Frigorífico Criscar: escribo el guion, grabo y edito los reels y posts, apareciendo en cámara en algunos, además de gestionar el día a día de la comunidad."
+      en: "The pen behind the script and the face in front of the lens: I'm the content creator who gives Frigorífico Criscar its voice, on and off camera.",
+      es: "La pluma detrás del guion y la cara frente a la cámara: soy el creador de contenido que le da voz a Frigorífico Criscar, dentro y fuera de plano."
     },
     pendingSlots: 0
   },
