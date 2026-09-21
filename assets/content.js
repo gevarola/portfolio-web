@@ -88,7 +88,7 @@ en: {
   creator: {
     eyebrow: "As a creator",
     title: "I also step in front of the camera.",
-    body: "Beyond strategy, I write, shoot and edit my own short-form video, as @gevarola. Same instinct for what stops the scroll, just from the other side of the camera.",
+    body: "Beyond strategy, I write, shoot and edit short-form video, both for my own channel (@gevarola) and as a content creator for brands. Same instinct for what stops the scroll, just from the other side of the camera.",
     watchLabel: "Watch"
   },
   ai: {
@@ -183,7 +183,7 @@ es: {
   creator: {
     eyebrow: "Como creador",
     title: "También me pongo delante de cámara.",
-    body: "Además de la estrategia, escribo, grabo y edito mis propios videos cortos, como @gevarola. El mismo instinto de qué hace que alguien deje de scrollear, pero del otro lado de la cámara.",
+    body: "Además de la estrategia, escribo, grabo y edito videos cortos, tanto para mi propio canal (@gevarola) como creador de contenido para marcas. El mismo instinto de qué hace que alguien deje de scrollear, pero del otro lado de la cámara.",
     watchLabel: "Ver"
   },
   ai: {
@@ -557,7 +557,7 @@ const CREATOR_ITEMS = [
     link: "https://www.instagram.com/p/DY2_VAsla0W/",
     brand: "@bitso.ar",
     type: { en: "New product announcement", es: "Anuncio de producto" },
-    stats: [{ value: "6.3M", en: "views", es: "views" }, { value: "+6K", en: "engagement", es: "engagement" }],
+    stats: [{ value: "+6.3M", en: "views", es: "views" }, { value: "+6K", en: "engagement", es: "engagement" }],
     en: "Announced Bitso's xStocks launch from my own account — the same campaign as the case study.",
     es: "Anuncié el lanzamiento de xStocks de Bitso desde mi cuenta, la misma campaña del caso de estudio."
   },
@@ -565,9 +565,8 @@ const CREATOR_ITEMS = [
     image: "assets/images/creator-criscar.webp",
     link: "https://www.instagram.com/reel/DXE8WY8ESmy/",
     brand: "@frigorifico.criscar.campana",
-    client: "criscar",
     type: { en: "Account launch", es: "Lanzamiento de cuenta" },
-    stats: [{ value: "84K", en: "views", es: "views" }, { value: "500", en: "engagement", es: "engagement" }],
+    stats: [{ value: "+84K", en: "views", es: "views" }, { value: "+500", en: "engagement", es: "engagement" }],
     en: "Introductory plant tour to launch Frigorífico Criscar's account.",
     es: "Recorrida por la planta para lanzar la cuenta de Frigorífico Criscar."
   },
@@ -577,7 +576,7 @@ const CREATOR_ITEMS = [
     brand: "@frigorifico.criscar.campana",
     client: "criscar",
     type: { en: "Trend Humor", es: "Trend Humor" },
-    stats: [{ value: "+120K", en: "views", es: "views" }, { value: "99", en: "likes", es: "me gusta" }, { value: "4", en: "comments", es: "comentarios" }],
+    stats: [{ value: "+120K", en: "views", es: "views" }, { value: "+99", en: "likes", es: "me gusta" }, { value: "+4", en: "comments", es: "comentarios" }],
     en: "Humor bit contrasting an absurd 1-star review with the shop's real 5-star reviews.",
     es: "Video de humor que contrasta una reseña de 1 estrella absurda con las reseñas reales de 5 estrellas."
   },
@@ -587,7 +586,7 @@ const CREATOR_ITEMS = [
     brand: "@frigorifico.criscar.campana",
     client: "criscar",
     type: { en: "Trend Humor", es: "Trend Humor" },
-    stats: [{ value: "+4.3K", en: "views", es: "views" }, { value: "55", en: "likes", es: "me gusta" }, { value: "6", en: "comments", es: "comentarios" }],
+    stats: [{ value: "+4.3K", en: "views", es: "views" }, { value: "+55", en: "likes", es: "me gusta" }, { value: "+6", en: "comments", es: "comentarios" }],
     en: "Humor bit on choosing meat over salad, playing up the shop's meat-first attitude.",
     es: "Video de humor sobre elegir carne antes que ensalada, jugando con la actitud carnívora del local."
   },
@@ -595,9 +594,8 @@ const CREATOR_ITEMS = [
     image: "assets/images/creator-criscar-4.jpg",
     link: "https://www.instagram.com/reel/DZFaAmbDpYG/",
     brand: "@frigorifico.criscar.campana",
-    client: "criscar",
     type: { en: "Talking head", es: "Frente a cámara" },
-    stats: [{ value: "+60K", en: "views", es: "views" }, { value: "43", en: "likes", es: "me gusta" }, { value: "4", en: "comments", es: "comentarios" }],
+    stats: [{ value: "+60K", en: "views", es: "views" }, { value: "+43", en: "likes", es: "me gusta" }, { value: "+4", en: "comments", es: "comentarios" }],
     en: "Talking-head bit showing how much quality meat a fixed budget buys.",
     es: "Video frente a cámara mostrando cuánta carne de calidad rinde un presupuesto fijo."
   },
@@ -617,7 +615,7 @@ const CREATOR_ITEMS = [
     brand: "@tempocafe_",
     client: "tempo-cafe",
     type: { en: "In-store moment", es: "Momento en el local" },
-    stats: [{ value: "+6K", en: "views", es: "views" }, { value: "102", en: "likes", es: "me gusta" }, { value: "25", en: "comments", es: "comentarios" }],
+    stats: [{ value: "+6K", en: "views", es: "views" }, { value: "+102", en: "likes", es: "me gusta" }, { value: "+25", en: "comments", es: "comentarios" }],
     en: "Counter scene handing over coffee and a medialuna as a mid-day treat.",
     es: "Escena de mostrador entregando café y medialuna como un mimo para el día."
   },
@@ -627,7 +625,7 @@ const CREATOR_ITEMS = [
     brand: "@tempocafe_",
     client: "tempo-cafe",
     type: { en: "Trend Humor", es: "Trend Humor" },
-    stats: [{ value: "+4.2K", en: "views", es: "views" }, { value: "203", en: "likes", es: "me gusta" }, { value: "42", en: "comments", es: "comentarios" }],
+    stats: [{ value: "+4.2K", en: "views", es: "views" }, { value: "+203", en: "likes", es: "me gusta" }, { value: "+42", en: "comments", es: "comentarios" }],
     en: "In-store humor bit with two team members playing on \"the perfect duo.\"",
     es: "Video de humor en el local con dos del equipo, jugando con la idea del 'dúo perfecto'."
   },
@@ -637,7 +635,7 @@ const CREATOR_ITEMS = [
     brand: "@tempocafe_",
     client: "tempo-cafe",
     type: { en: "Talking head", es: "Frente a cámara" },
-    stats: [{ value: "3.2K", en: "views", es: "views" }, { value: "171", en: "likes", es: "me gusta" }, { value: "24", en: "comments", es: "comentarios" }],
+    stats: [{ value: "+3.2K", en: "views", es: "views" }, { value: "+171", en: "likes", es: "me gusta" }, { value: "+24", en: "comments", es: "comentarios" }],
     en: "Talking-head bit telling the audience to stop scrolling and grab a coffee.",
     es: "Video frente a cámara invitando a dejar de scrollear y pasar por un café."
   },
@@ -646,7 +644,7 @@ const CREATOR_ITEMS = [
     link: "https://www.instagram.com/reel/C9VLilEO2Bb/",
     brand: "@bitso.ar",
     type: { en: "Interview", es: "Entrevista" },
-    stats: [{ value: "3.1K", en: "views", es: "views" }, { value: "130", en: "engagement", es: "engagement" }],
+    stats: [{ value: "+3.1K", en: "views", es: "views" }, { value: "+130", en: "engagement", es: "engagement" }],
     en: "On-camera user interviews at Bitso's 10th-anniversary event.",
     es: "Entrevistas a usuarios en el evento de los 10 años de Bitso."
   },
@@ -655,7 +653,7 @@ const CREATOR_ITEMS = [
     link: "https://www.instagram.com/reel/DDM6G2exlN2/",
     brand: "@bitso.ar",
     type: { en: "Educational video", es: "Video educativo" },
-    stats: [{ value: "3K", en: "views", es: "views" }, { value: "80", en: "engagement", es: "engagement" }],
+    stats: [{ value: "+3K", en: "views", es: "views" }, { value: "+80", en: "engagement", es: "engagement" }],
     en: "Reaction video riding a real-time Bitcoin price milestone.",
     es: "Video de reacción aprovechando un hito de precio de Bitcoin en tiempo real."
   },
@@ -664,7 +662,7 @@ const CREATOR_ITEMS = [
     link: "https://www.instagram.com/p/DWOzOlJDsih/",
     brand: "@gevarola",
     type: { en: "Talking head", es: "Frente a cámara" },
-    stats: [{ value: "2.1K", en: "views", es: "views" }, { value: "80", en: "engagement", es: "engagement" }],
+    stats: [{ value: "+2.1K", en: "views", es: "views" }, { value: "+80", en: "engagement", es: "engagement" }],
     en: "Talking-head explainer on how color shapes perception.",
     es: "Video frente a cámara sobre cómo los colores influyen en nuestra percepción."
   },
@@ -673,7 +671,7 @@ const CREATOR_ITEMS = [
     link: "https://www.instagram.com/p/DWHMtDFDglO/",
     brand: "@gevarola",
     type: { en: "Talking head", es: "Frente a cámara" },
-    stats: [{ value: "2K", en: "views", es: "views" }, { value: "50", en: "engagement", es: "engagement" }],
+    stats: [{ value: "+2K", en: "views", es: "views" }, { value: "+50", en: "engagement", es: "engagement" }],
     en: "Talking-head explainer on whether ice cream actually has a smell.",
     es: "Video frente a cámara sobre si el helado tiene olor o no."
   },
@@ -691,7 +689,7 @@ const CREATOR_ITEMS = [
     link: "https://www.instagram.com/p/DVqwdxOESsE/",
     brand: "@fruta.noble",
     type: { en: "Collab post", es: "Colaboración" },
-    stats: [{ value: "1.9K", en: "views", es: "views" }, { value: "105", en: "engagement", es: "engagement" }],
+    stats: [{ value: "+1.9K", en: "views", es: "views" }, { value: "+105", en: "engagement", es: "engagement" }],
     en: "Awareness video explaining a wine subscription club with a humor-first tone.",
     es: "Video de awareness explicando un club de vinos, con tono conversacional y humor."
   },
@@ -701,7 +699,7 @@ const CREATOR_ITEMS = [
     brand: "@fruta.noble",
     client: "fruta-noble",
     type: { en: "Educational tip", es: "Tip educativo" },
-    stats: [{ value: "+13K", en: "views", es: "views" }, { value: "87", en: "likes", es: "me gusta" }, { value: "10", en: "comments", es: "comentarios" }],
+    stats: [{ value: "+13K", en: "views", es: "views" }, { value: "+87", en: "likes", es: "me gusta" }, { value: "+10", en: "comments", es: "comentarios" }],
     en: "Tip on how to hold and pour wine without staining your clothes.",
     es: "Tip sobre cómo sostener y servir vino sin arruinarte la ropa."
   },
@@ -711,7 +709,7 @@ const CREATOR_ITEMS = [
     brand: "@fruta.noble",
     client: "fruta-noble",
     type: { en: "Humor", es: "Humor" },
-    stats: [{ value: "+4K", en: "views", es: "views" }, { value: "111", en: "likes", es: "me gusta" }, { value: "10", en: "comments", es: "comentarios" }],
+    stats: [{ value: "+4K", en: "views", es: "views" }, { value: "+111", en: "likes", es: "me gusta" }, { value: "+10", en: "comments", es: "comentarios" }],
     en: "Relatable humor bit about wanting wine earlier than you probably should.",
     es: "Video de humor sobre las ganas de tomar vino más temprano de lo que 'deberías'."
   },
@@ -721,7 +719,7 @@ const CREATOR_ITEMS = [
     brand: "@fruta.noble",
     client: "fruta-noble",
     type: { en: "Educational video", es: "Video educativo" },
-    stats: [{ value: "+9K", en: "views", es: "views" }, { value: "108", en: "likes", es: "me gusta" }, { value: "0", en: "comments", es: "comentarios" }],
+    stats: [{ value: "+9K", en: "views", es: "views" }, { value: "+108", en: "likes", es: "me gusta" }, { value: "+0", en: "comments", es: "comentarios" }],
     en: "Explains orange wine and its link to the club's small-producer labels.",
     es: "Explica qué es el vino naranjo y su conexión con los productores chicos del club."
   },
@@ -731,7 +729,7 @@ const CREATOR_ITEMS = [
     brand: "@fruta.noble",
     client: "fruta-noble",
     type: { en: "Educational tip", es: "Tip educativo" },
-    stats: [{ value: "+2K", en: "views", es: "views" }, { value: "94", en: "likes", es: "me gusta" }, { value: "6", en: "comments", es: "comentarios" }],
+    stats: [{ value: "+2K", en: "views", es: "views" }, { value: "+94", en: "likes", es: "me gusta" }, { value: "+6", en: "comments", es: "comentarios" }],
     en: "Answers how long opened wine lasts and how to keep it drinkable.",
     es: "Responde cuánto dura un vino abierto y cómo conservarlo."
   },
@@ -741,7 +739,7 @@ const CREATOR_ITEMS = [
     brand: "@tomyprat",
     client: "prato-autos",
     type: { en: "Vehicle walkaround", es: "Recorrida de auto" },
-    stats: [{ value: "+100K", en: "views", es: "views" }, { value: "3642", en: "likes", es: "me gusta" }, { value: "459", en: "comments", es: "comentarios" }],
+    stats: [{ value: "+100K", en: "views", es: "views" }, { value: "+3642", en: "likes", es: "me gusta" }, { value: "+459", en: "comments", es: "comentarios" }],
     en: "Walkaround of a Ford Focus wagon, asking followers their take on the body style.",
     es: "Recorrida de un Ford Focus con baúl, preguntando a los seguidores qué opinan."
   },
@@ -751,7 +749,7 @@ const CREATOR_ITEMS = [
     brand: "@tomyprat",
     client: "prato-autos",
     type: { en: "Listing walkaround", es: "Recorrida de unidad" },
-    stats: [{ value: "+50K", en: "views", es: "views" }, { value: "1154", en: "likes", es: "me gusta" }, { value: "84", en: "comments", es: "comentarios" }],
+    stats: [{ value: "+50K", en: "views", es: "views" }, { value: "+1154", en: "likes", es: "me gusta" }, { value: "+84", en: "comments", es: "comentarios" }],
     en: "Quick walkaround of a 2016 Honda CR-V listed for sale.",
     es: "Recorrida corta de una Honda CR-V 2016 en venta."
   },
@@ -761,7 +759,7 @@ const CREATOR_ITEMS = [
     brand: "@prato.autos",
     client: "prato-autos",
     type: { en: "New inventory", es: "Nuevo ingreso" },
-    stats: [{ value: "+15K", en: "views", es: "views" }, { value: "148", en: "likes", es: "me gusta" }, { value: "27", en: "comments", es: "comentarios" }],
+    stats: [{ value: "+15K", en: "views", es: "views" }, { value: "+148", en: "likes", es: "me gusta" }, { value: "+27", en: "comments", es: "comentarios" }],
     en: "Announces a new Chevrolet Tracker 2024 arrival on the lot.",
     es: "Anuncia el ingreso de una Chevrolet Tracker 2024 a la agencia."
   },
@@ -771,7 +769,7 @@ const CREATOR_ITEMS = [
     brand: "@prato.autos",
     client: "prato-autos",
     type: { en: "Comparison", es: "Comparación" },
-    stats: [{ value: "+12K", en: "views", es: "views" }, { value: "105", en: "likes", es: "me gusta" }, { value: "14", en: "comments", es: "comentarios" }],
+    stats: [{ value: "+12K", en: "views", es: "views" }, { value: "+105", en: "likes", es: "me gusta" }, { value: "+14", en: "comments", es: "comentarios" }],
     en: "Side-by-side comparison of a Corolla and a Fit, built to drive comments.",
     es: "Comparación lado a lado de un Corolla y una Fit, armada para generar comentarios."
   },
@@ -780,7 +778,7 @@ const CREATOR_ITEMS = [
     link: "https://www.instagram.com/p/DV1E1XIEVu6/",
     brand: "@barao.argentina",
     type: { en: "Collab post", es: "Colaboración" },
-    stats: [{ value: "1.5K", en: "views", es: "views" }, { value: "75", en: "engagement", es: "engagement" }],
+    stats: [{ value: "+1.5K", en: "views", es: "views" }, { value: "+75", en: "engagement", es: "engagement" }],
     en: "Awareness video for a yerba mate brand, using an everyday sketch as the hook.",
     es: "Video de awareness para una marca de yerbas, con un sketch cotidiano como gancho."
   }
