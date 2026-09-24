@@ -28,6 +28,7 @@ en: {
     ctaWork: "View case studies",
     ctaContact: "Get in touch"
   },
+  brands: { heading: "Brands I've worked with" },
   details: {
     experienceHeading: "Experience",
     experience: [
@@ -123,6 +124,7 @@ es: {
     ctaWork: "Ver casos de éxito",
     ctaContact: "Escribime"
   },
+  brands: { heading: "Marcas con las que trabajé" },
   details: {
     experienceHeading: "Experiencia",
     experience: [
@@ -495,6 +497,14 @@ const TICKER_KEYWORDS = {
   en: ["Content Strategy", "Social Media Management", "Copywriting", "Brand Voice", "Influencer Marketing", "Community Management", "Content Creation", "Editorial Planning", "Campaign Direction", "Creator Partnerships", "Crisis Communication", "Video Editing"],
   es: ["Estrategia de Contenido", "Social Media Management", "Copywriting", "Brand Voice", "Influencer Marketing", "Community Management", "Creación de Contenido", "Planificación Editorial", "Dirección Creativa", "Alianzas con Creadores", "Comunicación de Crisis", "Edición de Video"]
 };
+
+const BRANDS = [
+  { name: "Bitso", logo: "assets/images/brand-bitso.svg" },
+  { name: "Havanna", logo: "assets/images/brand-havanna.png" },
+  { name: "Rexona", logo: "assets/images/brand-rexona.svg" },
+  { name: "Experta Seguros", logo: "assets/images/brand-experta.png" },
+  { name: "Barão", logo: "assets/images/brand-barao.png" }
+];
 
 const OTHER_CLIENTS = [
   {

@@ -49,6 +49,18 @@
     document.getElementById("ticker-track").innerHTML = itemsHtml + itemsHtml;
   }
 
+  function renderBrands() {
+    document.getElementById("brands-heading").textContent = t().brands.heading;
+    var item = function (b, dup) {
+      return '<li class="brand-logo' + (dup ? ' brand-logo-dup" aria-hidden="true' : '') + '">' +
+        '<img src="' + b.logo + '" alt="' + (dup ? '' : b.name) + '" loading="lazy"></li>';
+    };
+    // Second copy only shows on mobile, where the row scrolls as a seamless marquee
+    document.getElementById("brands-list").innerHTML =
+      BRANDS.map(function (b) { return item(b, false); }).join("") +
+      BRANDS.map(function (b) { return item(b, true); }).join("");
+  }
+
   function renderDetails() {
     var s = t().details;
     document.getElementById("details-experience-heading").textContent = s.experienceHeading;
@@ -438,6 +450,11 @@
     if (revealCtx) revealCtx.revert();
 
     revealCtx = gsap.context(function () {
+      gsap.from("#brands-list .brand-logo", {
+        scrollTrigger: { trigger: "#brands-list", start: "top 88%" },
+        opacity: 0, duration: 0.5, ease: "power2.out", stagger: 0.06
+      });
+
       gsap.from("#pillars-list .index-item", {
         scrollTrigger: { trigger: "#pillars-list", start: "top 82%" },
         opacity: 0, y: 24, duration: 0.6, ease: "power2.out", stagger: 0.08
@@ -459,6 +476,7 @@
     renderHeader();
     renderIntro();
     renderTicker();
+    renderBrands();
     renderDetails();
     renderPillars();
     renderWork();

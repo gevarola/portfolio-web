@@ -338,6 +338,74 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 700; line-height: 1.
   to { transform: translateX(-50%); }
 }
 
+/* Brands */
+.brands { padding: 64px 0 72px; }
+.brands-heading {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 600;
+  font-size: 40px;
+  color: var(--blue);
+  text-align: center;
+  margin: 0 0 40px;
+}
+.brands-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 32px 56px;
+}
+.brand-logo {
+  width: 150px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.brand-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: grayscale(1);
+  opacity: 0.65;
+  transition: filter 0.3s var(--ease-out), opacity 0.3s var(--ease-out);
+}
+.brand-logo:hover img { filter: none; opacity: 1; }
+.brand-logo-dup { display: none; }
+@keyframes brands-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+@media (max-width: 720px) {
+  .brands .wrap {
+    overflow-x: clip;
+    padding-left: 0;
+    padding-right: 0;
+    -webkit-mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
+    mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
+  }
+  .brands-heading { padding: 0 24px; }
+  .brands-list {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    gap: 0;
+    width: max-content;
+    animation: brands-scroll 22s linear infinite;
+  }
+  .brands-list:hover { animation-play-state: paused; }
+  .brand-logo, .brand-logo-dup { display: flex; flex-shrink: 0; margin-right: 36px; }
+}
+@media (max-width: 720px) and (prefers-reduced-motion: reduce) {
+  .brands .wrap { -webkit-mask-image: none; mask-image: none; }
+  .brands-list { width: auto; flex-wrap: wrap; justify-content: center; gap: 24px 28px; animation: none; }
+  .brand-logo { margin-right: 0; }
+  .brand-logo-dup { display: none; }
+}
+
 /* Details */
 .details {
   padding: 80px 0 100px;
@@ -1148,4 +1216,7 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 700; line-height: 1.
   }
   .intro { padding: 44px 0 64px; }
   .details { padding: 56px 0 72px; }
+  .brands { padding: 48px 0 56px; }
+  .brands-heading { font-size: 32px; margin-bottom: 28px; }
+  .brand-logo { width: 120px; height: 52px; }
 }
