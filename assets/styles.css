@@ -339,15 +339,16 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 700; line-height: 1.
 }
 
 /* Brands */
-.brands { padding: 64px 0 72px; }
+.brands { padding: 44px 0 52px; }
 .brands-heading {
-  font-family: var(--font-serif);
-  font-style: italic;
+  font-family: var(--font-body);
+  font-size: 13px;
   font-weight: 600;
-  font-size: 40px;
-  color: var(--blue);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
   text-align: center;
-  margin: 0 0 40px;
+  margin: 0 0 28px;
 }
 .brands-list {
   list-style: none;
@@ -1216,7 +1217,7 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 700; line-height: 1.
   }
   .intro { padding: 44px 0 64px; }
   .details { padding: 56px 0 72px; }
-  .brands { padding: 48px 0 56px; }
-  .brands-heading { font-size: 32px; margin-bottom: 28px; }
+  .brands { padding: 36px 0 44px; }
+  .brands-heading { margin-bottom: 20px; }
   .brand-logo { width: 120px; height: 52px; }
 }
