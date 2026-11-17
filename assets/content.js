@@ -14,27 +14,59 @@ const ICON_PATHS = {
   anthropic: 'M17.3041 3.541h-3.6718l6.696 16.918H24Zm-10.6082 0L0 20.459h3.7442l1.3693-3.5527h7.0052l1.3693 3.5528h3.7442L10.5363 3.5409Zm-.3712 10.2232 2.2914-5.9456 2.2914 5.9456Z',
   mail: 'M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.89 2 1.99 2H20c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z',
   linkedin: 'M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z',
+  vercel: "M12 2 23 21H1z",
+  asana: "M18.78 12.653c-2.882 0-5.22 2.336-5.22 5.22s2.338 5.22 5.22 5.22 5.22-2.34 5.22-5.22-2.336-5.22-5.22-5.22zm-13.56 0c-2.88 0-5.22 2.337-5.22 5.22s2.338 5.22 5.22 5.22 5.22-2.338 5.22-5.22-2.336-5.22-5.22-5.22zm12-6.525c0 2.883-2.337 5.22-5.22 5.22-2.882 0-5.22-2.337-5.22-5.22 0-2.88 2.338-5.22 5.22-5.22 2.883 0 5.22 2.34 5.22 5.22z",
+  looker: "M11.9475 0c-1.1598.0021-2.0982.944-2.096 2.1038a2.1 2.1 0 00.356 1.166l.895-.8959a.884.884 0 11.565.564l-.895.895c.9593.6478 2.2621.3953 2.91-.564.6478-.9593.3953-2.262-.564-2.91A2.096 2.096 0 0011.9475 0zm-.835 6.1128a3.2629 3.2629 0 00-.653-1.965l-1.164 1.162a1.667 1.667 0 01-.318 2.012l.632 1.5449a3.2819 3.2819 0 001.503-2.754zm-3.2499 1.666h-.03c-.9217.0009-1.6697-.7455-1.6707-1.6673-.001-.9217.7454-1.6697 1.6672-1.6707a1.669 1.669 0 01.9195.275l1.152-1.152c-1.4069-1.141-3.4724-.9257-4.6135.4811s-.9257 3.4723.481 4.6135a3.2799 3.2799 0 002.7275.6652l-.633-1.5439v-.001zm4.1279 1.3359c-.728 0-1.452.106-2.15.315l.922 2.2519c2.6872-.6819 5.4184.9438 6.1002 3.631.6818 2.6873-.9439 5.4184-3.6311 6.1002s-5.4184-.9439-6.1002-3.631c-.5682-2.2394.4655-4.5774 2.5041-5.6643l-.91-2.2449c-3.6908 1.808-5.2173 6.2657-3.4093 9.9567l.0005.001c1.808 3.6909 6.2657 5.2173 9.9567 3.4093l.001-.0005c3.6913-1.8071 5.2187-6.2645 3.4116-9.9558a7.4417 7.4417 0 00-6.6865-4.1696h-.008l-.001.001z",
+  // Higgsfield glyph, drawn on a 20x20 grid (see ICON_VIEWBOX)
+  higgsfield: "M18.3498 9.83713L18.3339 9.65759C18.1831 7.93447 17.0963 4.69261 14.0816 4.69261C11.8445 4.69261 10.1545 6.97097 8.66311 8.97967C7.47302 10.5883 6.4419 11.9683 5.3073 11.9683C5.00574 11.9357 4.61708 11.7805 4.3792 11.4294C4.16497 11.1108 4.10948 10.7026 4.22046 10.2126C4.39489 9.43684 5.39463 8.7182 6.44963 7.95063C7.02864 7.54238 7.6238 7.10955 8.03634 6.69311C9.22643 5.5091 9.82932 4.65164 9.82932 3.2717C9.82932 1.89176 9.09157 1.20565 8.47276 0.911636C7.23514 0.323844 5.41851 0.666781 4.26026 1.69583C4.08583 1.85922 3.91117 2.01418 3.75243 2.16119C2.58622 3.23097 1.80094 3.95781 0 3.40232V5.63972C2.38791 6.72588 4.39512 4.65164 5.15675 3.69633C5.74372 3.06758 6.36253 2.70006 6.82283 2.70006H6.84671C7.05298 2.70825 7.22741 2.78995 7.35454 2.93696C7.56081 3.18204 7.64018 3.46786 7.60038 3.78622C7.51305 4.45594 6.83875 5.23967 5.60113 6.09713C4.14928 7.10159 1.7218 8.78374 1.53122 10.8987C1.3884 12.4177 2.15003 13.9365 3.34012 14.5243C6.11669 15.8798 7.80665 13.5444 9.5994 11.0783C10.9719 9.1756 12.273 7.37103 14.0818 7.37103C15.7081 7.37103 16.311 8.75916 16.311 9.63301V9.80459L16.1523 9.83713C12.2095 10.5558 10.0595 14.3611 10.0595 16.1167C10.0595 17.8724 11.5034 19.375 13.2804 19.375C15.359 19.375 17.9293 17.5458 18.3419 12.4013L18.3578 12.2136H20V9.83737H18.3498V9.83713ZM16.1998 12.4746C15.8826 15.5531 14.3513 16.9904 13.4232 16.9904C13.0027 16.9904 12.4158 16.631 12.4158 15.9615C12.4158 15.2104 13.5026 12.932 15.946 12.2543L16.2316 12.1808L16.1998 12.4748V12.4746Z",
+  supabase: "M13.7 21.8c-.6.7-1.7.3-1.7-.6V13H3.8c-1 0-1.5-1.1-.9-1.9l7.4-8.9c.6-.7 1.7-.3 1.7.6V11h8.2c1 0 1.5 1.1.9 1.9z",
   github: 'M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.333-1.755-1.333-1.755-1.089-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.335-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.135.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12'
 };
+
+// Icons that are not drawn on the default 24x24 grid
+const ICON_VIEWBOX = { higgsfield: "0 0 20 20" };
 
 const SITE = {
 en: {
   meta: { title: "Germán Rojas La Valle · Digital Strategist & Content" },
+  ui: {
+    status: "Digital Strategist at Cuatro Coronas · Freelance UGC Creator",
+    brandsLabel: "Brands I've worked with",
+    workEyebrow: "Work",
+    workTitle: "Receipts, not adjectives.",
+    toolsEyebrow: "AI in my workflow",
+    toolsTitle: "AI applied to marketing.",
+    aboutEyebrow: "About",
+    aboutTitle: "+7 years in digital marketing.",
+    contactEyebrow: "Contact",
+    prev: "Previous",
+    next: "Next",
+    live: "Live",
+    openCase: "Open case",
+    toolsLead: "AI takes the repetitive part: pulling Instagram data, sorting metrics, building reports. With Claude Code I built my own tools: monthly dashboards that update themselves for Tempo Café and Prato Autos, and a Rosario Central site with live data. I decide what to build and why; the AI writes the code.",
+    toolDashboard: "Reporting dashboard",
+    toolSite: "Live website",
+    stackTitle: "Platforms & tools",
+    kickerShort: "Digital Strategist & UGC Creator",
+        marquee: ["Social strategy", "On-camera UGC", "Script, camera, edit", "Community management", "Bitso × 4 markets", "AI-built reporting"],
+    ugcCats: { all: "All", brands: "Brands", accounts: "Accounts", own: "My channel" },
+    see: "View"
+  },
   nav: { work: "Work", ugc: "UGC", tools: "Tools", about: "About", contact: "Contact", cta: "Let's talk", menu: "Menu" },
   highlights: {
     label: "Highlights",
     items: [
-      { value: "+39M", label: "views · Havanna x Leo, World Cup 2026" },
-      { value: "+6.3M", label: "views · xStocks launch, on camera for Bitso" },
+      { value: "+6.3M", label: "views · Bitso xStocks launch, me on camera" },
       { value: "+4M", label: "views · Bitso Stocks creator program" },
-      { value: "300K+", label: "followers · Bitso AR, MX & CO" }
+      { value: "+300K", label: "followers · Bitso AR, MX & CO" },
+      { value: "+39M", label: "campaign views · Havanna x Leo, as community manager" }
     ]
   },
   intro: {
     roleLine: "Digital Strategist · Social Media Strategist · UGC Creator",
-    title: "Hi, I'm Germán. I help brands and creators build content people [[choose to stick around for]].",
-    subtitle: "5+ years leading content and digital strategy for fintech and consumer brands across LATAM. Today, Digital Strategist at Cuatro Coronas and, in parallel, freelance social media strategist and UGC creator.",
-    ctaWork: "View case studies",
+    title: "Hi, I'm Germán. I plan it, write it and [[show up on camera]].",
+    subtitle: "7+ years leading content and digital strategy for fintech and consumer brands across LATAM. Today, Digital Strategist at Cuatro Coronas and, in parallel, freelance social media strategist and UGC creator.",
+    ctaWork: "See the work",
     ctaContact: "Get in touch"
   },
   brands: { heading: "Brands I've worked with", ugcTag: "UGC" },
@@ -66,23 +98,23 @@ en: {
     eyebrow: "What I do",
     items: [
       { num: "01", title: "Social Media Manager", body: "I keep the lights on: calendars, growth, agencies, numbers. The unglamorous stuff that makes everything else possible." },
-      { num: "02", title: "Content Manager", body: "I decide what gets said before anyone writes a word. Voice, pillars, campaigns: the plan nobody sees but everyone feels." },
-      { num: "03", title: "Content Creator", body: "Camera, mic, edit. I make the thing people actually watch, not just scroll past." },
-      { num: "04", title: "Copywriting", body: "Words that don't sound like a press release. Scripts, captions, campaigns, written to be read, not skimmed." },
+      { num: "02", title: "Content Manager", body: "I decide what gets said before anyone writes a word. Voice, pillars, campaigns. Get this right and everything else gets easier." },
+      { num: "03", title: "Content Creator", body: "Camera, mic, edit. Made for the thumb to stop." },
+      { num: "04", title: "Copywriting", body: "Scripts and captions that don't sound like a press release, or like ChatGPT." },
       { num: "05", title: "Video Editor", body: "Timelines, cuts, pacing. The invisible half-second that decides if someone keeps watching or swipes away." },
       { num: "06", title: "AI Automation", body: "I build the pipelines and prompts that handle the repetitive part for me. Scraping, reporting, workflows: less manual work, same output." },
-      { num: "07", title: "Web Development", body: "This site, client landing pages, quick internal tools: I build what I need instead of waiting on a developer." },
+      { num: "07", title: "Web Development", body: "This site and a live-data football site. I build what I need instead of waiting on a dev." },
       { num: "08", title: "Community Management", body: "Replies, DMs, comment sections. The direct line between the brand and the people actually watching it." }
     ]
   },
   work: {
     heading: "Work",
-    tabCases: "Big projects",
-    tabBrands: "Accounts I manage",
-    tabUgc: "UGC Creator",
-    ugcBody: "I write, shoot and edit short-form video on camera for brands like Rexona, Experta Seguros, Barão and Bitso, plus the accounts I manage and my own channel (@gevarola). Filter by brand to see every piece.",
+    tabCases: "Case studies",
+    tabBrands: "Accounts",
+    tabUgc: "UGC",
+    ugcBody: "Only videos where I'm the face: I write, shoot and edit them, for brands like Rexona, Experta Seguros, Barão, Instituto CAB and Bitso, for the accounts I run and for my own channel (@gevarola). Sorted by views.",
     filterAll: "All",
-    filterLabel: "Filter by brand",
+    filterLabel: "Filter by type",
     challengeLabel: "The challenge",
     processLabel: "The process",
     resultLabel: "The result",
@@ -92,8 +124,10 @@ en: {
     close: "Close"
   },
   otherWork: {
-    body: "I also handle content, video editing and community management for these brands. Some are just getting started, others are already established — tap a logo to see the actual reels and posts I made for each one.",
-    cta: "See the work",
+    body: "Instagram accounts I run end to end: strategy, scripts, editing and community. Some videos have me on camera, others I make from behind it. Tap an account to see the reels.",
+    currentHeading: "Current accounts",
+    pastHeading: "Past accounts",
+    cta: "See reels",
     viewProfile: "View Instagram profile",
     piecesLabel: "pieces",
     empty: "New content for this account is on its way. In the meantime, check out the full profile.",
@@ -114,13 +148,13 @@ en: {
   },
   webdev: {
     eyebrow: "Web Development",
-    body: "\"De Guerrero a Guerrero\" is a live sports news site for Rosario Central fans that I built end-to-end with Claude Code. I'm upfront that AI wrote the code, but building and shipping a real site taught me the general concepts behind web development: structure, hosting, and how the pieces fit together. Scores, upcoming fixtures, league standings and head-to-head history all update automatically, no manual data entry. It's already live with 3,000+ visits.",
+    body: "\"De Guerrero a Guerrero\" is a live sports news site for Rosario Central fans that I built end-to-end with Claude Code. I'm upfront that AI wrote the code, but building and shipping a real site taught me the general concepts behind web development: structure, hosting, and how the pieces fit together. Scores, upcoming fixtures, league standings and head-to-head history all update automatically, no manual data entry. It's already live with 5,000+ visits.",
     ctaLabel: "View live site"
   },
   contact: {
     eyebrow: "Contact",
-    title: "Let's talk about your content.",
-    body: "Open to freelance social media strategy projects and UGC collaborations with brands.",
+    title: "Send me the brief.",
+    body: "I take on freelance social strategy projects and UGC videos for brands. Tell me the brand and what you need; I answer myself.",
     emailLabel: "Email",
     linkedinLabel: "LinkedIn",
     instagramLabel: "Instagram",
@@ -128,26 +162,49 @@ en: {
     copyLabel: "Copy",
     copiedLabel: "Copied ✓",
     backToTop: "Back to top ↑",
-    footer: "Built and designed by Germán Rojas La Valle."
+    footer: "Designed by me, coded with Claude Code."
   }
 },
 es: {
   meta: { title: "Germán Rojas La Valle · Digital Strategist & Content" },
+  ui: {
+    status: "Digital Strategist en Cuatro Coronas · UGC Creator freelance",
+    brandsLabel: "Marcas con las que trabajé",
+    workEyebrow: "Trabajo",
+    workTitle: "Con números, no con adjetivos.",
+    toolsEyebrow: "IA en mi trabajo",
+    toolsTitle: "IA aplicada al marketing.",
+    aboutEyebrow: "Sobre mí",
+    aboutTitle: "+7 años en marketing digital.",
+    contactEyebrow: "Contacto",
+    prev: "Anterior",
+    next: "Siguiente",
+    live: "En vivo",
+    openCase: "Ver caso",
+    toolsLead: "La IA se queda con lo repetitivo: sacar datos de Instagram, ordenar métricas, armar reportes. Con Claude Code construí mis propias herramientas: dashboards mensuales que se actualizan solos para Tempo Café y Prato Autos, y una web de Rosario Central con datos en vivo. Yo decido qué hace falta y para qué; la IA escribe el código.",
+    toolDashboard: "Dashboard de reporting",
+    toolSite: "Sitio en vivo",
+    stackTitle: "Plataformas y herramientas",
+    kickerShort: "Digital Strategist & UGC Creator",
+        marquee: ["Estrategia de redes", "UGC en cámara", "Guion, cámara y edición", "Community management", "Bitso × 4 mercados", "Reportes hechos con IA"],
+    ugcCats: { all: "Todo", brands: "Marcas", accounts: "Cuentas", own: "Mi canal" },
+    see: "Ver"
+  },
   nav: { work: "Trabajo", ugc: "UGC", tools: "Herramientas", about: "Sobre mí", contact: "Contacto", cta: "Hablemos", menu: "Menú" },
   highlights: {
     label: "Destacados",
     items: [
-      { value: "+39M", label: "views · Havanna x Leo, Mundial 2026" },
-      { value: "+6.3M", label: "views · lanzamiento xStocks, en cámara para Bitso" },
+      { value: "+6.3M", label: "views · lanzamiento xStocks de Bitso, en cámara" },
       { value: "+4M", label: "views · programa de creadores Bitso Stocks" },
-      { value: "300K+", label: "seguidores · Bitso AR, MX y CO" }
+      { value: "+300K", label: "seguidores · Bitso AR, MX y CO" },
+      { value: "+39M", label: "views de campaña · Havanna x Leo, como community manager" }
     ]
   },
   intro: {
     roleLine: "Digital Strategist · Social Media Strategist · UGC Creator",
-    title: "Hola, soy Germán. Ayudo a marcas y creadores a construir contenido que la gente [[elige quedarse a ver]].",
-    subtitle: "Más de 5 años liderando estrategia de contenido y digital para marcas fintech y de consumo en LATAM. Hoy, Digital Strategist en Cuatro Coronas y, en paralelo, social media strategist y UGC creator freelance.",
-    ctaWork: "Ver casos de éxito",
+    title: "Hola, soy Germán. Armo la estrategia, escribo el guion y [[pongo la cara]].",
+    subtitle: "Más de 7 años liderando estrategia de contenido y digital para marcas fintech y de consumo en LATAM. Hoy, Digital Strategist en Cuatro Coronas y, en paralelo, social media strategist y UGC creator freelance.",
+    ctaWork: "Ver los casos",
     ctaContact: "Escribime"
   },
   brands: { heading: "Marcas con las que trabajé", ugcTag: "UGC" },
@@ -179,23 +236,23 @@ es: {
     eyebrow: "Qué hago",
     items: [
       { num: "01", title: "Social Media Manager", body: "Mantengo todo funcionando: calendarios, crecimiento, agencias, números. Lo poco glamoroso que hace posible todo lo demás." },
-      { num: "02", title: "Content Manager", body: "Decido qué se dice antes de que alguien escriba una palabra. Voz, pilares, campañas: el plan que nadie ve pero todos sienten." },
-      { num: "03", title: "Content Creator", body: "Cámara, micrófono, edición. Hago lo que la gente realmente mira, no lo que scrollea de largo." },
-      { num: "04", title: "Copywriting", body: "Palabras que no suenan a gacetilla de prensa. Guiones, captions, campañas, escritas para leerse, no para pasarlas de largo." },
+      { num: "02", title: "Content Manager", body: "Decido qué se dice antes de que alguien escriba una palabra. Voz, pilares y campañas. Si esto está bien, lo demás sale más fácil." },
+      { num: "03", title: "Content Creator", body: "Cámara, micrófono y edición. Contenido hecho para que el pulgar se frene." },
+      { num: "04", title: "Copywriting", body: "Guiones y captions que no suenan a gacetilla ni a ChatGPT." },
       { num: "05", title: "Editor de Video", body: "Timelines, cortes, ritmo. El medio segundo invisible que decide si alguien se queda mirando o desliza al siguiente." },
-      { num: "06", title: "AI Automation", body: "Armo los pipelines y prompts que hacen la parte repetitiva por mí. Scraping, reportes, flujos de trabajo: menos trabajo manual, el mismo resultado." },
-      { num: "07", title: "Desarrollo Web", body: "Esta web, landings de clientes, herramientas internas rápidas: construyo lo que necesito en vez de esperar a un desarrollador." },
+      { num: "06", title: "Automatización con IA", body: "Armo los pipelines y prompts que hacen la parte repetitiva por mí. Scraping, reportes, flujos de trabajo: menos trabajo manual, el mismo resultado." },
+      { num: "07", title: "Desarrollo Web", body: "Esta web y una de fútbol con datos en vivo. Construyo lo que necesito en vez de esperar a un dev." },
       { num: "08", title: "Community Management", body: "Respuestas, DMs, comentarios. La línea directa entre la marca y la gente que realmente la está mirando." }
     ]
   },
   work: {
     heading: "Trabajo",
-    tabCases: "Proyectos grandes",
-    tabBrands: "Cuentas que manejo",
-    tabUgc: "UGC Creator",
-    ugcBody: "Escribo, grabo y edito videos cortos frente a cámara para marcas como Rexona, Experta Seguros, Barão y Bitso, además de las cuentas que manejo y mi propio canal (@gevarola). Filtrá por marca para ver cada pieza.",
+    tabCases: "Casos",
+    tabBrands: "Cuentas",
+    tabUgc: "UGC",
+    ugcBody: "Solo videos donde soy la cara: los escribo, los grabo y los edito, para marcas como Rexona, Experta Seguros, Barão, Instituto CAB y Bitso, para las cuentas que manejo y para mi canal (@gevarola). Ordenados de más a menos views.",
     filterAll: "Todas",
-    filterLabel: "Filtrar por marca",
+    filterLabel: "Filtrar por tipo",
     challengeLabel: "El desafío",
     processLabel: "El proceso",
     resultLabel: "El resultado",
@@ -205,8 +262,10 @@ es: {
     close: "Cerrar"
   },
   otherWork: {
-    body: "También llevo el contenido, la edición de video y el community management de estas marcas. Algunas recién están arrancando, otras ya están asentadas — tocá un logo para ver la info y los reels y posts reales que hice para cada una.",
-    cta: "Ver el trabajo",
+    body: "Cuentas de Instagram que manejo de punta a punta: estrategia, guion, edición y comunidad. En algunos videos aparezco y en otros estoy detrás de cámara. Tocá una cuenta para ver los reels.",
+    currentHeading: "Cuentas actuales",
+    pastHeading: "Cuentas que manejé",
+    cta: "Ver reels",
     viewProfile: "Ver perfil de Instagram",
     piecesLabel: "piezas",
     empty: "El contenido de esta cuenta está en camino. Mientras tanto, mirá el perfil completo.",
@@ -227,13 +286,13 @@ es: {
   },
   webdev: {
     eyebrow: "Desarrollo Web",
-    body: "\"De Guerrero a Guerrero\" es una web de noticias deportivas para hinchas de Rosario Central que armé de punta a punta con Claude Code. Soy transparente en que el código lo escribió la IA, pero construir y publicar una web real me enseñó los conceptos generales del desarrollo web: estructura, hosting, y cómo encaja cada pieza. Resultados, próximos partidos, tabla de posiciones e historial se actualizan automáticamente, sin carga manual de datos. Ya está en vivo con más de 3.000 visitas.",
+    body: "\"De Guerrero a Guerrero\" es una web de noticias deportivas para hinchas de Rosario Central que armé de punta a punta con Claude Code. Soy transparente en que el código lo escribió la IA, pero construir y publicar una web real me enseñó los conceptos generales del desarrollo web: estructura, hosting, y cómo encaja cada pieza. Resultados, próximos partidos, tabla de posiciones e historial se actualizan automáticamente, sin carga manual de datos. Ya está en vivo con más de 5.000 visitas.",
     ctaLabel: "Ver sitio en vivo"
   },
   contact: {
     eyebrow: "Contacto",
-    title: "Hablemos de tu contenido.",
-    body: "Abierto a proyectos freelance de estrategia en redes y colaboraciones UGC con marcas.",
+    title: "Mandame el brief.",
+    body: "Tomo proyectos freelance de estrategia de redes y videos UGC para marcas. Contame qué marca es y qué necesitás; respondo yo.",
     emailLabel: "Email",
     linkedinLabel: "LinkedIn",
     instagramLabel: "Instagram",
@@ -241,7 +300,7 @@ es: {
     copyLabel: "Copiar",
     copiedLabel: "Copiado ✓",
     backToTop: "Volver arriba ↑",
-    footer: "Diseñado y construido por Germán Rojas La Valle."
+    footer: "Diseñada por mí, programada con Claude Code."
   }
 }
 };
@@ -263,12 +322,34 @@ const AI_TOOLS = [
   { name: "Prato Autos", image: "assets/images/ai-prato-hero.png", link: LINKS.pratoDashboard }
 ];
 
+// "Built with AI" cards: no screenshots, just each project's logo (or a wordmark) and the stack behind it
+const TOOL_CARDS = [
+  {
+    logo: "assets/images/brand-tempo.png", logoStyle: "mono", name: "Tempo Café", link: LINKS.tempoDashboard,
+    kind: { en: "Reporting dashboard", es: "Dashboard de reporting" },
+    desc: { en: "The monthly Instagram report builds itself.", es: "El reporte mensual de Instagram se arma solo." },
+    stack: ["anthropic", "instagram", "vercel"]
+  },
+  {
+    wordmark: "PRATO<br>AUTOS", name: "Prato Autos", link: LINKS.pratoDashboard,
+    kind: { en: "Reporting dashboard", es: "Dashboard de reporting" },
+    desc: { en: "Instagram and TikTok metrics on one board.", es: "Métricas de Instagram y TikTok en un solo tablero." },
+    stack: ["anthropic", "instagram", "tiktok", "vercel"]
+  },
+  {
+    logo: "assets/images/logo-guerrero-casco.png", logoStyle: "gray", name: "De Guerrero a Guerrero", link: LINKS.guerreroSite,
+    kind: { en: "Live website", es: "Sitio en vivo" },
+    desc: { en: "Rosario Central results, stories and more data, updated automatically. +5,000 visits.", es: "Resultados, historias y más datos de Rosario Central, actualizados solos. +5.000 visitas." },
+    stack: ["anthropic", "supabase", "vercel", "github"]
+  }
+];
+
 const WEBDEV_PROJECT = {
   name: "De Guerrero a Guerrero",
   image: "assets/images/case-guerrero-hero.jpg",
   link: LINKS.guerreroSite,
   stats: [
-    { value: "+3.000", en: "visits since launch", es: "visitas desde el lanzamiento" },
+    { value: "+5.000", en: "visits since launch", es: "visitas desde el lanzamiento" },
     { value: "100%", en: "automated live data", es: "datos en vivo automatizados" },
     { value: "Claude Code", en: "wrote the code", es: "escribió el código" }
   ]
@@ -286,31 +367,31 @@ const CASES = [
     stats: [
       { value: "+39M", en: "views in 45 days", es: "de views en 45 días" },
       { value: "+512K", en: "engagement", es: "de engagement" },
-      { value: "130+", en: "pieces of content produced", es: "piezas de contenido producidas" }
+      { value: "+130", en: "pieces published during the campaign", es: "piezas publicadas en la campaña" }
     ],
     en: {
       title: "Havanna x Leo",
-      challenge: "Havanna partnered with Lionel Messi during the 2026 World Cup. Success meant capturing a fast-moving, high-emotion national conversation in real time, not just publishing a fixed calendar, while protecting a beloved 100-year-old brand from ever feeling opportunistic.",
+      challenge: "Havanna teamed up with Messi for the 2026 World Cup. The conversation was fast and emotional, and the brand had to show up daily without a 100-year-old name ever feeling opportunistic.",
       process: [
-        "Ran real-time content and community strategy across Instagram, TikTok, Facebook and X for 45+ days, from campaign launch through the tournament final.",
-        "Rode cultural moments as they happened (Messi's birthday, the pre-final tension, the final whistle), turning each into timely content instead of sticking to a rigid calendar.",
-        "Tracked audience sentiment daily and adjusted tone in real time, moderating conversation through emotionally sensitive moments like product doubts, pricing questions and the match result.",
-        "Balanced two roles for the brand at once, cheering as a fan and building awareness as a marketer, without ever reading as opportunistic."
+        "Community manager for the campaign across Instagram, TikTok, Facebook and X for 45 days, launch to final, as part of the Cuatro Coronas team.",
+        "Wrote copy and replies for moments as they happened: Messi's birthday, the pre-final build-up, the final whistle.",
+        "Tracked sentiment daily and moderated sensitive moments: product doubts, pricing questions and the match result.",
+        "Kept the voice of a fan cheering on without forgetting a brand was talking."
       ],
-      result: "39M+ views, 512K+ engagement and 130+ pieces of content in 45 days. Sentiment stayed strongly positive throughout the campaign, reaching 100% positive in the emotional aftermath of the final, with the campaign becoming one of the most talked-about brand moments of the tournament in Argentina.",
+      result: "The campaign passed 39M views and 512K engagements in 45 days, with sentiment positive throughout and 100% positive after the final.",
       strategicThinking: "The rule for balancing \"fan\" and \"marketer\": every post had to feel genuine first, brand second.",
       whatWeLearned: "The closer a brand gets to its users, the more engagement and the more good buzz it generates."
     },
     es: {
       title: "Havanna x Leo",
-      challenge: "Havanna se asoció con Lionel Messi durante el Mundial 2026. El éxito significaba capturar en tiempo real una conversación nacional de alta emocionalidad y ritmo acelerado, no solo publicar un calendario fijo, cuidando a la vez a una marca centenaria y querida de sonar oportunista.",
+      challenge: "Havanna se asoció con Messi para el Mundial 2026. La conversación iba a mil y con la emoción a flor de piel. Había que estar ahí todos los días sin que una marca de 100 años sonara oportunista.",
       process: [
-        "Llevé la estrategia de contenido y comunidad en tiempo real en Instagram, TikTok, Facebook y X durante más de 45 días, desde el lanzamiento de la campaña hasta la final del torneo.",
-        "Capitalizamos los momentos culturales a medida que sucedían (el cumpleaños de Messi, la previa a la final, el pitazo final), convirtiendo cada uno en contenido oportuno en vez de seguir un calendario rígido.",
-        "Trackeamos el sentimiento de la audiencia día a día y ajustamos el tono en tiempo real, moderando la conversación en momentos emocionalmente sensibles como dudas de producto, consultas de precio y el resultado del partido.",
-        "Balanceamos dos roles a la vez para la marca, alentar como hincha y generar awareness como marketer, sin que se sintiera oportunista en ningún momento."
+        "Fui community manager de la campaña en Instagram, TikTok, Facebook y X durante 45 días, del lanzamiento a la final, dentro del equipo de Cuatro Coronas.",
+        "Escribí copys y respuestas para los momentos que iban pasando: el cumple de Messi, la previa, el pitazo final.",
+        "Seguí el sentimiento todos los días y moderé la conversación en los momentos sensibles: dudas de producto, precios y el resultado del partido.",
+        "Sostuve el tono del hincha que alienta sin perder de vista que hablaba una marca."
       ],
-      result: "+39M de visualizaciones, +512K de engagement y +130 piezas de contenido en 45 días. El sentimiento se mantuvo fuertemente positivo durante toda la campaña, llegando a 100% positivo en el after emocional de la final, y la campaña se convirtió en uno de los momentos de marca más comentados del torneo en Argentina.",
+      result: "La campaña pasó los 39M de views y los 512K de interacciones en 45 días, con sentimiento positivo de punta a punta y 100% positivo después de la final.",
       strategicThinking: "La regla para balancear \"hincha\" y \"marketer\": todo posteo tenía que sentirse genuino primero, marca después.",
       whatWeLearned: "Cuanto más cercana es la marca con los usuarios, más engagement y ruido positivo genera."
     }
@@ -362,7 +443,7 @@ const CASES = [
     org: "Bitso",
     period: "2025 to 2026",
     stats: [
-      { value: "120+", en: "videos published", es: "videos publicados" },
+      { value: "+120", en: "videos published", es: "videos publicados" },
       { value: "+4M", en: "views", es: "de views" },
       { value: "+500K", en: "engagement", es: "de engagement" }
     ],
@@ -402,7 +483,7 @@ const CASES = [
     period: "2024",
     stats: [
       { value: "4", en: "creator partnerships, 4 long-form episodes", es: "creadores, 4 episodios long-form" },
-      { value: "20+", en: "short-form clips from the same production", es: "clips short-form de la misma producción" },
+      { value: "+20", en: "short-form clips from the same production", es: "clips short-form de la misma producción" },
       { value: "+150K", en: "views & +20K engagement combined", es: "views y +20K de engagement combinados" }
     ],
     en: {
@@ -440,7 +521,7 @@ const CASES = [
     stats: [
       { value: "+2M", en: "views", es: "de views" },
       { value: "+400K", en: "engagement", es: "de engagement" },
-      { value: "15+", en: "how-to videos & guides produced", es: "videos y guías how-to producidos" }
+      { value: "+15", en: "how-to videos & guides produced", es: "videos y guías how-to producidos" }
     ],
     en: {
       title: "Hugging Our Users",
@@ -475,9 +556,9 @@ const CASES = [
     org: "Bitso",
     period: "2022 to 2026",
     stats: [
-      { value: "300K+", en: "followers across AR, MX & CO (AR & CO from zero, MX +50%)", es: "seguidores entre AR, MX y CO (AR y CO desde cero, MX +50%)" },
+      { value: "+300K", en: "followers across AR, MX & CO (AR & CO from zero, MX +50%)", es: "seguidores entre AR, MX y CO (AR y CO desde cero, MX +50%)" },
       { value: "40–50", en: "pieces of content / week across 4 markets", es: "piezas de contenido / semana en 4 mercados" },
-      { value: "10+", en: "person hybrid team coordinated", es: "personas en el equipo híbrido coordinado" }
+      { value: "+10", en: "person hybrid team coordinated", es: "personas en el equipo híbrido coordinado" }
     ],
     en: {
       title: "Brand expansion in LATAM",
@@ -520,11 +601,14 @@ const TOOLS = [
   { name: "Canva", icon: "canva" },
   { name: "Buffer", icon: "buffer" },
   { name: "Google Workspace", icon: "google" },
+  { name: "Looker Studio", icon: "looker" },
+  { name: "Asana", icon: "asana" },
   { name: "ChatGPT", icon: "openai" },
   { name: "Claude", icon: "anthropic" },
+  { name: "Higgsfield", icon: "higgsfield" },
   { name: "CapCut", img: "assets/images/logo-capcut.jpg" },
-  { name: "Sprout Social", img: "assets/images/logo-sproutsocial.png" },
-  { name: "Monday", img: "assets/images/logo-monday.png" }
+  { name: "Sprout Social", img: "assets/images/logo-monday.png" },
+  { name: "Monday", img: "assets/images/logo-sproutsocial.png" }
 ];
 
 const TICKER_KEYWORDS = {
@@ -533,11 +617,17 @@ const TICKER_KEYWORDS = {
 };
 
 const BRANDS = [
-  { name: "Bitso", logo: "assets/images/brand-bitso.svg" },
-  { name: "Havanna", logo: "assets/images/brand-havanna.png" },
-  { name: "Rexona", logo: "assets/images/brand-rexona.svg", ugc: true },
-  { name: "Experta Seguros", logo: "assets/images/brand-experta.png", ugc: true },
-  { name: "Barão", logo: "assets/images/brand-barao.png", ugc: true }
+  // h = logo height in px, tuned by eye so every mark reads at the same visual weight
+  { name: "Bitso", logo: "assets/images/brand-bitso.svg", h: 26 },
+  { name: "Havanna", logo: "assets/images/brand-havanna.png", h: 30 },
+  { name: "Coca-Cola FEMSA Argentina", logo: "assets/images/brand-femsa.png", h: 48 },
+  { name: "Rexona", logo: "assets/images/brand-rexona.svg", h: 44 },
+  { name: "Experta Seguros", logo: "assets/images/brand-experta.png", h: 36 },
+  { name: "Barão", logo: "assets/images/brand-barao.png", h: 50, raw: true },
+  { name: "Instituto CAB", logo: "assets/images/brand-instituto-cab.png", h: 50 },
+  { name: "Tempo Café", logo: "assets/images/brand-tempo.png", h: 34 },
+  { name: "Fruta Noble", logo: "assets/images/brand-fruta-noble.png", h: 52 },
+  { name: "Frigorífico Criscar", logo: "assets/images/brand-criscar.png", h: 56 }
 ];
 
 const OTHER_CLIENTS = [
@@ -572,11 +662,12 @@ const OTHER_CLIENTS = [
     logo: "assets/images/logo-criscar-client.jpeg",
     name: "Frigorífico Criscar",
     link: "https://www.instagram.com/frigorifico.criscar.campana/",
-    stage: { en: "Consolidating", es: "Consolidando" },
+    stage: { en: "Past client", es: "Cuenta anterior" },
+    past: true,
     stats: [{ value: "+30", en: "pieces", es: "piezas" }, { value: "+300K", en: "views", es: "views" }],
     description: {
-      en: "Content creator for Frigorífico Criscar: I come up with the ideas, write the scripts and bring them to life, on camera when the piece needs a face.",
-      es: "Creador de contenido de Frigorífico Criscar: ideo los conceptos, escribo los guiones y los llevo a la pantalla, poniendo la cara cuando la pieza lo pide."
+      en: "I was Frigorífico Criscar's content creator: I came up with the ideas, wrote the scripts and brought them to life, on camera when the piece needed a face.",
+      es: "Fui creador de contenido de Frigorífico Criscar: ideaba los conceptos, escribía los guiones y los llevaba a la pantalla, poniendo la cara cuando la pieza lo pedía."
     },
     pendingSlots: 0
   },
@@ -607,8 +698,10 @@ const CREATOR_ITEMS = [
   },
   {
     image: "assets/images/creator-criscar.webp",
+    onCamera: true,
     link: "https://www.instagram.com/reel/DXE8WY8ESmy/",
     brand: "@frigorifico.criscar.campana",
+    client: "criscar",
     type: { en: "Account launch", es: "Lanzamiento de cuenta" },
     stats: [{ value: "+84K", en: "views", es: "views" }, { value: "+500", en: "engagement", es: "engagement" }],
     en: "Introductory plant tour to launch Frigorífico Criscar's account.",
@@ -616,8 +709,10 @@ const CREATOR_ITEMS = [
   },
   {
     image: "assets/images/creator-criscar-2.jpg",
+    onCamera: true,
     link: "https://www.instagram.com/reel/DbawF4TFGFS/",
     brand: "@frigorifico.criscar.campana",
+    client: "criscar",
     type: { en: "Trend Humor", es: "Trend Humor" },
     stats: [{ value: "+120K", en: "views", es: "views" }, { value: "+99", en: "likes", es: "me gusta" }, { value: "+4", en: "comments", es: "comentarios" }],
     en: "Humor bit contrasting an absurd 1-star review with the shop's real 5-star reviews.",
@@ -625,8 +720,10 @@ const CREATOR_ITEMS = [
   },
   {
     image: "assets/images/creator-criscar-3.jpg",
+    onCamera: true,
     link: "https://www.instagram.com/reel/DYSw8pbAAEk/",
     brand: "@frigorifico.criscar.campana",
+    client: "criscar",
     type: { en: "Trend Humor", es: "Trend Humor" },
     stats: [{ value: "+4.3K", en: "views", es: "views" }, { value: "+55", en: "likes", es: "me gusta" }, { value: "+6", en: "comments", es: "comentarios" }],
     en: "Humor bit on choosing meat over salad, playing up the shop's meat-first attitude.",
@@ -634,8 +731,10 @@ const CREATOR_ITEMS = [
   },
   {
     image: "assets/images/creator-criscar-4.jpg",
+    onCamera: true,
     link: "https://www.instagram.com/reel/DZFaAmbDpYG/",
     brand: "@frigorifico.criscar.campana",
+    client: "criscar",
     type: { en: "Talking head", es: "Frente a cámara" },
     stats: [{ value: "+60K", en: "views", es: "views" }, { value: "+43", en: "likes", es: "me gusta" }, { value: "+4", en: "comments", es: "comentarios" }],
     en: "Talking-head bit showing how much quality meat a fixed budget buys.",
@@ -643,6 +742,7 @@ const CREATOR_ITEMS = [
   },
   {
     image: "assets/images/creator-tempo-cafe.webp",
+    onCamera: true,
     link: "https://www.instagram.com/p/DbYZR8PhEGg/",
     brand: "@tempocafe_",
     client: "tempo-cafe",
@@ -722,6 +822,7 @@ const CREATOR_ITEMS = [
     link: "https://www.instagram.com/p/DWjZ6vnRjws/",
     brand: "Rexona",
     type: { en: "UGC", es: "UGC" },
+    stats: [{ value: "+1K", en: "views", es: "views" }],
     en: "On-camera UGC video for Rexona, shot at home with a humor-first tone.",
     es: "Video UGC frente a cámara para Rexona, grabado en casa con tono de humor."
   },
@@ -736,8 +837,10 @@ const CREATOR_ITEMS = [
   },
   {
     image: "assets/images/creator-fruta-noble.jpg",
+    onCamera: true,
     link: "https://www.instagram.com/p/DVqwdxOESsE/",
     brand: "@fruta.noble",
+    client: "fruta-noble",
     type: { en: "Collab post", es: "Colaboración" },
     stats: [{ value: "+1.9K", en: "views", es: "views" }, { value: "+105", en: "engagement", es: "engagement" }],
     en: "Awareness video explaining a wine subscription club with a humor-first tone.",
@@ -831,5 +934,90 @@ const CREATOR_ITEMS = [
     stats: [{ value: "+1.5K", en: "views", es: "views" }, { value: "+75", en: "engagement", es: "engagement" }],
     en: "Awareness video for a yerba mate brand, using an everyday sketch as the hook.",
     es: "Video de awareness para una marca de yerbas, con un sketch cotidiano como gancho."
+  },
+  {
+    image: "assets/images/creator-cab-2.jpg",
+    link: "https://www.instagram.com/reel/DexMN8RuVIf/",
+    brand: "@institutocab",
+    type: { en: "Course launch", es: "Lanzamiento de curso" },
+    stats: [{ value: "+5K", en: "views", es: "views" }],
+    en: "On-camera video announcing a free training course for technical commissioners.",
+    es: "Video frente a cámara anunciando la capacitación gratuita para Comisionados Técnicos."
+  },
+  {
+    image: "assets/images/creator-cab-1.jpg",
+    link: "https://www.instagram.com/reel/DeSPoWDv8fH/",
+    brand: "@institutocab",
+    type: { en: "Course launch", es: "Lanzamiento de curso" },
+    stats: [{ value: "+124K", en: "views", es: "views" }],
+    en: "On-camera video promoting the Sports Marketing & Sponsorship course for clubs.",
+    es: "Video frente a cámara para el Curso de Marketing y Patrocinio Deportivo para Clubes."
+  },
+  {
+    image: "assets/images/creator-cab-4.jpg",
+    link: "https://www.instagram.com/reel/DfXVzJZRvZ9/",
+    brand: "@institutocab",
+    type: { en: "Talking head", es: "Frente a cámara" },
+    stats: [{ value: "+1.5K", en: "views", es: "views" }],
+    en: "Talking head on why a brand would choose to sponsor your club.",
+    es: "Video frente a cámara sobre por qué una marca elegiría patrocinar a tu club."
+  },
+  {
+    image: "assets/images/creator-cab-3.jpg",
+    link: "https://www.instagram.com/reel/DfpWSK5xU98/",
+    brand: "@institutocab",
+    type: { en: "Event coverage", es: "Cobertura de evento" },
+    stats: [{ value: "+1.5K", en: "views", es: "views" }],
+    en: "Coverage of the Sports Medicine Conference for staff, medical teams and players.",
+    es: "Cobertura de la Jornada de Ciencias Médicas Aplicadas al Deporte."
+  },
+  {
+    image: "assets/images/creator-tempo-cafe-5.jpg",
+    onCamera: true,
+    link: "https://www.instagram.com/reel/De9lvmLB2ig/",
+    brand: "@tempocafe_",
+    client: "tempo-cafe",
+    type: { en: "Trend Humor", es: "Trend Humor" },
+    stats: [{ value: "+3K", en: "views", es: "views" }],
+    en: "Humor bit: \"I'm just going in for a coffee\", then the pastry counter wins.",
+    es: "Video de humor: \"Solo voy a comprar café\" y termina ganando la vitrina."
+  },
+  {
+    image: "assets/images/creator-tempo-cafe-6.jpg",
+    onCamera: true,
+    link: "https://www.instagram.com/reel/DdHIFF9hFSM/",
+    brand: "@tempocafe_",
+    client: "tempo-cafe",
+    type: { en: "Conversation starter", es: "Debate" },
+    stats: [{ value: "+1K", en: "views", es: "views" }],
+    en: "Sugar in your coffee: yes or no? A question built to get people commenting.",
+    es: "Azúcar en el café: ¿va o no va? Una pregunta pensada para que la gente comente."
+  },
+  {
+    image: "assets/images/creator-gevarola-michi.jpg",
+    link: "https://www.instagram.com/reel/DWUHgJ-DgmV/",
+    brand: "@gevarola",
+    type: { en: "Humor", es: "Humor" },
+    stats: [{ value: "+1K", en: "views", es: "views" }],
+    en: "Humor bit: what do we do with the cat?",
+    es: "Video de humor: ¿qué hacemos con el michi?"
+  },
+  {
+    image: "assets/images/creator-gevarola-shifter.jpg",
+    link: "https://www.instagram.com/reel/DWhXf5ih9WS/",
+    brand: "@gevarola",
+    type: { en: "Humor", es: "Humor" },
+    stats: [{ value: "+1K", en: "views", es: "views" }],
+    en: "Humor bit about being a gear-shifter and not even noticing.",
+    es: "Video de humor: sos un gordo shifter y no te diste cuenta."
+  },
+  {
+    image: "assets/images/creator-gevarola-casilla.jpg",
+    link: "https://www.instagram.com/reel/DZpu3w-uAnF/",
+    brand: "@gevarola",
+    type: { en: "Humor", es: "Humor" },
+    stats: [{ value: "+1.3K", en: "views", es: "views" }],
+    en: "Humor bit about the inbox nobody ever empties.",
+    es: "Video de humor sobre la casilla de mails que nadie tiene vacía."
   }
 ];
