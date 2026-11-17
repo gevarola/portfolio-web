@@ -19,20 +19,30 @@ const ICON_PATHS = {
 
 const SITE = {
 en: {
-  meta: { title: "Germán Rojas La Valle · Content & Social Media Manager" },
-  nav: { about: "About", work: "Work", creator: "As a creator", contact: "Contact" },
+  meta: { title: "Germán Rojas La Valle · Digital Strategist & Content" },
+  nav: { work: "Work", ugc: "UGC", tools: "Tools", about: "About", contact: "Contact", cta: "Let's talk", menu: "Menu" },
+  highlights: {
+    label: "Highlights",
+    items: [
+      { value: "+39M", label: "views · Havanna x Leo, World Cup 2026" },
+      { value: "+6.3M", label: "views · xStocks launch, on camera for Bitso" },
+      { value: "+4M", label: "views · Bitso Stocks creator program" },
+      { value: "300K+", label: "followers · Bitso AR, MX & CO" }
+    ]
+  },
   intro: {
-    roleLine: "Social Media Manager · Content Manager · Content Creator",
+    roleLine: "Digital Strategist · Social Media Strategist · UGC Creator",
     title: "Hi, I'm Germán. I help brands and creators build content people [[choose to stick around for]].",
-    subtitle: "4+ years leading content strategy across LATAM markets. Today, freelancing full-time for brands across the board.",
+    subtitle: "5+ years leading content and digital strategy for fintech and consumer brands across LATAM. Today, Digital Strategist at Cuatro Coronas and, in parallel, freelance social media strategist and UGC creator.",
     ctaWork: "View case studies",
     ctaContact: "Get in touch"
   },
-  brands: { heading: "Brands I've worked with" },
+  brands: { heading: "Brands I've worked with", ugcTag: "UGC" },
   details: {
     experienceHeading: "Experience",
     experience: [
-      { role: "Social Media & Content Manager", org: "Freelance · Independent", period: "Mar 2026 to Present" },
+      { role: "Digital Strategist", org: "Cuatro Coronas · Hybrid", period: "Oct 2026 to Present" },
+      { role: "Social Media Strategist & UGC Creator", org: "Freelance · Independent", period: "Mar 2026 to Present" },
       { role: "Social Media Manager", org: "Bitso · Remote", period: "Apr 2024 to Mar 2026" },
       { role: "Social Media Strategist", org: "Bitso · Remote", period: "Apr 2023 to Apr 2024" },
       { role: "Social Media Analyst & Community Manager", org: "Bitso · Remote", period: "Oct 2021 to Apr 2023" },
@@ -69,6 +79,10 @@ en: {
     heading: "Work",
     tabCases: "Big projects",
     tabBrands: "Accounts I manage",
+    tabUgc: "UGC Creator",
+    ugcBody: "I write, shoot and edit short-form video on camera for brands like Rexona, Experta Seguros, Barão and Bitso, plus the accounts I manage and my own channel (@gevarola). Filter by brand to see every piece.",
+    filterAll: "All",
+    filterLabel: "Filter by brand",
     challengeLabel: "The challenge",
     processLabel: "The process",
     resultLabel: "The result",
@@ -106,29 +120,42 @@ en: {
   contact: {
     eyebrow: "Contact",
     title: "Let's talk about your content.",
-    body: "Open to freelance content strategy work, full-time roles, and brand collaborations as a creator.",
+    body: "Open to freelance social media strategy projects and UGC collaborations with brands.",
     emailLabel: "Email",
     linkedinLabel: "LinkedIn",
     instagramLabel: "Instagram",
     githubLabel: "GitHub",
+    copyLabel: "Copy",
+    copiedLabel: "Copied ✓",
+    backToTop: "Back to top ↑",
     footer: "Built and designed by Germán Rojas La Valle."
   }
 },
 es: {
-  meta: { title: "Germán Rojas La Valle · Content & Social Media Manager" },
-  nav: { about: "Sobre mí", work: "Trabajo", creator: "Como creador", contact: "Contacto" },
+  meta: { title: "Germán Rojas La Valle · Digital Strategist & Content" },
+  nav: { work: "Trabajo", ugc: "UGC", tools: "Herramientas", about: "Sobre mí", contact: "Contacto", cta: "Hablemos", menu: "Menú" },
+  highlights: {
+    label: "Destacados",
+    items: [
+      { value: "+39M", label: "views · Havanna x Leo, Mundial 2026" },
+      { value: "+6.3M", label: "views · lanzamiento xStocks, en cámara para Bitso" },
+      { value: "+4M", label: "views · programa de creadores Bitso Stocks" },
+      { value: "300K+", label: "seguidores · Bitso AR, MX y CO" }
+    ]
+  },
   intro: {
-    roleLine: "Social Media Manager · Content Manager · Content Creator",
+    roleLine: "Digital Strategist · Social Media Strategist · UGC Creator",
     title: "Hola, soy Germán. Ayudo a marcas y creadores a construir contenido que la gente [[elige quedarse a ver]].",
-    subtitle: "Más de 4 años liderando estrategia de contenido en mercados de LATAM. Hoy, freelance full-time para marcas de todo tipo.",
+    subtitle: "Más de 5 años liderando estrategia de contenido y digital para marcas fintech y de consumo en LATAM. Hoy, Digital Strategist en Cuatro Coronas y, en paralelo, social media strategist y UGC creator freelance.",
     ctaWork: "Ver casos de éxito",
     ctaContact: "Escribime"
   },
-  brands: { heading: "Marcas con las que trabajé" },
+  brands: { heading: "Marcas con las que trabajé", ugcTag: "UGC" },
   details: {
     experienceHeading: "Experiencia",
     experience: [
-      { role: "Social Media & Content Manager", org: "Freelance · Independiente", period: "Mar 2026 a Presente" },
+      { role: "Digital Strategist", org: "Cuatro Coronas · Híbrido", period: "Oct 2026 a Presente" },
+      { role: "Social Media Strategist & UGC Creator", org: "Freelance · Independiente", period: "Mar 2026 a Presente" },
       { role: "Social Media Manager", org: "Bitso · Remoto", period: "Abr 2024 a Mar 2026" },
       { role: "Social Media Strategist", org: "Bitso · Remoto", period: "Abr 2023 a Abr 2024" },
       { role: "Social Media Analyst & Community Manager", org: "Bitso · Remoto", period: "Oct 2021 a Abr 2023" },
@@ -165,6 +192,10 @@ es: {
     heading: "Trabajo",
     tabCases: "Proyectos grandes",
     tabBrands: "Cuentas que manejo",
+    tabUgc: "UGC Creator",
+    ugcBody: "Escribo, grabo y edito videos cortos frente a cámara para marcas como Rexona, Experta Seguros, Barão y Bitso, además de las cuentas que manejo y mi propio canal (@gevarola). Filtrá por marca para ver cada pieza.",
+    filterAll: "Todas",
+    filterLabel: "Filtrar por marca",
     challengeLabel: "El desafío",
     processLabel: "El proceso",
     resultLabel: "El resultado",
@@ -202,11 +233,14 @@ es: {
   contact: {
     eyebrow: "Contacto",
     title: "Hablemos de tu contenido.",
-    body: "Abierto a proyectos freelance de estrategia de contenido, roles full-time, y colaboraciones de marca como creador.",
+    body: "Abierto a proyectos freelance de estrategia en redes y colaboraciones UGC con marcas.",
     emailLabel: "Email",
     linkedinLabel: "LinkedIn",
     instagramLabel: "Instagram",
     githubLabel: "GitHub",
+    copyLabel: "Copiar",
+    copiedLabel: "Copiado ✓",
+    backToTop: "Volver arriba ↑",
     footer: "Diseñado y construido por Germán Rojas La Valle."
   }
 }
@@ -231,7 +265,7 @@ const AI_TOOLS = [
 
 const WEBDEV_PROJECT = {
   name: "De Guerrero a Guerrero",
-  image: "assets/images/case-guerrero-hero.png",
+  image: "assets/images/case-guerrero-hero.jpg",
   link: LINKS.guerreroSite,
   stats: [
     { value: "+3.000", en: "visits since launch", es: "visitas desde el lanzamiento" },
@@ -247,7 +281,7 @@ const CASES = [
     tag: { en: "Community Management & Copywriting", es: "Community Management & Copywriting" },
     image: "assets/images/case-havanna-hero.jpg",
     image2: "assets/images/case-havanna-tweet.jpg",
-    org: "Havanna",
+    org: "Havanna · via Cuatro Coronas",
     period: "2026",
     stats: [
       { value: "+39M", en: "views in 45 days", es: "de views en 45 días" },
@@ -314,7 +348,7 @@ const CASES = [
         "Construimos cada pieza alrededor de un gancho que a la audiencia ya le importaba, y lo conectamos con un insight financiero que no habían considerado.",
         "Diseñamos contenido genuinamente educativo, no promocional, posicionando a Bitso como una voz de confianza en educación financiera, no solo en cripto."
       ],
-      result: "Hicimos que conceptos financieros complejos fueran accesibles y compartibles, ancládolos a momentos de los que la gente ya estaba hablando, demostrando que la mejor puerta de entrada a la educación financiera es una historia que la audiencia ya conoce, no una definición.",
+      result: "Hicimos que conceptos financieros complejos fueran accesibles y compartibles, anclándolos a momentos de los que la gente ya estaba hablando, demostrando que la mejor puerta de entrada a la educación financiera es una historia que la audiencia ya conoce, no una definición.",
       strategicThinking: "Anclamos educación financiera a momentos de cultura pop en vez de un formato explicativo tradicional, porque la audiencia ya estaba emocionalmente enganchada, lo que bajaba la resistencia a \"aprender algo\".",
       whatWeLearned: "Al principio queríamos remarcar bien el \"insight financiero\" en cada pieza. Funcionó mejor cuando lo dejamos más sutil y el contenido se sintió más cultura que clase. Aprendimos a subexplicar en vez de sobreexplicar."
     }
@@ -404,7 +438,7 @@ const CASES = [
     org: "Bitso",
     period: "2023 to 2026",
     stats: [
-      { value: "+2M", en: "impressions", es: "de impresiones" },
+      { value: "+2M", en: "views", es: "de views" },
       { value: "+400K", en: "engagement", es: "de engagement" },
       { value: "15+", en: "how-to videos & guides produced", es: "videos y guías how-to producidos" }
     ],
@@ -441,7 +475,7 @@ const CASES = [
     org: "Bitso",
     period: "2022 to 2026",
     stats: [
-      { value: "60K+", en: "combined followers built from zero", es: "seguidores combinados construidos desde cero" },
+      { value: "300K+", en: "followers across AR, MX & CO (AR & CO from zero, MX +50%)", es: "seguidores entre AR, MX y CO (AR y CO desde cero, MX +50%)" },
       { value: "40–50", en: "pieces of content / week across 4 markets", es: "piezas de contenido / semana en 4 mercados" },
       { value: "10+", en: "person hybrid team coordinated", es: "personas en el equipo híbrido coordinado" }
     ],
@@ -451,7 +485,7 @@ const CASES = [
       process: [
         "Built the Argentina and Colombia channels from scratch: architecture, localized tone of voice, and a market-specific editorial calendar, going from zero to consistent weekly publishing in both.",
         "Coordinated a hybrid team (in-house + agency) to sustain production across all 4 markets simultaneously, publishing on Instagram, X and Facebook every week without interruption.",
-        "In 2025, led the content side of Bitso's global rebrand for the region, rebuilding messaging architecture, tone of voice and creative guidelines from scratch."
+        "In 2025, led content creative direction for Bitso's global rebrand, rebuilding messaging architecture, tone of voice and creative guidelines from scratch and applying them across MX, AR, BR and CO."
       ],
       result: "Took Bitso from operating in 2 markets to a full, owned content strategy across 4, with a unified tone of voice and content pillars aligned to business goals in every market and channel.",
       strategicThinking: "We went with a hybrid team (in-house + agency) instead of fully outsourcing or keeping it fully in-house: the agency gave us production speed, while brand-voice control stayed in-house. And we built Argentina and Colombia from scratch instead of translating Mexico and Brazil's content, because the crypto conversation is different in every market.",
@@ -463,7 +497,7 @@ const CASES = [
       process: [
         "Construimos los canales de Argentina y Colombia desde cero: arquitectura, tono de voz localizado y un calendario editorial por mercado, pasando de cero a publicación semanal consistente en ambos.",
         "Coordinamos un equipo híbrido (interno + agencia) para sostener la producción en los 4 mercados en simultáneo, publicando en Instagram, X y Facebook todas las semanas sin interrupciones.",
-        "En 2025, lideré el lado de contenido del rebranding global de Bitso para la región, reconstruyendo la arquitectura de mensajes, el tono de voz y los lineamientos creativos desde cero."
+        "En 2025, lideré la dirección creativa de contenido del rebranding global de Bitso, reconstruyendo la arquitectura de mensajes, el tono de voz y los lineamientos creativos desde cero y aplicándolos en MX, AR, BR y CO."
       ],
       result: "Llevamos a Bitso de operar en 2 mercados a una estrategia de contenido propia en 4, con un tono de voz y pilares de contenido unificados y alineados a los objetivos de negocio en cada mercado y canal.",
       strategicThinking: "Optamos por un equipo híbrido (interno + agencia) en vez de tercerizar todo o mantenerlo 100% interno: la agencia daba velocidad de producción, pero el control de brand voice se mantenía adentro. Y construimos Argentina y Colombia desde cero en vez de \"traducir\" el contenido de México/Brasil, porque la conversación cripto es distinta en cada mercado.",
@@ -494,16 +528,16 @@ const TOOLS = [
 ];
 
 const TICKER_KEYWORDS = {
-  en: ["Content Strategy", "Social Media Management", "Copywriting", "Brand Voice", "Influencer Marketing", "Community Management", "Content Creation", "Editorial Planning", "Campaign Direction", "Creator Partnerships", "Crisis Communication", "Video Editing"],
-  es: ["Estrategia de Contenido", "Social Media Management", "Copywriting", "Brand Voice", "Influencer Marketing", "Community Management", "Creación de Contenido", "Planificación Editorial", "Dirección Creativa", "Alianzas con Creadores", "Comunicación de Crisis", "Edición de Video"]
+  en: ["Content Strategy", "Social Media Management", "Copywriting", "Brand Voice", "Influencer Marketing", "Community Management", "Content Creation", "Editorial Planning", "Campaign Direction", "Creator Partnerships", "Crisis Communication", "Video Editing", "Digital Strategy", "Paid Media"],
+  es: ["Estrategia de Contenido", "Social Media Management", "Copywriting", "Brand Voice", "Influencer Marketing", "Community Management", "Creación de Contenido", "Planificación Editorial", "Dirección Creativa", "Alianzas con Creadores", "Comunicación de Crisis", "Edición de Video", "Estrategia Digital", "Paid Media"]
 };
 
 const BRANDS = [
   { name: "Bitso", logo: "assets/images/brand-bitso.svg" },
   { name: "Havanna", logo: "assets/images/brand-havanna.png" },
-  { name: "Rexona", logo: "assets/images/brand-rexona.svg" },
-  { name: "Experta Seguros", logo: "assets/images/brand-experta.png" },
-  { name: "Barão", logo: "assets/images/brand-barao.png" }
+  { name: "Rexona", logo: "assets/images/brand-rexona.svg", ugc: true },
+  { name: "Experta Seguros", logo: "assets/images/brand-experta.png", ugc: true },
+  { name: "Barão", logo: "assets/images/brand-barao.png", ugc: true }
 ];
 
 const OTHER_CLIENTS = [
@@ -568,8 +602,8 @@ const CREATOR_ITEMS = [
     brand: "@bitso.ar",
     type: { en: "New product announcement", es: "Anuncio de producto" },
     stats: [{ value: "+6.3M", en: "views", es: "views" }, { value: "+6K", en: "engagement", es: "engagement" }],
-    en: "Announced Bitso's xStocks launch from my own account — the same campaign as the case study.",
-    es: "Anuncié el lanzamiento de xStocks de Bitso desde mi cuenta, la misma campaña del caso de estudio."
+    en: "On-camera announcement of Bitso's xStocks launch, published on @bitso.ar (separate from the creator-program totals).",
+    es: "Anuncio en cámara del lanzamiento de xStocks de Bitso, publicado en @bitso.ar (aparte de los totales del programa de creadores)."
   },
   {
     image: "assets/images/creator-criscar.webp",
