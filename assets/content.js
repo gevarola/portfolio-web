@@ -718,6 +718,14 @@ const CREATOR_ITEMS = [
     es: "Video frente a cámara sobre si el helado tiene olor o no."
   },
   {
+    image: "assets/images/creator-rexona.jpg",
+    link: "https://www.instagram.com/p/DWjZ6vnRjws/",
+    brand: "Rexona",
+    type: { en: "UGC", es: "UGC" },
+    en: "On-camera UGC video for Rexona, shot at home with a humor-first tone.",
+    es: "Video UGC frente a cámara para Rexona, grabado en casa con tono de humor."
+  },
+  {
     image: "assets/images/creator-experta.jpg",
     link: "https://www.instagram.com/p/Dc_tOn8CKGD/",
     brand: "@expertaoficial",
