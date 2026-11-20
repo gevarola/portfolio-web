@@ -11,7 +11,7 @@
     } catch (e) {}
     return (navigator.language || "en").toLowerCase().indexOf("es") === 0 ? "es" : "en";
   }
-  var state = { lang: initialLang(), tab: "cases", ugcFilter: "all" };
+  var state = { lang: initialLang(), tab: "cases", ugcFilter: "all", ugcYear: "all" };
   var TABS = ["cases", "brands", "ugc"];
 
   function T() { return SITE[state.lang]; }
@@ -191,28 +191,87 @@
   // The UGC tab only shows videos where I'm on camera; account videos without me stay in the Accounts tab
   function ugcPool() { return CREATOR_ITEMS.filter(function (x) { return ugcCategory(x) !== "accounts" || x.onCamera; }); }
 
+  // Publish year, read from the post ID itself (both Instagram and TikTok IDs carry a timestamp).
+  // An explicit item.year wins if set.
+  var IG_ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_";
+  function yearOf(item) {
+    if (item.year) return item.year;
+    if (item._year) return item._year;
+    var y = 0, m;
+    try {
+      if ((m = item.link.match(/instagram\.com\/(?:[^\/]+\/)?(?:p|reel)\/([A-Za-z0-9_-]{11})/))) {
+        var id = BigInt(0);
+        for (var i = 0; i < m[1].length; i++) id = id * BigInt(64) + BigInt(IG_ALPHABET.indexOf(m[1][i]));
+        y = new Date(Number((id >> BigInt(23)) + BigInt(1314220021721))).getUTCFullYear();
+      } else if ((m = item.link.match(/tiktok\.com\/.*\/video\/(\d+)/))) {
+        y = new Date(Number(BigInt(m[1]) >> BigInt(32)) * 1000).getUTCFullYear();
+      }
+    } catch (e) { y = 0; }
+    item._year = y;
+    return y;
+  }
+  function byViews(a, b) {
+    var va = viewsOf(a), vb = viewsOf(b);
+    return (vb ? parseMetric(vb.value) : 0) - (va ? parseMetric(va.value) : 0);
+  }
+
   function renderUgc() {
-    var w = T().work, cats = T().ui.ugcCats;
+    var w = T().work, ui = T().ui, cats = ui.ugcCats;
+    if (UGC_CATS.indexOf(state.ugcFilter) === -1) state.ugcFilter = "all";
+    var pool = ugcPool();
+
+    // Level 1: category
     $("ugc-filters").setAttribute("aria-label", w.filterLabel);
     $("ugc-filters").innerHTML = UGC_CATS.map(function (k) {
-      var n = k === "all" ? ugcPool().length : ugcPool().filter(function (x) { return ugcCategory(x) === k; }).length;
-      return '<button type="button" class="chip" aria-pressed="' + (state.ugcFilter === k) + '" data-cat="' + k + '">' +
-        cats[k] + '<span class="chip-count">' + n + '</span></button>';
+      var n = k === "all" ? pool.length : pool.filter(function (x) { return ugcCategory(x) === k; }).length;
+      return '<button type="button" class="seg-btn" aria-pressed="' + (state.ugcFilter === k) + '" data-cat="' + k + '">' +
+        cats[k] + '<span class="seg-count">' + n + '</span></button>';
     }).join("");
-    $("ugc-filters").querySelectorAll(".chip").forEach(function (btn) {
+    $("ugc-filters").querySelectorAll(".seg-btn").forEach(function (btn) {
       btn.addEventListener("click", function () {
         state.ugcFilter = btn.getAttribute("data-cat");
         renderUgc();
       });
     });
-    if (UGC_CATS.indexOf(state.ugcFilter) === -1) state.ugcFilter = "all";
-    var items = state.ugcFilter === "all" ? ugcPool() : ugcPool().filter(function (x) { return ugcCategory(x) === state.ugcFilter; });
-    // Highest-view pieces first
-    items = items.slice().sort(function (a, b) {
-      var va = viewsOf(a), vb = viewsOf(b);
-      return (vb ? parseMetric(vb.value) : 0) - (va ? parseMetric(va.value) : 0);
+
+    var items = state.ugcFilter === "all" ? pool : pool.filter(function (x) { return ugcCategory(x) === state.ugcFilter; });
+
+    // Level 2: year, counted inside the chosen category
+    var years = [];
+    items.forEach(function (x) { var y = yearOf(x); if (y && years.indexOf(y) === -1) years.push(y); });
+    years.sort(function (a, b) { return b - a; });
+    if (state.ugcYear !== "all" && years.indexOf(state.ugcYear) === -1) state.ugcYear = "all";
+    $("ugc-years").setAttribute("aria-label", ui.ugcYears.label);
+    $("ugc-years").innerHTML =
+      '<span class="years-label">' + ui.ugcYears.label + '</span>' +
+      ["all"].concat(years).map(function (y) {
+        var n = y === "all" ? items.length : items.filter(function (x) { return yearOf(x) === y; }).length;
+        return '<button type="button" class="year-btn" aria-pressed="' + (state.ugcYear === y) + '" data-year="' + y + '">' +
+          (y === "all" ? ui.ugcYears.all : y) + '<sup>' + n + '</sup></button>';
+      }).join("");
+    $("ugc-years").querySelectorAll(".year-btn").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var v = btn.getAttribute("data-year");
+        state.ugcYear = v === "all" ? "all" : parseInt(v, 10);
+        renderUgc();
+      });
     });
-    $("ugc-rail").innerHTML = items.map(ugcCard).join("");
+
+    if (state.ugcYear !== "all") items = items.filter(function (x) { return yearOf(x) === state.ugcYear; });
+
+    // Newest year first, highest-view pieces first inside each year, with a marker where each year starts
+    var html = "";
+    years.forEach(function (y) {
+      var group = items.filter(function (x) { return yearOf(x) === y; }).sort(byViews);
+      if (!group.length) return;
+      html += '<div class="rail-year"><span class="rail-year-num">' + y + '</span>' +
+        '<span class="rail-year-count">' + group.length + ' ' + ui.ugcYears.videos + '</span></div>';
+      html += group.map(ugcCard).join("");
+    });
+    var undated = items.filter(function (x) { return !yearOf(x); }).sort(byViews);
+    html += undated.map(ugcCard).join("");
+
+    $("ugc-rail").innerHTML = html;
     $("ugc-rail").scrollLeft = 0;
     updateRail();
   }

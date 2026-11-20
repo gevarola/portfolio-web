@@ -369,14 +369,51 @@ section[id], .anchor { scroll-margin-top: calc(var(--header-h) + 8px); }
 .chip:hover { color: var(--ink); border-color: rgba(255,255,255,.35); }
 .chip[aria-pressed="true"] { background: var(--ink); border-color: var(--ink); color: var(--bg); }
 .chip-count { opacity: .5; margin-left: 6px; font-family: var(--mono); font-size: 11px; }
+
+/* UGC filters: category is level 1 (segmented control), year is level 2 (quiet type row) */
+.ugc-filters { margin: 28px 0 30px; display: flex; flex-direction: column; align-items: flex-start; gap: 18px; }
+.seg {
+  display: inline-flex; padding: 5px; gap: 2px; border-radius: 999px;
+  background: var(--card-2); box-shadow: inset 0 0 0 1px var(--line-2);
+}
+.seg-btn {
+  border: 0; background: transparent; cursor: pointer;
+  padding: 11px 20px; border-radius: 999px;
+  font-size: 15px; font-weight: 500; letter-spacing: -0.01em; color: var(--ink-2);
+  transition: background .25s var(--ease), color .25s var(--ease);
+}
+.seg-btn:hover { color: var(--ink); }
+.seg-btn[aria-pressed="true"] { background: var(--ink); color: var(--bg); }
+.seg-count { opacity: .45; margin-left: 7px; font-family: var(--mono); font-size: 11px; }
+.years { display: flex; align-items: baseline; gap: 4px 22px; flex-wrap: wrap; padding-left: 6px; }
+.years-label { font-family: var(--mono); font-size: 10.5px; text-transform: uppercase; letter-spacing: .14em; color: var(--ink-3); margin-right: 2px; }
+.year-btn {
+  border: 0; background: transparent; cursor: pointer; padding: 4px 0;
+  font-family: var(--mono); font-size: 13px; color: var(--ink-3);
+  border-bottom: 1px solid transparent;
+  transition: color .2s var(--ease), border-color .2s var(--ease);
+}
+.year-btn sup { font-size: 9px; margin-left: 3px; opacity: .7; }
+.year-btn:hover { color: var(--ink); }
+.year-btn[aria-pressed="true"] { color: var(--ink); border-bottom-color: var(--accent); }
+.rail-year {
+  flex: 0 0 auto; align-self: stretch; scroll-snap-align: start; display: flex; flex-direction: column; justify-content: space-between;
+  padding: 4px 4px 34px 16px; margin-left: 10px; border-left: 1px solid var(--line-2);
+}
+.rail-year:first-child { margin-left: 0; padding-left: 0; border-left: 0; }
+.rail-year-num {
+  writing-mode: vertical-rl; transform: rotate(180deg);
+  font-size: 44px; font-weight: 500; letter-spacing: -0.05em; line-height: 1; color: var(--ink);
+}
+.rail-year-count { font-family: var(--mono); font-size: 10.5px; color: var(--ink-3); writing-mode: vertical-rl; transform: rotate(180deg); }
 .rail {
-  display: grid; grid-auto-flow: column; grid-auto-columns: 220px; gap: 18px;
+  display: flex; gap: 18px;
   overflow-x: auto; scroll-snap-type: x mandatory;
   padding: 8px 0 12px; margin: -8px 0 -12px;
   scrollbar-width: none;
 }
 .rail::-webkit-scrollbar { display: none; }
-.ugc-card { scroll-snap-align: start; display: flex; flex-direction: column; text-decoration: none; color: inherit; }
+.ugc-card { flex: 0 0 220px; scroll-snap-align: start; display: flex; flex-direction: column; text-decoration: none; color: inherit; }
 .ugc-media {
   position: relative; aspect-ratio: 9 / 16; border-radius: 22px; overflow: hidden;
   background: var(--card-2);
@@ -697,7 +734,16 @@ section[id], .anchor { scroll-margin-top: calc(var(--header-h) + 8px); }
   .chips { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; margin-right: -20px; padding-right: 20px; }
   .chips::-webkit-scrollbar { display: none; }
   .chip { flex-shrink: 0; }
-  .rail { grid-auto-columns: 60%; margin-right: -20px; padding-right: 20px; }
+  .rail { margin-right: -20px; padding-right: 20px; }
+  .ugc-card { flex-basis: 60%; }
+  .ugc-filters { margin: 22px 0 24px; gap: 14px; align-items: stretch; }
+  .seg { display: flex; overflow-x: auto; scrollbar-width: none; }
+  .seg::-webkit-scrollbar { display: none; }
+  .seg-btn { flex: 1 0 auto; padding: 10px 14px; font-size: 14px; }
+  .years { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; padding-left: 4px; }
+  .years::-webkit-scrollbar { display: none; }
+  .year-btn { flex-shrink: 0; }
+  .rail-year-num { font-size: 34px; }
   .rail-controls { display: none; }
   .skills-grid { margin-bottom: 56px; }
   .skill { padding: 16px 14px 18px; gap: 6px; }

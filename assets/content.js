@@ -50,6 +50,7 @@ en: {
     kickerShort: "End-to-end digital marketing",
         marquee: ["Social strategy", "On-camera UGC", "Script, camera, edit", "Community management", "Bitso × 4 markets", "AI-built reporting"],
     ugcCats: { all: "All", brands: "Brands", accounts: "Accounts", own: "My channel" },
+    ugcYears: { label: "Year", all: "All", videos: "videos" },
     see: "View"
   },
   nav: { work: "Work", ugc: "UGC", tools: "Tools", about: "About", contact: "Contact", cta: "Let's talk", menu: "Menu" },
@@ -110,7 +111,7 @@ en: {
     tabCases: "Case studies",
     tabBrands: "Accounts",
     tabUgc: "UGC",
-    ugcBody: "Only videos where I'm the face: I write, shoot and edit them, for brands like Rexona, Experta Seguros, Barão, Instituto CAB and Bitso, for the accounts I run and for my own channel (@gevarola). Sorted by views.",
+    ugcBody: "Only videos where I'm the face: I write, shoot and edit them, for brands like Rexona, Experta Seguros, Barão, Instituto CAB and Bitso, for the accounts I run and for my own channel (@gevarola). Newest year first; inside each year, the most-watched lead.",
     filterAll: "All",
     filterLabel: "Filter by type",
     challengeLabel: "The challenge",
@@ -186,6 +187,7 @@ es: {
     kickerShort: "Marketing digital de punta a punta",
         marquee: ["Estrategia de redes", "UGC en cámara", "Guion, cámara y edición", "Community management", "Bitso × 4 mercados", "Reportes hechos con IA"],
     ugcCats: { all: "Todo", brands: "Marcas", accounts: "Cuentas", own: "Mi canal" },
+    ugcYears: { label: "Año", all: "Todos", videos: "videos" },
     see: "Ver"
   },
   nav: { work: "Trabajo", ugc: "UGC", tools: "Herramientas", about: "Sobre mí", contact: "Contacto", cta: "Hablemos", menu: "Menú" },
@@ -246,7 +248,7 @@ es: {
     tabCases: "Casos",
     tabBrands: "Cuentas",
     tabUgc: "UGC",
-    ugcBody: "Solo videos donde soy la cara: los escribo, los grabo y los edito, para marcas como Rexona, Experta Seguros, Barão, Instituto CAB y Bitso, para las cuentas que manejo y para mi canal (@gevarola). Ordenados de más a menos views.",
+    ugcBody: "Solo videos donde soy la cara: los escribo, los grabo y los edito, para marcas como Rexona, Experta Seguros, Barão, Instituto CAB y Bitso, para las cuentas que manejo y para mi canal (@gevarola). Del año más reciente para atrás; dentro de cada año, primero los más vistos.",
     filterAll: "Todas",
     filterLabel: "Filtrar por tipo",
     challengeLabel: "El desafío",
@@ -794,6 +796,177 @@ const CREATOR_ITEMS = [
     stats: [{ value: "+3K", en: "views", es: "views" }, { value: "+80", en: "engagement", es: "engagement" }],
     en: "Reaction video riding a real-time Bitcoin price milestone.",
     es: "Video de reacción aprovechando un hito de precio de Bitcoin en tiempo real."
+  },
+  {
+    image: "assets/images/creator-bitso-da7hsphamgk.jpg",
+    link: "https://www.instagram.com/reel/Da7hsPhAmgK/",
+    brand: "@bitso.ar",
+    type: { en: "Announcement", es: "Anuncio" },
+    stats: [{ value: "+1.1K", en: "views", es: "views" }],
+    en: "Talking head announcing that a fan-favorite feature is back on Bitso.",
+    es: "Video frente a cámara anunciando que una función que la gente pedía volvió a Bitso."
+  },
+  {
+    image: "assets/images/creator-bitso-dsd4xo8fizo.jpg",
+    link: "https://www.instagram.com/reel/DSD4Xo8FIZo/",
+    brand: "@bitso.ar",
+    type: { en: "In-app tutorial", es: "Tutorial en la app" },
+    stats: [{ value: "+1.4K", en: "views", es: "views" }],
+    en: "What to do with your year-end bonus: buying bitcoin step by step in the app.",
+    es: "Qué hacer con el aguinaldo: compra de bitcoin paso a paso dentro de la app."
+  },
+  {
+    image: "assets/images/creator-bitso-dnqmrlbninr.jpg",
+    link: "https://www.instagram.com/reel/DNQmRlBNINr/",
+    brand: "@bitso.ar",
+    type: { en: "Referral program", es: "Programa de referidos" },
+    stats: [{ value: "+1.6K", en: "views", es: "views" }],
+    en: "Explains Bitso's referral program, where both sides earn bitcoin.",
+    es: "Explica el programa de referidos de Bitso, donde los dos ganan bitcoin."
+  },
+  {
+    image: "assets/images/creator-bitso-dmgzm8vngj4.jpg",
+    link: "https://www.instagram.com/reel/DMgZm8VNGj4/",
+    brand: "@bitso.ar",
+    type: { en: "Talking head", es: "Frente a cámara" },
+    stats: [{ value: "+1.1K", en: "views", es: "views" }],
+    en: "Talking head on the easiest way to start earning bitcoin with Bitso.",
+    es: "Video frente a cámara sobre la forma más simple de empezar a ganar bitcoin con Bitso."
+  },
+  {
+    image: "assets/images/creator-bitso-dlsr9riugsj.jpg",
+    link: "https://www.instagram.com/reel/DLSr9RIuGSj/",
+    brand: "@bitso.ar",
+    type: { en: "Product for freelancers", es: "Producto para freelancers" },
+    stats: [{ value: "+1.3K", en: "views", es: "views" }],
+    en: "Pitch to freelancers who bill abroad, shot outdoors.",
+    es: "Pieza para freelancers que cobran del exterior, grabada en exteriores."
+  },
+  {
+    image: "assets/images/creator-bitso-dkckcfjw7s.jpg",
+    link: "https://www.instagram.com/reel/DKckCf-JW7S/",
+    brand: "@bitso.ar",
+    type: { en: "Educational video", es: "Video educativo" },
+    stats: [{ value: "+1K", en: "views", es: "views" }],
+    en: "Breaks down stablecoins like USDT and USDC in plain language.",
+    es: "Explica las stablecoins como USDT y USDC en criollo."
+  },
+  {
+    image: "assets/images/creator-bitso-djmdbzakify.jpg",
+    link: "https://www.instagram.com/reel/DJmdbzaKiFY/",
+    brand: "@bitso.ar",
+    type: { en: "Educational tip", es: "Tip educativo" },
+    stats: [{ value: "+1.6K", en: "views", es: "views" }],
+    en: "Three common mistakes people make when they start in crypto.",
+    es: "Tres errores comunes al arrancar en cripto."
+  },
+  {
+    image: "assets/images/creator-bitso-cbfxjijpbw.jpg",
+    link: "https://www.instagram.com/reel/C_BFXJIJPBw/",
+    brand: "@bitso.ar",
+    type: { en: "Interview", es: "Entrevista" },
+    stats: [{ value: "+2.9K", en: "views", es: "views" }],
+    en: "\"If I say Bitcoin, what do you say?\" Quick-fire interviews at Bitso's 10th-anniversary event.",
+    es: "\"Si te digo Bitcoin, ¿qué me decís?\" Entrevistas rápidas en el evento de los 10 años de Bitso."
+  },
+  {
+    image: "assets/images/creator-bitso-cvwggwifj.jpg",
+    link: "https://www.instagram.com/reel/C-vWGgWi-Fj/",
+    brand: "@bitso.ar",
+    type: { en: "Interview", es: "Entrevista" },
+    stats: [{ value: "+3.1K", en: "views", es: "views" }],
+    en: "Advice for crypto beginners, collected at Bitso's 10th-anniversary event.",
+    es: "Consejos para quien arranca en cripto, en el evento de los 10 años de Bitso."
+  },
+  {
+    image: "assets/images/creator-bitso-c9ku8tkxb9w.jpg",
+    link: "https://www.instagram.com/reel/C9ku8tkxB9W/",
+    brand: "@bitso.ar",
+    type: { en: "Interview", es: "Entrevista" },
+    stats: [{ value: "+5K", en: "views", es: "views" }],
+    en: "Users share the worst mistake they made in crypto.",
+    es: "Usuarios cuentan el peor error que cometieron en cripto."
+  },
+  {
+    image: "assets/images/creator-bitso-c6y7tbqlbxn.jpg",
+    link: "https://www.instagram.com/reel/C6y7tbQLbXn/",
+    brand: "@bitso.ar",
+    type: { en: "Educational video", es: "Video educativo" },
+    stats: [{ value: "+2.8K", en: "views", es: "views" }],
+    en: "What a Web3 wallet is and how it differs from an exchange account.",
+    es: "Qué es una wallet Web3 y en qué se diferencia de una cuenta en un exchange."
+  },
+  {
+    image: "assets/images/creator-bitso-c5rdrujv5ja.jpg",
+    link: "https://www.instagram.com/reel/C5rDRUJv5jA/",
+    brand: "@bitso.ar",
+    type: { en: "Crypto 101", es: "Cripto 101" },
+    stats: [{ value: "+3.2K", en: "views", es: "views" }],
+    en: "Litecoin in under a minute.",
+    es: "Litecoin en menos de un minuto."
+  },
+  {
+    image: "assets/images/creator-bitso-c4y3hknss2d.jpg",
+    link: "https://www.instagram.com/reel/C4Y3hKnsS2D/",
+    brand: "@bitso.ar",
+    type: { en: "Crypto news", es: "Noticia cripto" },
+    stats: [{ value: "+6.5K", en: "views", es: "views" }],
+    en: "Explains Ethereum's Dencun upgrade and why it matters.",
+    es: "Explica la actualización Dencun de Ethereum y por qué importa."
+  },
+  {
+    image: "assets/images/creator-bitso-c3n4lj3piaf.jpg",
+    link: "https://www.instagram.com/reel/C3n4lj3PiaF/",
+    brand: "@bitso.ar",
+    type: { en: "Crypto 101", es: "Cripto 101" },
+    stats: [{ value: "+6.6K", en: "views", es: "views" }],
+    en: "Ethereum in under a minute.",
+    es: "Ethereum en menos de un minuto."
+  },
+  {
+    image: "assets/images/creator-bitso-c2nqi8vk8h.jpg",
+    link: "https://www.instagram.com/reel/C2-nqI8vk8H/",
+    brand: "@bitso.ar",
+    type: { en: "Crypto 101", es: "Cripto 101" },
+    stats: [{ value: "+6K", en: "views", es: "views" }],
+    en: "Polygon (MATIC) in under a minute.",
+    es: "Polygon (MATIC) en menos de un minuto."
+  },
+  {
+    image: "assets/images/creator-bitso-c15ijarpblq.jpg",
+    link: "https://www.instagram.com/reel/C15IJArPblq/",
+    brand: "@bitso.ar",
+    type: { en: "Crypto 101", es: "Cripto 101" },
+    stats: [{ value: "+4.9K", en: "views", es: "views" }],
+    en: "Avalanche (AVAX) in under a minute.",
+    es: "Avalanche (AVAX) en menos de un minuto."
+  },
+  {
+    image: "assets/images/creator-bitso-c0hqeuwvzzq.jpg",
+    link: "https://www.instagram.com/reel/C0hqEuwvZzq/",
+    brand: "@bitso.ar",
+    type: { en: "Crypto 101", es: "Cripto 101" },
+    stats: [{ value: "+2.2K", en: "views", es: "views" }],
+    en: "Dogecoin, from meme to market, in under a minute.",
+    es: "Dogecoin, del meme al mercado, en menos de un minuto."
+  },
+  {
+    image: "assets/images/creator-bitso-cz64hizpf7m.jpg",
+    link: "https://www.instagram.com/reel/Cz64HiZPf7m/",
+    brand: "@bitso.ar",
+    type: { en: "Crypto 101", es: "Cripto 101" },
+    stats: [{ value: "+3.2K", en: "views", es: "views" }],
+    en: "Solana in under a minute.",
+    es: "Solana en menos de un minuto."
+  },
+  {
+    image: "assets/images/creator-bitso-czb1umar3qa.jpg",
+    link: "https://www.instagram.com/reel/Czb1umAr3QA/",
+    brand: "@bitso.ar",
+    type: { en: "Crypto 101", es: "Cripto 101" },
+    stats: [{ value: "+4.6K", en: "views", es: "views" }],
+    en: "Chainlink in under a minute.",
+    es: "Chainlink en menos de un minuto."
   },
   {
     image: "assets/images/creator-psicologia-color.jpg",
