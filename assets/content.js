@@ -49,7 +49,13 @@ en: {
     stackTitle: "Platforms & tools",
     kickerShort: "End-to-end digital marketing",
         marquee: ["Social strategy", "On-camera UGC", "Script, camera, edit", "Community management", "Bitso × 4 markets", "AI-built reporting"],
-    ugcCats: { all: "All", brands: "Brands", accounts: "Accounts", own: "My channel" },
+    ugcCats: { all: "All", brands: "Brand UGC", accounts: "Accounts I run", own: "My channel" },
+    ugcHints: {
+      all: "Every video where I'm on camera.",
+      brands: "Brands that hired me to be the face of a video. I write it, shoot it and edit it; they post it on their account.",
+      accounts: "Accounts I run end to end, from strategy to community. Here, only the videos where I also appear.",
+      own: "My own channel, @gevarola."
+    },
     ugcYears: { label: "Year", all: "All", videos: "videos" },
     see: "View"
   },
@@ -186,7 +192,13 @@ es: {
     stackTitle: "Plataformas y herramientas",
     kickerShort: "Marketing digital de punta a punta",
         marquee: ["Estrategia de redes", "UGC en cámara", "Guion, cámara y edición", "Community management", "Bitso × 4 mercados", "Reportes hechos con IA"],
-    ugcCats: { all: "Todo", brands: "Marcas", accounts: "Cuentas", own: "Mi canal" },
+    ugcCats: { all: "Todo", brands: "UGC para marcas", accounts: "Cuentas que manejo", own: "Mi canal" },
+    ugcHints: {
+      all: "Todos los videos donde salgo yo.",
+      brands: "Marcas que me contrataron para ser la cara de un video. Lo escribo, lo grabo y lo edito; ellas lo publican en su cuenta.",
+      accounts: "Cuentas que manejo de punta a punta, de la estrategia a la comunidad. Acá van solo los videos donde además aparezco.",
+      own: "Mi canal propio, @gevarola."
+    },
     ugcYears: { label: "Año", all: "Todos", videos: "videos" },
     see: "Ver"
   },

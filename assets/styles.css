@@ -385,6 +385,8 @@ section[id], .anchor { scroll-margin-top: calc(var(--header-h) + 8px); }
 .seg-btn:hover { color: var(--ink); }
 .seg-btn[aria-pressed="true"] { background: var(--ink); color: var(--bg); }
 .seg-count { opacity: .45; margin-left: 7px; font-family: var(--mono); font-size: 11px; }
+.seg-hint { margin: -6px 0 0 6px; max-width: 62ch; font-size: 13.5px; line-height: 1.5; color: var(--ink-2); }
+.years[hidden] { display: none; }
 .years { display: flex; align-items: baseline; gap: 4px 22px; flex-wrap: wrap; padding-left: 6px; }
 .years-label { font-family: var(--mono); font-size: 10.5px; text-transform: uppercase; letter-spacing: .14em; color: var(--ink-3); margin-right: 2px; }
 .year-btn {
@@ -740,6 +742,7 @@ section[id], .anchor { scroll-margin-top: calc(var(--header-h) + 8px); }
   .seg { display: flex; overflow-x: auto; scrollbar-width: none; }
   .seg::-webkit-scrollbar { display: none; }
   .seg-btn { flex: 1 0 auto; padding: 10px 14px; font-size: 14px; }
+  .seg-hint { margin-left: 4px; font-size: 13px; }
   .years { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; padding-left: 4px; }
   .years::-webkit-scrollbar { display: none; }
   .year-btn { flex-shrink: 0; }

@@ -235,12 +235,15 @@
     });
 
     var items = state.ugcFilter === "all" ? pool : pool.filter(function (x) { return ugcCategory(x) === state.ugcFilter; });
+    $("ugc-hint").textContent = ui.ugcHints[state.ugcFilter];
 
     // Level 2: year, counted inside the chosen category
     var years = [];
     items.forEach(function (x) { var y = yearOf(x); if (y && years.indexOf(y) === -1) years.push(y); });
     years.sort(function (a, b) { return b - a; });
     if (state.ugcYear !== "all" && years.indexOf(state.ugcYear) === -1) state.ugcYear = "all";
+    // A single year needs no year filter
+    $("ugc-years").hidden = years.length < 2;
     $("ugc-years").setAttribute("aria-label", ui.ugcYears.label);
     $("ugc-years").innerHTML =
       '<span class="years-label">' + ui.ugcYears.label + '</span>' +
