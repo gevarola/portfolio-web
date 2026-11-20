@@ -159,6 +159,10 @@ section[id], .anchor { scroll-margin-top: calc(var(--header-h) + 8px); }
   color: var(--ink-2);
 }
 .hero-lead em { font-style: normal; color: var(--ink); }
+.hero-sub {
+  margin-top: 16px; max-width: 520px;
+  font-size: 15.5px; line-height: 1.6; color: var(--ink-3);
+}
 .hero-ctas { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 34px; }
 .status-pill {
   display: inline-flex; align-items: center; gap: 10px;
@@ -464,7 +468,7 @@ section[id], .anchor { scroll-margin-top: calc(var(--header-h) + 8px); }
 
 /* ---------- About: big numbered index ---------- */
 .skills-grid {
-  display: grid; grid-template-columns: repeat(4, minmax(0, 1fr));
+  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr));
   border-top: 1px solid var(--line); border-left: 1px solid var(--line); margin-bottom: 72px;
 }
 .skill {
@@ -674,6 +678,7 @@ section[id], .anchor { scroll-margin-top: calc(var(--header-h) + 8px); }
   .container { padding: 0 20px; }
   .hero-name { font-size: clamp(50px, 15vw, 66px); }
   .hero-lead { font-size: 18px; margin-top: 22px; }
+  .hero-sub { font-size: 14.5px; margin-top: 12px; }
   .kicker { font-size: 12px; margin-bottom: 18px; }
   .tabs { width: 100%; }
   .tab { flex: 1 0 auto; padding: 9px 10px; font-size: 13px; }

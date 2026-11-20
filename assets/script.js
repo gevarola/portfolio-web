@@ -59,6 +59,7 @@
     $("hero-status").textContent = s.ui.status;
     // Name is already the H1, so drop the "Hi, I'm Germán." opener from the lead
     $("hero-title").innerHTML = i.title.replace(/^[^.]+\.\s*/, "").replace(/\[\[(.+?)\]\]/g, "<em>$1</em>");
+    $("hero-sub").textContent = i.subtitle;
     $("hero-kicker").innerHTML = i.roleLine.split(" · ").join(' <span class="sep">//</span> ');
     $("hero-kicker-short").textContent = s.ui.kickerShort;
     $("hero-cta-work").textContent = i.ctaWork;

@@ -47,7 +47,7 @@ en: {
     toolDashboard: "Reporting dashboard",
     toolSite: "Live website",
     stackTitle: "Platforms & tools",
-    kickerShort: "Digital Strategist & UGC Creator",
+    kickerShort: "End-to-end digital marketing",
         marquee: ["Social strategy", "On-camera UGC", "Script, camera, edit", "Community management", "Bitso × 4 markets", "AI-built reporting"],
     ugcCats: { all: "All", brands: "Brands", accounts: "Accounts", own: "My channel" },
     see: "View"
@@ -63,9 +63,9 @@ en: {
     ]
   },
   intro: {
-    roleLine: "Digital Strategist · Social Media Strategist · UGC Creator",
-    title: "Hi, I'm Germán. I plan it, write it and [[show up on camera]].",
-    subtitle: "7+ years leading content and digital strategy for fintech and consumer brands across LATAM. Today, Digital Strategist at Cuatro Coronas and, in parallel, freelance social media strategist and UGC creator.",
+    roleLine: "Digital Marketing · Strategy · Content · Paid · E-commerce",
+    title: "Hi, I'm Germán. I do marketing end to end: I build the strategy, produce the content, run the ads and [[turn it into sales in the store]].",
+    subtitle: "Seven years in digital marketing for fintech, consumer and e-commerce brands across LATAM. Today I'm a Digital Strategist at an agency and, in parallel, I work with brands that bring me in for everything: paid media, e-commerce, content and UGC.",
     ctaWork: "See the work",
     ctaContact: "Get in touch"
   },
@@ -97,14 +97,12 @@ en: {
   pillars: {
     eyebrow: "What I do",
     items: [
-      { num: "01", title: "Social Media Manager", body: "I keep the lights on: calendars, growth, agencies, numbers. The unglamorous stuff that makes everything else possible." },
-      { num: "02", title: "Content Manager", body: "I decide what gets said before anyone writes a word. Voice, pillars, campaigns. Get this right and everything else gets easier." },
-      { num: "03", title: "Content Creator", body: "Camera, mic, edit. Made for the thumb to stop." },
-      { num: "04", title: "Copywriting", body: "Scripts and captions that don't sound like a press release, or like ChatGPT." },
-      { num: "05", title: "Video Editor", body: "Timelines, cuts, pacing. The invisible half-second that decides if someone keeps watching or swipes away." },
-      { num: "06", title: "AI Automation", body: "I build the pipelines and prompts that handle the repetitive part for me. Scraping, reporting, workflows: less manual work, same output." },
-      { num: "07", title: "Web Development", body: "This site and a live-data football site. I build what I need instead of waiting on a dev." },
-      { num: "08", title: "Community Management", body: "Replies, DMs, comment sections. The direct line between the brand and the people actually watching it." }
+      { num: "01", title: "Strategy & Brand", body: "Positioning, brand voice and communication plans. At Bitso I led content creative direction for the rebrand across four markets." },
+      { num: "02", title: "Content & UGC", body: "I write, shoot and edit. I produce for the accounts I run, manage their communities and appear on camera in UGC videos for consumer, insurance and fintech brands." },
+      { num: "03", title: "Paid Media", body: "I build and optimize paid campaigns: targeting, creative, budget, and reading the results to decide where the money goes next." },
+      { num: "04", title: "E-commerce", body: "I run stores on Tiendanube: catalog, promotions and the path to checkout. I connect the store to content and ads so the traffic ends in sales." },
+      { num: "05", title: "Influencers & Creators", body: "I design and run creator programs, from casting to UTM attribution. At Bitso we coordinated 20 influencers and 80+ UGC creators for a single launch." },
+      { num: "06", title: "Data & AI Automation", body: "I automate processes with AI: scraping, reporting and workflows. I build self-updating dashboards and my own websites with Claude Code." }
     ]
   },
   work: {
@@ -185,7 +183,7 @@ es: {
     toolDashboard: "Dashboard de reporting",
     toolSite: "Sitio en vivo",
     stackTitle: "Plataformas y herramientas",
-    kickerShort: "Digital Strategist & UGC Creator",
+    kickerShort: "Marketing digital de punta a punta",
         marquee: ["Estrategia de redes", "UGC en cámara", "Guion, cámara y edición", "Community management", "Bitso × 4 mercados", "Reportes hechos con IA"],
     ugcCats: { all: "Todo", brands: "Marcas", accounts: "Cuentas", own: "Mi canal" },
     see: "Ver"
@@ -201,9 +199,9 @@ es: {
     ]
   },
   intro: {
-    roleLine: "Digital Strategist · Social Media Strategist · UGC Creator",
-    title: "Hola, soy Germán. Armo la estrategia, escribo el guion y [[pongo la cara]].",
-    subtitle: "Más de 7 años liderando estrategia de contenido y digital para marcas fintech y de consumo en LATAM. Hoy, Digital Strategist en Cuatro Coronas y, en paralelo, social media strategist y UGC creator freelance.",
+    roleLine: "Marketing Digital · Estrategia · Contenido · Paid · E-commerce",
+    title: "Hola, soy Germán. Hago marketing de punta a punta: armo la estrategia, produzco el contenido, lo pauto y [[lo convierto en ventas en la tienda]].",
+    subtitle: "Siete años en marketing digital para fintech, consumo y e-commerce en LATAM. Hoy soy Digital Strategist en una agencia y, en paralelo, trabajo con marcas que me suman para todo: pauta, e-commerce, contenido y UGC.",
     ctaWork: "Ver los casos",
     ctaContact: "Escribime"
   },
@@ -235,14 +233,12 @@ es: {
   pillars: {
     eyebrow: "Qué hago",
     items: [
-      { num: "01", title: "Social Media Manager", body: "Mantengo todo funcionando: calendarios, crecimiento, agencias, números. Lo poco glamoroso que hace posible todo lo demás." },
-      { num: "02", title: "Content Manager", body: "Decido qué se dice antes de que alguien escriba una palabra. Voz, pilares y campañas. Si esto está bien, lo demás sale más fácil." },
-      { num: "03", title: "Content Creator", body: "Cámara, micrófono y edición. Contenido hecho para que el pulgar se frene." },
-      { num: "04", title: "Copywriting", body: "Guiones y captions que no suenan a gacetilla ni a ChatGPT." },
-      { num: "05", title: "Editor de Video", body: "Timelines, cortes, ritmo. El medio segundo invisible que decide si alguien se queda mirando o desliza al siguiente." },
-      { num: "06", title: "Automatización con IA", body: "Armo los pipelines y prompts que hacen la parte repetitiva por mí. Scraping, reportes, flujos de trabajo: menos trabajo manual, el mismo resultado." },
-      { num: "07", title: "Desarrollo Web", body: "Esta web y una de fútbol con datos en vivo. Construyo lo que necesito en vez de esperar a un dev." },
-      { num: "08", title: "Community Management", body: "Respuestas, DMs, comentarios. La línea directa entre la marca y la gente que realmente la está mirando." }
+      { num: "01", title: "Estrategia y marca", body: "Posicionamiento, voz de marca y plan de comunicación. En Bitso lideré la dirección creativa de contenido del rebranding en cuatro mercados." },
+      { num: "02", title: "Contenido y UGC", body: "Escribo, grabo y edito. Produzco para las cuentas que manejo, gestiono su comunidad y protagonizo videos UGC para marcas de consumo, seguros y fintech." },
+      { num: "03", title: "Paid media", body: "Armo y optimizo campañas pagas: segmentación, creatividades, presupuesto y lectura de resultados para decidir dónde va la próxima inversión." },
+      { num: "04", title: "E-commerce", body: "Gestiono tiendas en Tiendanube: catálogo, promociones y el recorrido hasta el checkout. Conecto la tienda con el contenido y la pauta para que el tráfico termine en ventas." },
+      { num: "05", title: "Influencers y creadores", body: "Diseño y ejecuto programas con creadores, desde el casting hasta la atribución por UTM. En Bitso coordinamos 20 influencers y más de 80 creadores UGC para un solo lanzamiento." },
+      { num: "06", title: "Datos y automatización con IA", body: "Automatizo procesos con IA: scraping, reportes y flujos de trabajo. Armo dashboards que se actualizan solos y webs propias con Claude Code." }
     ]
   },
   work: {
