@@ -187,7 +187,9 @@
     if (item.client || MANAGED.indexOf(item.brand) > -1) return "accounts";
     return "brands";
   }
-  var UGC_CATS = ["all", "brands", "accounts", "own"];
+  var UGC_CATS = ["all", "brands", "own"];
+  // Filter bucket: videos for accounts I run count as brand work
+  function ugcFilterCat(item) { return ugcCategory(item) === "own" ? "own" : "brands"; }
   // The UGC tab only shows videos where I'm on camera; account videos without me stay in the Accounts tab
   function ugcPool() { return CREATOR_ITEMS.filter(function (x) { return ugcCategory(x) !== "accounts" || x.onCamera; }); }
 
@@ -223,7 +225,7 @@
     // Level 1: category
     $("ugc-filters").setAttribute("aria-label", w.filterLabel);
     $("ugc-filters").innerHTML = UGC_CATS.map(function (k) {
-      var n = k === "all" ? pool.length : pool.filter(function (x) { return ugcCategory(x) === k; }).length;
+      var n = k === "all" ? pool.length : pool.filter(function (x) { return ugcFilterCat(x) === k; }).length;
       return '<button type="button" class="seg-btn" aria-pressed="' + (state.ugcFilter === k) + '" data-cat="' + k + '">' +
         cats[k] + '<span class="seg-count">' + n + '</span></button>';
     }).join("");
@@ -234,7 +236,7 @@
       });
     });
 
-    var items = state.ugcFilter === "all" ? pool : pool.filter(function (x) { return ugcCategory(x) === state.ugcFilter; });
+    var items = state.ugcFilter === "all" ? pool : pool.filter(function (x) { return ugcFilterCat(x) === state.ugcFilter; });
     $("ugc-hint").textContent = ui.ugcHints[state.ugcFilter];
 
     // Level 2: year, counted inside the chosen category
