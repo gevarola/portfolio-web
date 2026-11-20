@@ -751,6 +751,138 @@ const CREATOR_ITEMS = [
     es: "Video frente a cámara mostrando cuánta carne de calidad rinde un presupuesto fijo."
   },
   {
+    image: "assets/images/creator-criscar-dbtdqltmqqu.jpg",
+    onCamera: true,
+    link: "https://www.instagram.com/reel/DbtDqlTmqqU/",
+    brand: "@frigorifico.criscar.campana",
+    client: "criscar",
+    type: { en: "In-store sketch", es: "Sketch en el local" },
+    stats: [{ value: "+43.6K", en: "views", es: "views" }],
+    en: "In-store sketch with the shop's mascot, shot between the aisles.",
+    es: "Sketch en el local con la mascota, grabado entre las góndolas."
+  },
+  {
+    image: "assets/images/creator-criscar-dxgnbzeuio.jpg",
+    onCamera: true,
+    link: "https://www.instagram.com/reel/DXg_NbzEUIO/",
+    brand: "@frigorifico.criscar.campana",
+    client: "criscar",
+    type: { en: "Customer interview", es: "Entrevista a clientes" },
+    stats: [{ value: "+26.6K", en: "views", es: "views" }],
+    en: "Quick interviews with shoppers about Criscar's prices.",
+    es: "Entrevistas rápidas a clientes sobre los precios de Criscar."
+  },
+  {
+    image: "assets/images/creator-criscar-dbwdunidhnx.jpg",
+    onCamera: true,
+    link: "https://www.instagram.com/reel/DbWdUnIDHNX/",
+    brand: "@frigorifico.criscar.campana",
+    client: "criscar",
+    type: { en: "Talking head", es: "Frente a cámara" },
+    stats: [{ value: "+4.5K", en: "views", es: "views" }],
+    en: "Selfie-style video walking through the shop's best prices.",
+    es: "Video en modo selfie recorriendo los mejores precios del local."
+  },
+  {
+    image: "assets/images/creator-criscar-dxkuj37igid.jpg",
+    onCamera: true,
+    link: "https://www.instagram.com/reel/DXKuJ37iGId/",
+    brand: "@frigorifico.criscar.campana",
+    client: "criscar",
+    type: { en: "Conversation starter", es: "Debate" },
+    stats: [{ value: "+2.8K", en: "views", es: "views" }],
+    en: "Well-done or rare? A question that splits every asado table.",
+    es: "¿Cocida o jugosa? La pregunta que divide cualquier asado."
+  },
+  {
+    image: "assets/images/creator-criscar-db3exvoahcx.jpg",
+    onCamera: true,
+    link: "https://www.instagram.com/reel/Db3ExvOAHcX/",
+    brand: "@frigorifico.criscar.campana",
+    client: "criscar",
+    type: { en: "Humor", es: "Humor" },
+    stats: [{ value: "+2.2K", en: "views", es: "views" }],
+    en: "Humor bit at the meat counter: \"What's wrong with you?\"",
+    es: "Video de humor en el mostrador: \"¿Qué te pasa?\""
+  },
+  {
+    image: "assets/images/creator-criscar-dbltru0lb5r.jpg",
+    onCamera: true,
+    link: "https://www.instagram.com/reel/DbLTRU0lB5r/",
+    brand: "@frigorifico.criscar.campana",
+    client: "criscar",
+    type: { en: "Talking head", es: "Frente a cámara" },
+    stats: [{ value: "+2.1K", en: "views", es: "views" }],
+    en: "How to plan the week's meat in a single trip to the shop.",
+    es: "Cómo resolver la carne de toda la semana en una sola compra."
+  },
+  {
+    image: "assets/images/creator-criscar-dyaamhdpb3.jpg",
+    onCamera: true,
+    link: "https://www.instagram.com/reel/DYaA-MhDPB3/",
+    brand: "@frigorifico.criscar.campana",
+    client: "criscar",
+    type: { en: "Educational tip", es: "Tip educativo" },
+    stats: [{ value: "+2.1K", en: "views", es: "views" }],
+    en: "How much charcoal you need for an asado.",
+    es: "Cómo calcular cuánto carbón necesitás para el asado."
+  },
+  {
+    image: "assets/images/creator-criscar-dxmihh3elsf.jpg",
+    onCamera: true,
+    link: "https://www.instagram.com/reel/DXmIhH3ElsF/",
+    brand: "@frigorifico.criscar.campana",
+    client: "criscar",
+    type: { en: "Conversation starter", es: "Debate" },
+    stats: [{ value: "+2.1K", en: "views", es: "views" }],
+    en: "Which spice goes on your asado? Shot at the in-store seasoning shelf.",
+    es: "¿Qué especia le ponés al asado? Grabado frente a la góndola de condimentos."
+  },
+  {
+    image: "assets/images/creator-criscar-dav1cmedg63.jpg",
+    onCamera: true,
+    link: "https://www.instagram.com/reel/Dav1cMeDG63/",
+    brand: "@frigorifico.criscar.campana",
+    client: "criscar",
+    type: { en: "In-store moment", es: "Momento en el local" },
+    stats: [{ value: "+1.7K", en: "views", es: "views" }],
+    en: "Shopping the premium cuts fridge, point-of-view style.",
+    es: "Compra en la heladera de cortes premium, con cámara en primera persona."
+  },
+  {
+    image: "assets/images/creator-criscar-da5rvcfiy0a.jpg",
+    onCamera: true,
+    link: "https://www.instagram.com/reel/Da5RvCFiY0A/",
+    brand: "@frigorifico.criscar.campana",
+    client: "criscar",
+    type: { en: "Store tour", es: "Recorrida por el local" },
+    stats: [{ value: "+1.5K", en: "views", es: "views" }],
+    en: "Mic in hand, a tour of the shop for people who haven't been yet.",
+    es: "Micrófono en mano, una recorrida por el local para quien todavía no fue."
+  },
+  {
+    image: "assets/images/creator-criscar-daaowi2asnv.jpg",
+    onCamera: true,
+    link: "https://www.instagram.com/reel/DaAoWi2AsNv/",
+    brand: "@frigorifico.criscar.campana",
+    client: "criscar",
+    type: { en: "Talking head", es: "Frente a cámara" },
+    stats: [{ value: "+1.4K", en: "views", es: "views" }],
+    en: "Talking head shot inside the shop.",
+    es: "Video frente a cámara grabado adentro del local."
+  },
+  {
+    image: "assets/images/creator-criscar-davotnglrot.jpg",
+    onCamera: true,
+    link: "https://www.instagram.com/reel/DaVOtnGlRot/",
+    brand: "@frigorifico.criscar.campana",
+    client: "criscar",
+    type: { en: "Humor", es: "Humor" },
+    stats: [{ value: "+1.2K", en: "views", es: "views" }],
+    en: "Humor bit on a very Argentine habit: \"We're Argentinian!\"",
+    es: "Video de humor sobre una costumbre bien nuestra: \"¡Somos argentinos!\""
+  },
+  {
     image: "assets/images/creator-tempo-cafe.webp",
     onCamera: true,
     link: "https://www.instagram.com/p/DbYZR8PhEGg/",
